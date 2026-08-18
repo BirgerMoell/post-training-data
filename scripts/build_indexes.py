@@ -5,8 +5,10 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
 from pathlib import Path
+from urllib.parse import unquote
 
 ROOT = Path(__file__).resolve().parents[1]
 DATASETS = ROOT / "datasets"
@@ -46,6 +48,7 @@ LANGUAGE_LABELS = {
     "nl": "Dutch",
     "pl": "Polish",
     "ro": "Romanian",
+    "pt": "Portuguese",
     "uk": "Ukrainian",
     "sq": "Albanian",
     "bg": "Bulgarian",
@@ -89,6 +92,8 @@ REQUIRED = {
     "lumi_location",
     "source_sheet_row",
 }
+
+MARKDOWN_LINK = re.compile(r"(?<!!)\[[^\]]*\]\(([^)]+)\)")
 
 
 def parse_frontmatter(path: Path) -> dict:
@@ -155,6 +160,27 @@ def load_entries() -> list[dict]:
     if not entries:
         raise ValueError("No dataset entries found")
     return sorted(entries, key=lambda item: item["name"].casefold())
+
+
+def validate_local_links() -> list[str]:
+    """Return broken relative Markdown links in repository documentation."""
+
+    errors: list[str] = []
+    for path in sorted(ROOT.rglob("*.md")):
+        content = path.read_text(encoding="utf-8")
+        for line_number, line in enumerate(content.splitlines(), start=1):
+            for match in MARKDOWN_LINK.finditer(line):
+                raw_target = match.group(1).strip().strip("<>")
+                target = unquote(raw_target.split("#", 1)[0])
+                if not target or "://" in target or target.startswith("mailto:"):
+                    continue
+                resolved = (path.parent / target).resolve()
+                if not resolved.exists():
+                    errors.append(
+                        f"{path.relative_to(ROOT)}:{line_number}: "
+                        f"broken local link {raw_target!r}"
+                    )
+    return errors
 
 
 def clean(value: object) -> str:
@@ -297,6 +323,13 @@ def main() -> int:
         print(exc, file=sys.stderr)
         return 1
 
+    link_errors = validate_local_links()
+    if link_errors:
+        print("Broken local Markdown links:", file=sys.stderr)
+        for error in link_errors:
+            print(f"  - {error}", file=sys.stderr)
+        return 1
+
     outputs = build_outputs(entries)
     if args.check:
         stale: list[str] = []
@@ -321,4 +354,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

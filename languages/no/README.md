@@ -5,4 +5,5 @@ Entries are grouped from the language description recorded on each page. Broad m
 
 | Dataset / product | Training use | State | Recorded coverage |
 | --- | --- | --- | --- |
+| [FLORES-200 / FLORES+ evaluation copy on LUMI](../../datasets/lumi-flores-200/README.md) | Evaluation holdouts | Evaluation-only — do not train | 26 European language files plus FLORES+ combined dev/devtest |
 | [qwen35-9b-multiling-dpo-parquet](../../datasets/qwen35-9b-multiling-dpo-parquet/README.md) | Preference optimization | Configured / runnable | fi,sv,da,no,is + multilingual |

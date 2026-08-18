@@ -20,7 +20,9 @@ source_sheet_row: 10
 
 ## What it is for
 
-Tokenized ready-to-train artifact
+OLMo-core-ready English instruction data: 2,152,111 examples, 1.7B total
+tokens, and 789M trainable assistant tokens at a maximum sequence length of
+32,768.
 
 ## Where to find it
 
@@ -32,8 +34,14 @@ Tokenized ready-to-train artifact
 
 ## How to use it
 
-- For SFT, confirm the selected split and normalize examples to the conversation format expected by the model's chat template.
-- Pin an immutable public revision and record the exact configuration and split used.
+- This artifact is directly compatible with the OLMo-core SFT loader. It stores
+  `token_ids_part_*.npy`, `labels_mask_part_*.npy`, a tokenizer directory, and
+  `dataset_statistics.json`.
+- Use only when the target model uses the recorded OLMo tokenizer and chat
+  template. For a different base model, rebuild from the decontaminated raw
+  Dolci source rather than reusing token IDs.
+- Confirm that `labels_mask` trains assistant responses only and record the
+  immutable dataset revision.
 
 ## State and ownership
 
@@ -46,5 +54,6 @@ Tokenized ready-to-train artifact
 
 ## Notes and next action
 
-Check tokenizer compatibility with selected base.
-
+Ready for an OLMo-core reproduction. It is not a portable tokenized artifact
+for Prelude or another tokenizer; the raw decontaminated dataset is the
+portable source of truth.

@@ -1,7 +1,7 @@
 # Preference optimization
 > Generated from the metadata at the top of each dataset page. Run `python3 scripts/build_indexes.py` after changing an entry.
 
-23 entries.
+24 entries.
 
 | Dataset / product | State | Languages | Purpose | Locations |
 | --- | --- | --- | --- | --- |
@@ -23,8 +23,9 @@
 | [nvidia/HelpSteer3](../../datasets/nvidia-helpsteer3/README.md) | Candidate | primarily en | Preference/RM candidate | [public](<https://huggingface.co/datasets/nvidia/HelpSteer3>) · LUMI |
 | [oellm-eu-preference-v1](../../datasets/oellm-eu-preference-v1/README.md) | Planned | European languages | Planned European preference product | [public](<https://github.com/BirgerMoell/qwen35-posttrain/blob/main/docs/EU_DATA_STRATEGY.md>) |
 | [openai/MMMLU](../../datasets/openai-mmmlu/README.md) | Used in completed run | multilingual | Multilingual MMLU-style MCQs | [public](<https://huggingface.co/datasets/openai/MMMLU>) |
-| [openeurollm/Dolci-Instruct-DPO-translated](../../datasets/openeurollm-dolci-instruct-dpo-translated/README.md) | Published / available | 11 European languages | Multilingual preference alignment | [public](<https://huggingface.co/datasets/openeurollm/Dolci-Instruct-DPO-translated>) |
+| [openeurollm/Dolci-Instruct-DPO-translated](../../datasets/openeurollm-dolci-instruct-dpo-translated/README.md) | Published / available | cs,de,el,es,fi,fr,it,pl,ro,sv,uk (+ en config) | Multilingual preference alignment | [public](<https://huggingface.co/datasets/openeurollm/Dolci-Instruct-DPO-translated>) |
 | [openeurollm/smoltalk2-decontaminated](../../datasets/openeurollm-smoltalk2-decontaminated/README.md) | Published / available | primarily en | Decontaminated smoltalk2 | [public](<https://huggingface.co/datasets/openeurollm/smoltalk2-decontaminated>) |
+| [OpenR1-Math-220k staged on LUMI](../../datasets/lumi-openr1-math-220k/README.md) | Staged on LUMI — local revision not pinned | English | Verified-trace math SFT, preference-pair construction, and RLVR prompt seed | [public](<https://huggingface.co/datasets/open-r1/OpenR1-Math-220k>) · LUMI |
 | [qwen35-9b-dpo-parquet](../../datasets/qwen35-9b-dpo-parquet/README.md) | Used in completed run | en | Completed 9B English DPO stage | [public](<https://github.com/BirgerMoell/qwen35-posttrain/blob/main/configs/dpo_qwen35_9b.yaml>) · LUMI |
 | [qwen35-9b-multiling-dpo-parquet](../../datasets/qwen35-9b-multiling-dpo-parquet/README.md) | Configured / runnable | fi,sv,da,no,is + multilingual | Nordic/multilingual DPO mix | [public](<https://github.com/BirgerMoell/qwen35-posttrain/blob/main/configs/dpo_qwen35_9b_multilingual.yaml>) · LUMI |
 | [UltraFeedback](../../datasets/ultrafeedback/README.md) | Candidate | primarily en | General preference baseline | [public](<https://huggingface.co/datasets/openbmb/UltraFeedback>) · LUMI |

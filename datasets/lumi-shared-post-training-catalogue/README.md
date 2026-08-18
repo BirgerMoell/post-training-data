@@ -20,7 +20,11 @@ source_sheet_row: 105
 
 ## What it is for
 
-Umbrella inventory of staged candidates
+This is the landing page for the shared post-training data tree. The directory
+contains hundreds of gigabytes of SFT, preference, reasoning, long-context, and
+evaluation artifacts. Presence here means **available for inspection**, not
+approved for training: several folders have no pinned revision, build manifest,
+license decision, tokenizer record, or post-filter statistics.
 
 ## Where to find it
 
@@ -32,8 +36,29 @@ Umbrella inventory of staged candidates
 
 ## How to use it
 
-- Inspect the recorded source and evidence, select an exact version, and document any conversion before training.
-- Verify the recorded LUMI path still exists and inspect the concrete files, counts, and neighboring documentation before launching a run.
+Start from the individually reviewed entries rather than selecting a directory
+by name:
+
+| Artifact | Stage | Current decision |
+| --- | --- | --- |
+| [English–Finnish long-context SFT](../lumi-long-context-eng-fin-sft/README.md) | Context retention / SFT | P0 candidate; needs lineage, lengths, and loss-mask validation |
+| [Poro2 instruction data](../lumi-poro2-instruction-data/README.md) | Finnish SFT/repair | Staged; provenance and language audit missing |
+| [AM DeepSeek-R1 think mix](../lumi-am-deepseek-r1-think/README.md) | Reasoning SFT | Staged; source, correctness, and trace-policy review missing |
+| [OpenR1-Math-220k](../lumi-openr1-math-220k/README.md) | Reasoning/DPO/RLVR | Public upstream plus local materialization; pin local revision |
+| [Glaive Code Assistant v3](../lumi-glaive-code-assistant-v3/README.md) | Code SFT | Public upstream plus local materialization; execute/filter samples |
+| [BookSum](../lumi-booksum/README.md) | Long summarization | Legal/content reconstruction required |
+| [FLORES-200/FLORES+](../lumi-flores-200/README.md) | Evaluation | Protected; never train |
+| [Tatoeba English–Finnish](../lumi-tatoeba-eng-fin/README.md) | Evaluation | Protected; never train |
+
+Other top-level families observed on 2026-08-18 include `SFTTrainer_format`
+(about 773 GB), `DPOTrainer_format` (about 5.5 GB), HelpSteer3, Llama-Nemotron,
+Nemotron v2, EuroParl, Wikipedia, FinePDFs-Edu, LMSYS Chat 1M, AlpacaEval, and
+ArenaHard. They remain umbrella-level observations until an individual entry
+records exact files, provenance, format, and readiness.
+
+For any selected folder, inspect the concrete files and nearby documentation,
+pin the upstream version or checksum the bytes, generate row/token/language and
+length statistics, review terms, and record the exact conversion before launch.
 
 ## State and ownership
 
@@ -41,10 +66,9 @@ Umbrella inventory of staged candidates
 - **Source type:** LUMI catalogue
 - **Priority:** P1
 - **License / access:** Mixed; LUMI access
-- **Last verified:** 2026-08-11
+- **Last verified:** 2026-08-18 by direct LUMI inspection
 - **Confidence:** High
 
 ## Notes and next action
 
 Every selected file needs ID, revision, license, checksum and lineage.
-

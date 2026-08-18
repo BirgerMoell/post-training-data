@@ -23,8 +23,8 @@ Entries are grouped from the language description recorded on each page. Broad m
 | [fusion-synth](../../datasets/fusion-synth/README.md) | Instruction SFT | Used in research run | en + 8 EU languages |
 | [HPLT v2](../../datasets/hplt-v2/README.md) | Long-context extension | Candidate | European multilingual |
 | [Internally translated Hermes instructions](../../datasets/internally-translated-hermes-instructions/README.md) | Instruction SFT | Historical / superseded | European languages |
+| [Jouni Luoma LUMI long-context blend and runs](../../datasets/lumi-long-context-sample/README.md) | Long-context extension, Continued pretraining | Used in completed 16k/64k/128k runs | European multilingual + en/code/math/science |
 | [LightOn multilingual reasoning SFT](../../datasets/lighton-multilingual-reasoning-sft/README.md) | Reasoning SFT | Candidate | European languages |
-| [LUMI long-context sample](../../datasets/lumi-long-context-sample/README.md) | Long-context extension, Continued pretraining | Staged on LUMI | multilingual |
 | [LUMI shared post-training catalogue](../../datasets/lumi-shared-post-training-catalogue/README.md) | All stages | Staged on LUMI | many languages |
 | [MultiSynt OpenThoughts translations](../../datasets/multisynt-openthoughts-translations/README.md) | Reasoning SFT | Planned | 7 European languages |
 | [oellm-eu-longctx-instruct-v1](../../datasets/oellm-eu-longctx-instruct-v1/README.md) | Long-context extension | Planned | European languages |
@@ -39,11 +39,10 @@ Entries are grouped from the language description recorded on each page. Broad m
 | [openeurollm/ArenaHard-EU-v0 / v0-bis](../../datasets/openeurollm-arenahard-eu-v0-v0-bis/README.md) | Evaluation holdouts | Eval-only — do not train | European languages |
 | [openeurollm/battle-annotations](../../datasets/openeurollm-battle-annotations/README.md) | Evaluation holdouts | Eval-only — do not train | multilingual |
 | [openeurollm/contaminated-documents](../../datasets/openeurollm-contaminated-documents/README.md) | Data quality, filtering, and decontamination | Supporting / filtering | multilingual |
-| [openeurollm/Dolci-Instruct-DPO-translated](../../datasets/openeurollm-dolci-instruct-dpo-translated/README.md) | Preference optimization | Published / available | 11 European languages |
-| [openeurollm/EU-Instruct-Synthetic](../../datasets/openeurollm-eu-instruct-synthetic/README.md) | Instruction SFT | Published / available | 11 European languages |
 | [openeurollm/lmsys-chat-1m-decontaminated](../../datasets/openeurollm-lmsys-chat-1m-decontaminated/README.md) | Instruction SFT | Published / available | multilingual |
 | [openeurollm/nemotron-cc-10K-sample-translated](../../datasets/openeurollm-nemotron-cc-10k-sample-translated/README.md) | Data quality, filtering, and decontamination | Candidate | multilingual |
 | [openeurollm/nemotron-cc-10K-sample-translated-judged](../../datasets/openeurollm-nemotron-cc-10k-sample-translated-judged/README.md) | Data quality, filtering, and decontamination | Supporting / filtering | multilingual |
+| [openeurollm/prelude-base-eval-scores](../../datasets/openeurollm-prelude-base-eval-scores/README.md) | Evaluation holdouts | Supporting evaluation artifact | multilingual |
 | [qwen35-9b-multiling-dpo-parquet](../../datasets/qwen35-9b-multiling-dpo-parquet/README.md) | Preference optimization | Configured / runnable | fi,sv,da,no,is + multilingual |
 | [qwen35-9b-sft-parquet (tulu3-euroblocks-85-15)](../../datasets/qwen35-9b-sft-parquet-tulu3-euroblocks-85-15/README.md) | Instruction SFT | Used in completed run | EU multilingual + en |
 | [WildChat](../../datasets/wildchat/README.md) | Instruction SFT | Used in research run | multilingual |
