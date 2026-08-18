@@ -1,7 +1,7 @@
 # RLVR / GRPO / verifiable RL
 > Generated from the metadata at the top of each dataset page. Run `python3 scripts/build_indexes.py` after changing an entry.
 
-22 entries.
+23 entries.
 
 | Dataset / product | State | Languages | Purpose | Locations |
 | --- | --- | --- | --- | --- |
@@ -25,5 +25,6 @@
 | [NousResearch/hermes-function-calling-v1](../../datasets/nousresearch-hermes-function-calling-v1/README.md) | Used in completed run | en | Hermes/Qwen-formatted calls | [public](<https://huggingface.co/datasets/NousResearch/hermes-function-calling-v1>) |
 | [oellm-eu-tool-agent-v1](../../datasets/oellm-eu-tool-agent-v1/README.md) | Planned | European languages | Planned multilingual tool product | [public](<https://github.com/BirgerMoell/qwen35-posttrain/blob/main/docs/EU_DATA_STRATEGY.md>) |
 | [openai/MMMLU](../../datasets/openai-mmmlu/README.md) | Used in completed run | multilingual | Multilingual MMLU-style MCQs | [public](<https://huggingface.co/datasets/openai/MMMLU>) |
+| [OpenR1-Math-220k staged on LUMI](../../datasets/lumi-openr1-math-220k/README.md) | Staged on LUMI — local revision not pinned | English | Verified-trace math SFT, preference-pair construction, and RLVR prompt seed | [public](<https://huggingface.co/datasets/open-r1/OpenR1-Math-220k>) · LUMI |
 | [Salesforce/xlam-function-calling-60k](../../datasets/salesforce-xlam-function-calling-60k/README.md) | Candidate | en | APIGen-style function calls | [public](<https://huggingface.co/datasets/Salesforce/xlam-function-calling-60k>) |
 | [Team-ACE/ToolACE](../../datasets/team-ace-toolace/README.md) | Used in completed run | en | Multi-turn dependency calls | [public](<https://huggingface.co/datasets/Team-ACE/ToolACE>) |

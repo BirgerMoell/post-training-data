@@ -6,4 +6,7 @@ Entries are grouped from the language description recorded on each page. Broad m
 | Dataset / product | Training use | State | Recorded coverage |
 | --- | --- | --- | --- |
 | [European official/national exam bundle (23 IDs)](../../datasets/european-official-national-exam-bundle-23-ids/README.md) | Preference optimization, RLVR / GRPO / verifiable RL | Used in completed run | sq,bg,ca,cs,da,en,es,et,eu,it,pl,sk,sv |
+| [FLORES-200 / FLORES+ evaluation copy on LUMI](../../datasets/lumi-flores-200/README.md) | Evaluation holdouts | Evaluation-only — do not train | 26 European language files plus FLORES+ combined dev/devtest |
+| [openeurollm/Dolci-Instruct-DPO-translated](../../datasets/openeurollm-dolci-instruct-dpo-translated/README.md) | Preference optimization | Published / available | cs,de,el,es,fi,fr,it,pl,ro,sv,uk (+ en config) |
 | [openeurollm/Dolci-Instruct-SFT-translated](../../datasets/openeurollm-dolci-instruct-sft-translated/README.md) | Instruction SFT | Published / available | cs,de,el,es,fi,fr,it,nl,pl,ro,sv,uk |
+| [openeurollm/EU-Instruct-Synthetic](../../datasets/openeurollm-eu-instruct-synthetic/README.md) | Instruction SFT | Published / available | cs,de,el,es,fr,it,nl,pl,pt,ro,uk |

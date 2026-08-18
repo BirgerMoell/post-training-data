@@ -10,6 +10,19 @@ Keep entries useful to someone preparing a training run. Prefer concrete locatio
 4. Run `python3 scripts/build_indexes.py --check`.
 5. Open a pull request.
 
+## Update the training plan
+
+Training-stage pages are hand-maintained under `training-plan/`. When changing
+a proposed mixture or gate:
+
+- state whether it is confirmed, runnable, proposed, or blocked;
+- link the exact dataset pages and evidence;
+- distinguish completed-run hyperparameters from pilot suggestions;
+- update `training-plan/DATA_GAPS.md` when a blocker is opened or closed;
+- update `training-plan/LANGUAGE_COVERAGE.md` when capability depth changes;
+- run the catalogue check, which also validates relative Markdown links; and
+- include the evaluation evidence required by the stage's exit gate.
+
 ## Update a dataset
 
 Update its page when any of these change:
@@ -46,4 +59,3 @@ Use one of these `status_key` values:
 - Never commit credentials or signed download URLs.
 - Record the date on which a location was last verified.
 - If an artifact exists in a personal directory, identify the responsible owner and the intended shared destination.
-

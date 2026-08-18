@@ -10,10 +10,17 @@ This repository answers five practical questions:
 4. Where can it be found?
 5. What is its current state and next action?
 
+It also contains an operational [stage-by-stage training plan](training-plan/README.md)
+that maps the available data to concrete training phases, entry and exit gates,
+frameworks, artifact locations, and unresolved blockers.
+
 The initial catalogue was seeded from the OpenEuroLLM post-training data register on 2026-08-18. Each dataset or product has its own page and can be updated through an ordinary pull request.
 
 ## Browse the catalogue
 
+- [Training plan and stage readiness](training-plan/README.md)
+- [Missing data and implementation blockers](training-plan/DATA_GAPS.md)
+- [Language coverage by capability](training-plan/LANGUAGE_COVERAGE.md)
 - [By training type](training-types/README.md)
 - [By language](languages/README.md)
 - [By state](status/README.md)
@@ -55,6 +62,11 @@ The catalogue covers instruction SFT, reasoning SFT, preference optimization, RL
 
 Evaluation-only entries are deliberately included so that they are visible and kept out of training.
 
+The training plan distinguishes four kinds of statement: confirmed facts,
+runnable configurations that still require a data freeze, proposed recipes
+that must pass a pilot, and blocked stages. Proposed mixture weights are
+starting points for ablation, not records of completed OpenEuroLLM runs.
+
 ## Related repositories
 
 - [OpenEuroLLM/post-training](https://github.com/OpenEuroLLM/post-training)
@@ -63,4 +75,3 @@ Evaluation-only entries are deliberately included so that they are visible and k
 - [OpenEuroLLM/post-training-decontamination](https://github.com/OpenEuroLLM/post-training-decontamination)
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) to add or update an entry and [MIRRORING.md](MIRRORING.md) for the future OpenEuroLLM mirror.
-

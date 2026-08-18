@@ -22,11 +22,17 @@ Entries are grouped from the language description recorded on each page. Broad m
 | [birgermoell/oellm-longctx-tokenized-natural-128k-256k-pilot-v1](../../datasets/birgermoell-oellm-longctx-tokenized-natural-128k-256k-pilot-v1/README.md) | Long-context extension, Continued pretraining | Published / available | en + multilingual |
 | [birgermoell/oellm-longctx-tokenized-structured-128k-256k-v1](../../datasets/birgermoell-oellm-longctx-tokenized-structured-128k-256k-v1/README.md) | Long-context extension, Continued pretraining | Published / available | en |
 | [birgermoell/oellm-longctx-tokenized-superlong-512k-1m-2m-v2](../../datasets/birgermoell-oellm-longctx-tokenized-superlong-512k-1m-2m-v2/README.md) | Long-context extension, Continued pretraining | Published / available | en,sv,de,fr,es,pl |
+| [BookSum staged on LUMI](../../datasets/lumi-booksum/README.md) | Long-context extension, Instruction SFT | Staged on LUMI — content and legal review required | English |
 | [European official/national exam bundle (23 IDs)](../../datasets/european-official-national-exam-bundle-23-ids/README.md) | Preference optimization, RLVR / GRPO / verifiable RL | Used in completed run | sq,bg,ca,cs,da,en,es,et,eu,it,pl,sk,sv |
+| [FLORES-200 / FLORES+ evaluation copy on LUMI](../../datasets/lumi-flores-200/README.md) | Evaluation holdouts | Evaluation-only — do not train | 26 European language files plus FLORES+ combined dev/devtest |
 | [fusion-synth](../../datasets/fusion-synth/README.md) | Instruction SFT | Used in research run | en + 8 EU languages |
+| [Glaive Code Assistant v3 staged on LUMI](../../datasets/lumi-glaive-code-assistant-v3/README.md) | Reasoning SFT | Staged on LUMI — conversion revision not pinned | English prompts and multilingual programming languages |
 | [glaiveai/glaive-function-calling-v2](../../datasets/glaiveai-glaive-function-calling-v2/README.md) | RLVR / GRPO / verifiable RL, Tool use and agentic training | Used in completed run | en |
 | [HuggingFaceTB/smoltalk2 — Preference](../../datasets/huggingfacetb-smoltalk2-preference/README.md) | Preference optimization | Configured / runnable | primarily en |
+| [Jouni Luoma LUMI long-context blend and runs](../../datasets/lumi-long-context-sample/README.md) | Long-context extension, Continued pretraining | Used in completed 16k/64k/128k runs | European multilingual + en/code/math/science |
 | [LLM360/TxT360-3efforts — agent/high](../../datasets/llm360-txt360-3efforts-agent-high/README.md) | Tool use and agentic training | Used in research run | primarily en |
+| [LUMI AM DeepSeek-R1 think mixture](../../datasets/lumi-am-deepseek-r1-think/README.md) | Reasoning SFT | Staged on LUMI — lineage and trace policy required | English observed; code included; full distribution unmeasured |
+| [LUMI English–Finnish long-context SFT blend](../../datasets/lumi-long-context-eng-fin-sft/README.md) | Long-context extension, Instruction SFT | Staged on LUMI — validation required | en, fi (declared by directory name; distribution unmeasured) |
 | [Nanbeige/ToolMind — GraphSyn](../../datasets/nanbeige-toolmind-graphsyn/README.md) | Tool use and agentic training | Used in research run | primarily en |
 | [NousResearch/hermes-function-calling-v1](../../datasets/nousresearch-hermes-function-calling-v1/README.md) | RLVR / GRPO / verifiable RL, Tool use and agentic training | Used in completed run | en |
 | [nvidia/ChatQA2-Long-SFT-data](../../datasets/nvidia-chatqa2-long-sft-data/README.md) | Long-context extension | Planned | primarily en |
@@ -45,14 +51,17 @@ Entries are grouped from the language description recorded on each page. Broad m
 | [openeurollm/Dolci-Think-SFT-32B-decontaminated](../../datasets/openeurollm-dolci-think-sft-32b-decontaminated/README.md) | Reasoning SFT | Published / available | primarily en |
 | [openeurollm/Dolci-Think-SFT-7B-decontaminated](../../datasets/openeurollm-dolci-think-sft-7b-decontaminated/README.md) | Reasoning SFT | Published / available | primarily en |
 | [openeurollm/dolci-think-sft-tokenized](../../datasets/openeurollm-dolci-think-sft-tokenized/README.md) | Reasoning SFT | Published / available | primarily en |
+| [openeurollm/jeopardy](../../datasets/openeurollm-jeopardy/README.md) | Evaluation holdouts | Evaluation-only — do not train | en |
 | [openeurollm/Nemotron-Post-Training-Dataset-v2-decontaminated](../../datasets/openeurollm-nemotron-post-training-dataset-v2-decontaminated/README.md) | Reasoning SFT | Published / available | primarily en |
 | [openeurollm/open-perfectblend-decontaminated](../../datasets/openeurollm-open-perfectblend-decontaminated/README.md) | Instruction SFT | Published / available | primarily en |
 | [openeurollm/orca-agentinstruct-1M-v1-decontaminated](../../datasets/openeurollm-orca-agentinstruct-1m-v1-decontaminated/README.md) | Instruction SFT | Published / available | primarily en |
 | [openeurollm/smoltalk2-decontaminated](../../datasets/openeurollm-smoltalk2-decontaminated/README.md) | Preference optimization | Published / available | primarily en |
+| [OpenR1-Math-220k staged on LUMI](../../datasets/lumi-openr1-math-220k/README.md) | Reasoning SFT, Preference optimization, RLVR / GRPO / verifiable RL | Staged on LUMI — local revision not pinned | English |
 | [qwen35-9b-dpo-parquet](../../datasets/qwen35-9b-dpo-parquet/README.md) | Preference optimization | Used in completed run | en |
 | [qwen35-9b-reasoning-sft-parquet](../../datasets/qwen35-9b-reasoning-sft-parquet/README.md) | Reasoning SFT | Used in completed run | en,fi |
 | [qwen35-9b-sft-parquet (tulu3-euroblocks-85-15)](../../datasets/qwen35-9b-sft-parquet-tulu3-euroblocks-85-15/README.md) | Instruction SFT | Used in completed run | EU multilingual + en |
 | [Salesforce/xlam-function-calling-60k](../../datasets/salesforce-xlam-function-calling-60k/README.md) | RLVR / GRPO / verifiable RL, Tool use and agentic training | Candidate | en |
+| [Tatoeba MT Challenge English–Finnish holdout on LUMI](../../datasets/lumi-tatoeba-eng-fin/README.md) | Evaluation holdouts | Evaluation-only — do not train | English, Finnish |
 | [Team-ACE/ToolACE](../../datasets/team-ace-toolace/README.md) | RLVR / GRPO / verifiable RL, Tool use and agentic training | Used in completed run | en |
 | [THUDM/LongAlign-10k](../../datasets/thudm-longalign-10k/README.md) | Long-context extension | Candidate | primarily en |
 | [TMAX agentic RL reproduction](../../datasets/tmax-agentic-rl-reproduction/README.md) | Tool use and agentic training | Candidate | primarily en |

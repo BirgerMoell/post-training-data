@@ -1,7 +1,7 @@
 # Used in a completed run
 > Generated from the metadata at the top of each dataset page. Run `python3 scripts/build_indexes.py` after changing an entry.
 
-22 entries.
+23 entries.
 
 | Dataset / product | Training use | Languages | Locations |
 | --- | --- | --- | --- |
@@ -19,6 +19,7 @@
 | [facebook/belebele](../../datasets/facebook-belebele/README.md) | Preference optimization, RLVR / GRPO / verifiable RL | multilingual | [public](<https://huggingface.co/datasets/facebook/belebele>) |
 | [Finnish DeepSeek-distilled math corpus](../../datasets/finnish-deepseek-distilled-math-corpus/README.md) | Reasoning SFT | fi | LUMI |
 | [glaiveai/glaive-function-calling-v2](../../datasets/glaiveai-glaive-function-calling-v2/README.md) | RLVR / GRPO / verifiable RL, Tool use and agentic training | en | [public](<https://huggingface.co/datasets/glaiveai/glaive-function-calling-v2>) |
+| [Jouni Luoma LUMI long-context blend and runs](../../datasets/lumi-long-context-sample/README.md) | Long-context extension, Continued pretraining | European multilingual + en/code/math/science | LUMI |
 | [NousResearch/hermes-function-calling-v1](../../datasets/nousresearch-hermes-function-calling-v1/README.md) | RLVR / GRPO / verifiable RL, Tool use and agentic training | en | [public](<https://huggingface.co/datasets/NousResearch/hermes-function-calling-v1>) |
 | [nvidia/Llama-Nemotron-Post-Training-Dataset](../../datasets/nvidia-llama-nemotron-post-training-dataset/README.md) | Reasoning SFT | primarily en | [public](<https://huggingface.co/datasets/nvidia/Llama-Nemotron-Post-Training-Dataset>) · LUMI |
 | [openai/MMMLU](../../datasets/openai-mmmlu/README.md) | Preference optimization, RLVR / GRPO / verifiable RL | multilingual | [public](<https://huggingface.co/datasets/openai/MMMLU>) |
