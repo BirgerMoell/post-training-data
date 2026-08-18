@@ -1,0 +1,35 @@
+# Browse by language
+> Generated from the metadata at the top of each dataset page. Run `python3 scripts/build_indexes.py` after changing an entry.
+
+- [Albanian](sq/README.md) — 1 entries
+- [Basque](eu/README.md) — 1 entries
+- [Bulgarian](bg/README.md) — 2 entries
+- [Catalan](ca/README.md) — 1 entries
+- [Code](code/README.md) — 4 entries
+- [Croatian](hr/README.md) — 1 entries
+- [Czech](cs/README.md) — 2 entries
+- [Danish](da/README.md) — 3 entries
+- [Dutch](nl/README.md) — 1 entries
+- [English](en/README.md) — 53 entries
+- [Estonian](et/README.md) — 2 entries
+- [Finnish](fi/README.md) — 6 entries
+- [French](fr/README.md) — 2 entries
+- [German](de/README.md) — 2 entries
+- [Greek](el/README.md) — 1 entries
+- [Hungarian](hu/README.md) — 1 entries
+- [Icelandic](is/README.md) — 2 entries
+- [Irish](ga/README.md) — 1 entries
+- [Italian](it/README.md) — 2 entries
+- [Latvian](lv/README.md) — 1 entries
+- [Lithuanian](lt/README.md) — 1 entries
+- [Maltese](mt/README.md) — 1 entries
+- [Multilingual and European language groups](multilingual/README.md) — 42 entries
+- [Norwegian](no/README.md) — 1 entries
+- [Polish](pl/README.md) — 4 entries
+- [Romanian](ro/README.md) — 2 entries
+- [Slovak](sk/README.md) — 2 entries
+- [Slovenian](sl/README.md) — 1 entries
+- [Spanish](es/README.md) — 3 entries
+- [Swedish](sv/README.md) — 7 entries
+- [Ukrainian](uk/README.md) — 2 entries
+- [Unspecified](unspecified/README.md) — 3 entries
