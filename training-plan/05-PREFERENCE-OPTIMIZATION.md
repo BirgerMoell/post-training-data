@@ -9,15 +9,15 @@ preserving multilingual, reasoning, tool, and long-context capabilities.
 
 | Source | State | Role |
 | --- | --- | --- |
-| [Dolci Instruct DPO translated](../datasets/openeurollm-dolci-instruct-dpo-translated/README.md) | Public; 11 European languages plus English config | Primary multilingual preference candidate |
-| [SmolTalk2 decontaminated](../datasets/openeurollm-smoltalk2-decontaminated/README.md) | Public | Primary decontaminated general preference source |
-| [Dolci Instruct DPO](../datasets/allenai-dolci-instruct-dpo/README.md) | Used in completed run; on LUMI | English control/reproduction |
-| [HelpSteer3](../datasets/nvidia-helpsteer3/README.md) | Candidate; on LUMI | Attribute-based quality and preference ablation |
-| [UltraFeedback](../datasets/ultrafeedback/README.md) | Candidate; on LUMI | Broad English preference data after license/decontamination review |
-| [Exam DPO artifact](../datasets/exam-dpo-parquet/README.md) | Configured/runnable | Verifiable multilingual domain preference branch |
-| [Medical DPO artifact](../datasets/medical-dpo-parquet/README.md) | Staged on LUMI | Swedish medical branch, not general flagship data |
-| [Qwen multilingual DPO artifact](../datasets/qwen35-9b-multiling-dpo-parquet/README.md) | Configured/runnable | Pipeline control; verify model-template portability |
-| [OpenR1-Math-220k on LUMI](../datasets/lumi-openr1-math-220k/README.md) | Staged; multiple scored traces upstream | Math-only pair construction after revision, verifier, and margin checks |
+| [Dolci Instruct DPO translated](../openeurollm-dolci-instruct-dpo-translated/0.0.0/README.md) | Public; 11 European languages plus English config | Primary multilingual preference candidate |
+| [SmolTalk2 decontaminated](../openeurollm-smoltalk2-decontaminated/0.0.0/README.md) | Public | Primary decontaminated general preference source |
+| [Dolci Instruct DPO](../allenai-dolci-instruct-dpo/0.0.0/README.md) | Used in completed run; on LUMI | English control/reproduction |
+| [HelpSteer3](../nvidia-helpsteer3/0.0.0/README.md) | Candidate; on LUMI | Attribute-based quality and preference ablation |
+| [UltraFeedback](../ultrafeedback/0.0.0/README.md) | Candidate; on LUMI | Broad English preference data after license/decontamination review |
+| [Exam DPO artifact](../exam-dpo-parquet/0.0.0/README.md) | Configured/runnable | Verifiable multilingual domain preference branch |
+| [Medical DPO artifact](../medical-dpo-parquet/0.0.0/README.md) | Staged on LUMI | Swedish medical branch, not general flagship data |
+| [Qwen multilingual DPO artifact](../qwen35-9b-multiling-dpo-parquet/0.0.0/README.md) | Configured/runnable | Pipeline control; verify model-template portability |
+| [OpenR1-Math-220k on LUMI](../lumi-openr1-math-220k/0.0.0/README.md) | Staged; multiple scored traces upstream | Math-only pair construction after revision, verifier, and margin checks |
 
 ## Data acceptance checks
 

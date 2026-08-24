@@ -11,27 +11,27 @@ branch passes its own gate.
 
 | Source | State | Use |
 | --- | --- | --- |
-| [Dolci Think 7B decontaminated](../datasets/openeurollm-dolci-think-sft-7b-decontaminated/README.md) | Public | Primary English reasoning SFT branch |
-| [Dolci Think 32B decontaminated](../datasets/openeurollm-dolci-think-sft-32b-decontaminated/README.md) | Public | Higher-capacity teacher-trace ablation |
-| [Nemotron Post-Training v2 decontaminated](../datasets/openeurollm-nemotron-post-training-dataset-v2-decontaminated/README.md) | Public | STEM/math/reasoning mix after split review |
-| [OpenThoughts 114k](../datasets/open-thoughts-openthoughts-114k/README.md) and [OpenThoughts2 1M](../datasets/open-thoughts-openthoughts2-1m/README.md) | Candidate | Correctness-filtered ablations |
-| [Finnish distilled math](../datasets/finnish-deepseek-distilled-math-corpus/README.md) | Used in completed run | Finnish reasoning seed |
-| [MultiSynt OpenThoughts translations](../datasets/multisynt-openthoughts-translations/README.md) | Planned | Seven-language reasoning expansion; no canonical artifact recorded |
-| [OpenR1-Math-220k on LUMI](../datasets/lumi-openr1-math-220k/README.md) | 5.12 GB local default JSONL; public upstream | Correctness-annotated math traces after pinning local derivation |
-| [AM DeepSeek-R1 think mix on LUMI](../datasets/lumi-am-deepseek-r1-think/README.md) | 40.2 GB combined plus six component files | Large math/code/IF/science/multi-turn candidate; lineage and verification missing |
-| [Glaive Code Assistant v3 on LUMI](../datasets/lumi-glaive-code-assistant-v3/README.md) | 950k public rows; 1.92 GB local JSONL | Code SFT after revision pinning, deduplication, and execution filtering |
+| [Dolci Think 7B decontaminated](../openeurollm-dolci-think-sft-7b-decontaminated/0.0.0/README.md) | Public | Primary English reasoning SFT branch |
+| [Dolci Think 32B decontaminated](../openeurollm-dolci-think-sft-32b-decontaminated/0.0.0/README.md) | Public | Higher-capacity teacher-trace ablation |
+| [Nemotron Post-Training v2 decontaminated](../openeurollm-nemotron-post-training-dataset-v2-decontaminated/0.0.0/README.md) | Public | STEM/math/reasoning mix after split review |
+| [OpenThoughts 114k](../open-thoughts-openthoughts-114k/0.0.0/README.md) and [OpenThoughts2 1M](../open-thoughts-openthoughts2-1m/0.0.0/README.md) | Candidate | Correctness-filtered ablations |
+| [Finnish distilled math](../finnish-deepseek-distilled-math-corpus/0.0.0/README.md) | Used in completed run | Finnish reasoning seed |
+| [MultiSynt OpenThoughts translations](../multisynt-openthoughts-translations/0.0.0/README.md) | Planned | Seven-language reasoning expansion; no canonical artifact recorded |
+| [OpenR1-Math-220k on LUMI](../lumi-openr1-math-220k/0.0.0/README.md) | 5.12 GB local default JSONL; public upstream | Correctness-annotated math traces after pinning local derivation |
+| [AM DeepSeek-R1 think mix on LUMI](../lumi-am-deepseek-r1-think/0.0.0/README.md) | 40.2 GB combined plus six component files | Large math/code/IF/science/multi-turn candidate; lineage and verification missing |
+| [Glaive Code Assistant v3 on LUMI](../lumi-glaive-code-assistant-v3/0.0.0/README.md) | 950k public rows; 1.92 GB local JSONL | Code SFT after revision pinning, deduplication, and execution filtering |
 
 ## Tool/agentic data available
 
 | Source | State | Use |
 | --- | --- | --- |
-| [OpenEuroLLM function-calling mixture](../datasets/openeurollm-function-calling-mixture-220/README.md) | Research run | Project control mixture; locate/freeze exact artifact |
-| [OpenEuroLLM EU tool-use v1](../datasets/birgermoell-oellm-eu-tooluse-v1/README.md) | Used in completed run | Verified execution/function-call seed |
-| [ToolACE](../datasets/team-ace-toolace/README.md) | Used in completed run | Diverse function calling |
-| [Hermes function calling](../datasets/nousresearch-hermes-function-calling-v1/README.md) | Used in completed run | Structured calls/control |
-| [Glaive function calling](../datasets/glaiveai-glaive-function-calling-v2/README.md) | Used in completed run | Additional English tool breadth |
-| [Nemotron Agentic/SFT Agentic](../datasets/nvidia-nemotron-agentic-v1-tool-calling/README.md) | Research run | Interactive-agent candidate |
-| [xLAM](../datasets/salesforce-xlam-function-calling-60k/README.md) | Candidate | Function-call generalization |
+| [OpenEuroLLM function-calling mixture](../openeurollm-function-calling-mixture-220/0.0.0/README.md) | Research run | Project control mixture; locate/freeze exact artifact |
+| [OpenEuroLLM EU tool-use v1](../birgermoell-oellm-eu-tooluse-v1/0.0.0/README.md) | Used in completed run | Verified execution/function-call seed |
+| [ToolACE](../team-ace-toolace/0.0.0/README.md) | Used in completed run | Diverse function calling |
+| [Hermes function calling](../nousresearch-hermes-function-calling-v1/0.0.0/README.md) | Used in completed run | Structured calls/control |
+| [Glaive function calling](../glaiveai-glaive-function-calling-v2/0.0.0/README.md) | Used in completed run | Additional English tool breadth |
+| [Nemotron Agentic/SFT Agentic](../nvidia-nemotron-agentic-v1-tool-calling/0.0.0/README.md) | Research run | Interactive-agent candidate |
+| [xLAM](../salesforce-xlam-function-calling-60k/0.0.0/README.md) | Candidate | Function-call generalization |
 
 Most tool data is English. Do not advertise multilingual tool use from this
 stage without a separate evaluation and translated/native tool artifact.

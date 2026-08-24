@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build and validate the human-facing catalogue indexes."""
+"""Build and validate the human-facing post-training catalogue indexes."""
 
 from __future__ import annotations
 
@@ -10,8 +10,8 @@ import sys
 from pathlib import Path
 from urllib.parse import unquote
 
+
 ROOT = Path(__file__).resolve().parents[1]
-DATASETS = ROOT / "datasets"
 
 TYPE_LABELS = {
     "instruction-sft": "Instruction SFT",
@@ -79,20 +79,55 @@ STATUS_LABELS = {
     "eval-only": "Evaluation-only — do not train",
 }
 
+CATALOGUE_STATUS_LABELS = {
+    "D": "Draft",
+    "P": "Published",
+    "E": "Deprecated",
+}
+
+STATISTIC_FIELDS = {"bytes", "documents", "segments", "characters", "tokens"}
+CANONICAL_ANCHORS = {
+    "background",
+    "sources",
+    "statistics",
+    "metadata",
+    "languages",
+    "access",
+    "use",
+    "post-training-use",
+    "quality",
+    "curator",
+    "notes",
+}
+
 REQUIRED = {
     "name",
     "slug",
+    "version",
+    "catalogue_status",
     "training_types",
     "status_key",
     "status",
     "language_keys",
+    "language_codes",
     "languages",
     "purpose",
+    "source_type",
+    "priority",
+    "curator",
+    "license_access",
     "public_location",
     "lumi_location",
+    "data_format",
+    "compression",
+    "statistics",
+    "last_verified",
+    "confidence",
     "source_sheet_row",
 }
 
+VERSION = re.compile(r"^\d+\.\d+\.\d+(?:[-+][0-9A-Za-z.-]+)?$")
+LANGUAGE_CODE = re.compile(r"^(?:[a-z]{3}|und|zxx)_[A-Z][a-z]{3}$")
 MARKDOWN_LINK = re.compile(r"(?<!!)\[[^\]]*\]\(([^)]+)\)")
 
 
@@ -121,36 +156,110 @@ def parse_frontmatter(path: Path) -> dict:
     return metadata
 
 
+def entry_paths() -> list[Path]:
+    return sorted(
+        path
+        for path in ROOT.glob("*/*/README.md")
+        if VERSION.fullmatch(path.parent.name)
+    )
+
+
 def load_entries() -> list[dict]:
     entries: list[dict] = []
     errors: list[str] = []
-    seen_slugs: set[str] = set()
+    seen_keys: set[tuple[str, str]] = set()
 
-    for path in sorted(DATASETS.glob("*/README.md")):
-        if path.parent.name.startswith("_"):
-            continue
+    for path in entry_paths():
         try:
             item = parse_frontmatter(path)
             missing = REQUIRED - item.keys()
             if missing:
                 errors.append(f"{path}: missing {sorted(missing)}")
                 continue
-            if item["slug"] != path.parent.name:
+
+            slug = path.parent.parent.name
+            version = path.parent.name
+            if item["slug"] != slug:
+                errors.append(f"{path}: slug {item['slug']!r} does not match {slug!r}")
+            if item["version"] != version:
                 errors.append(
-                    f"{path}: slug {item['slug']!r} does not match folder name"
+                    f"{path}: version {item['version']!r} does not match folder {version!r}"
                 )
-            if item["slug"] in seen_slugs:
-                errors.append(f"{path}: duplicate slug {item['slug']!r}")
-            seen_slugs.add(item["slug"])
+            key = (item["slug"], item["version"])
+            if key in seen_keys:
+                errors.append(f"{path}: duplicate dataset version {key!r}")
+            seen_keys.add(key)
+
+            if item["catalogue_status"] not in CATALOGUE_STATUS_LABELS:
+                errors.append(
+                    f"{path}: catalogue_status must be one of D, P, or E"
+                )
             if not isinstance(item["training_types"], list) or not item["training_types"]:
                 errors.append(f"{path}: training_types must be a non-empty list")
-            for key in item.get("training_types", []):
-                if key not in TYPE_LABELS:
-                    errors.append(f"{path}: unknown training type {key!r}")
+            for training_type in item.get("training_types", []):
+                if training_type not in TYPE_LABELS:
+                    errors.append(f"{path}: unknown training type {training_type!r}")
             if item["status_key"] not in STATUS_LABELS:
                 errors.append(f"{path}: unknown status_key {item['status_key']!r}")
             if not isinstance(item["language_keys"], list) or not item["language_keys"]:
                 errors.append(f"{path}: language_keys must be a non-empty list")
+            for language_key in item.get("language_keys", []):
+                if language_key not in LANGUAGE_LABELS:
+                    errors.append(f"{path}: unknown language key {language_key!r}")
+            if not isinstance(item["language_codes"], list):
+                errors.append(f"{path}: language_codes must be a list")
+            for code in item.get("language_codes", []):
+                if not isinstance(code, str) or not LANGUAGE_CODE.fullmatch(code):
+                    errors.append(
+                        f"{path}: invalid language code {code!r}; use ISO 639-3_ISO 15924"
+                    )
+
+            statistics = item["statistics"]
+            if not isinstance(statistics, dict) or set(statistics) != STATISTIC_FIELDS:
+                errors.append(
+                    f"{path}: statistics must contain exactly {sorted(STATISTIC_FIELDS)}"
+                )
+            else:
+                for name, value in statistics.items():
+                    if value is not None and (
+                        not isinstance(value, int) or isinstance(value, bool) or value < 0
+                    ):
+                        errors.append(f"{path}: statistics.{name} must be null or >= 0")
+
+            if item["data_format"] is not None and not isinstance(item["data_format"], str):
+                errors.append(f"{path}: data_format must be a string or null")
+            if item["compression"] is not None and not isinstance(item["compression"], str):
+                errors.append(f"{path}: compression must be a string or null")
+            if item["source_sheet_row"] is not None and (
+                not isinstance(item["source_sheet_row"], int)
+                or isinstance(item["source_sheet_row"], bool)
+                or item["source_sheet_row"] < 1
+            ):
+                errors.append(f"{path}: source_sheet_row must be a positive integer or null")
+
+            content = path.read_text(encoding="utf-8")
+            missing_anchors = {
+                anchor
+                for anchor in CANONICAL_ANCHORS
+                if f'id="{anchor}"' not in content
+            }
+            if missing_anchors:
+                errors.append(f"{path}: missing canonical anchors {sorted(missing_anchors)}")
+            lifecycle_marker = (
+                f"**[{CATALOGUE_STATUS_LABELS[item['catalogue_status']].upper()}] "
+                f"(Version {item['version']};"
+            )
+            if lifecycle_marker not in content:
+                errors.append(
+                    f"{path}: lifecycle heading does not match frontmatter "
+                    f"({lifecycle_marker!r})"
+                )
+            if item["status_key"] == "eval-only" and not (
+                "never train" in content.casefold()
+                or "never use for training" in content.casefold()
+            ):
+                errors.append(f"{path}: eval-only entry must explicitly say never train")
+
             entries.append(item)
         except ValueError as exc:
             errors.append(str(exc))
@@ -158,8 +267,8 @@ def load_entries() -> list[dict]:
     if errors:
         raise ValueError("\n".join(errors))
     if not entries:
-        raise ValueError("No dataset entries found")
-    return sorted(entries, key=lambda item: item["name"].casefold())
+        raise ValueError("No versioned dataset entries found")
+    return sorted(entries, key=lambda item: (item["name"].casefold(), item["version"]))
 
 
 def validate_local_links() -> list[str]:
@@ -188,7 +297,10 @@ def clean(value: object) -> str:
 
 
 def dataset_link(item: dict, prefix: str) -> str:
-    return f"[{clean(item['name'])}]({prefix}datasets/{item['slug']}/README.md)"
+    return (
+        f"[{clean(item['name'])}]"
+        f"({prefix}{item['slug']}/{item['version']}/README.md)"
+    )
 
 
 def type_text(item: dict) -> str:
@@ -206,7 +318,7 @@ def locations(item: dict) -> str:
 
 def generated_note() -> str:
     return (
-        "> Generated from the metadata at the top of each dataset page. "
+        "> Generated from the JSON frontmatter in each versioned dataset entry. "
         "Run `python3 scripts/build_indexes.py` after changing an entry.\n"
     )
 
@@ -224,13 +336,25 @@ def build_outputs(entries: list[dict]) -> dict[Path, str]:
     catalogue = [
         "# Complete catalogue\n",
         generated_note(),
-        f"\n{len(entries)} datasets, artifacts, products, and support resources are currently listed.\n\n",
-        table_header(["Dataset / product", "Training use", "State", "Languages", "Locations"]),
+        f"\n{len(entries)} versioned datasets, artifacts, products, and support resources are currently listed.\n\n",
+        table_header(
+            [
+                "Dataset / product",
+                "Version",
+                "Catalogue",
+                "Training use",
+                "Operational state",
+                "Languages",
+                "Locations",
+            ]
+        ),
     ]
     for item in entries:
         catalogue.append(
-            f"| {dataset_link(item, '')} | {clean(type_text(item))} | "
-            f"{clean(item['status'])} | {clean(item['languages'])} | {locations(item)} |\n"
+            f"| {dataset_link(item, '')} | {clean(item['version'])} | "
+            f"{CATALOGUE_STATUS_LABELS[item['catalogue_status']]} | "
+            f"{clean(type_text(item))} | {clean(item['status'])} | "
+            f"{clean(item['languages'])} | {locations(item)} |\n"
         )
     outputs[ROOT / "CATALOGUE.md"] = "".join(catalogue)
 
@@ -247,12 +371,16 @@ def build_outputs(entries: list[dict]) -> dict[Path, str]:
             f"# {label}\n",
             generated_note(),
             f"\n{len(type_groups[key])} entries.\n\n",
-            table_header(["Dataset / product", "State", "Languages", "Purpose", "Locations"]),
+            table_header(
+                ["Dataset / product", "Version", "Catalogue", "Operational state", "Languages", "Purpose", "Locations"]
+            ),
         ]
         for item in type_groups[key]:
             body.append(
-                f"| {dataset_link(item, '../../')} | {clean(item['status'])} | "
-                f"{clean(item['languages'])} | {clean(item['purpose'])} | {locations(item)} |\n"
+                f"| {dataset_link(item, '../../')} | {clean(item['version'])} | "
+                f"{CATALOGUE_STATUS_LABELS[item['catalogue_status']]} | "
+                f"{clean(item['status'])} | {clean(item['languages'])} | "
+                f"{clean(item['purpose'])} | {locations(item)} |\n"
             )
         outputs[ROOT / "training-types" / key / "README.md"] = "".join(body)
     outputs[ROOT / "training-types" / "README.md"] = "".join(type_overview)
@@ -265,47 +393,90 @@ def build_outputs(entries: list[dict]) -> dict[Path, str]:
     for key in language_keys:
         label = LANGUAGE_LABELS.get(key, key.upper())
         group = [item for item in entries if key in item["language_keys"]]
-        language_overview.append(
-            f"- [{label}]({key}/README.md) — {len(group)} entries\n"
-        )
+        language_overview.append(f"- [{label}]({key}/README.md) — {len(group)} entries\n")
         body = [
             f"# {label}\n",
             generated_note(),
             (
-                "\nEntries are grouped from the language description recorded on each page. "
+                "\nEntries are grouped from the recorded coverage on each page. "
                 "Broad multilingual entries may not enumerate every included language.\n\n"
             ),
-            table_header(["Dataset / product", "Training use", "State", "Recorded coverage"]),
+            table_header(
+                ["Dataset / product", "Version", "Training use", "Catalogue", "Operational state", "Recorded coverage"]
+            ),
         ]
         for item in group:
             body.append(
-                f"| {dataset_link(item, '../../')} | {clean(type_text(item))} | "
+                f"| {dataset_link(item, '../../')} | {clean(item['version'])} | "
+                f"{clean(type_text(item))} | "
+                f"{CATALOGUE_STATUS_LABELS[item['catalogue_status']]} | "
                 f"{clean(item['status'])} | {clean(item['languages'])} |\n"
             )
         outputs[ROOT / "languages" / key / "README.md"] = "".join(body)
     outputs[ROOT / "languages" / "README.md"] = "".join(language_overview)
 
-    status_overview = ["# Browse by state\n", generated_note(), "\n"]
+    status_overview = ["# Browse by operational state\n", generated_note(), "\n"]
     for key, label in STATUS_LABELS.items():
         group = [item for item in entries if item["status_key"] == key]
-        status_overview.append(
-            f"- [{label}]({key}/README.md) — {len(group)} entries\n"
-        )
+        status_overview.append(f"- [{label}]({key}/README.md) — {len(group)} entries\n")
         body = [
             f"# {label}\n",
             generated_note(),
             f"\n{len(group)} entries.\n\n",
-            table_header(["Dataset / product", "Training use", "Languages", "Locations"]),
+            table_header(
+                ["Dataset / product", "Version", "Catalogue", "Training use", "Languages", "Locations"]
+            ),
         ]
         for item in group:
             body.append(
-                f"| {dataset_link(item, '../../')} | {clean(type_text(item))} | "
-                f"{clean(item['languages'])} | {locations(item)} |\n"
+                f"| {dataset_link(item, '../../')} | {clean(item['version'])} | "
+                f"{CATALOGUE_STATUS_LABELS[item['catalogue_status']]} | "
+                f"{clean(type_text(item))} | {clean(item['languages'])} | {locations(item)} |\n"
             )
         outputs[ROOT / "status" / key / "README.md"] = "".join(body)
     outputs[ROOT / "status" / "README.md"] = "".join(status_overview)
 
+    catalogue_status_overview = [
+        "# Browse by catalogue lifecycle\n",
+        generated_note(),
+        (
+            "\nThis D/P/E lifecycle follows the OpenEuroLLM training-data catalogue and "
+            "is separate from operational readiness.\n\n"
+        ),
+    ]
+    for key, label in CATALOGUE_STATUS_LABELS.items():
+        group = [item for item in entries if item["catalogue_status"] == key]
+        catalogue_status_overview.append(
+            f"- [{key} — {label}]({key.lower()}/README.md) — {len(group)} entries\n"
+        )
+        body = [
+            f"# {key} — {label}\n",
+            generated_note(),
+            f"\n{len(group)} entries.\n\n",
+            table_header(
+                ["Dataset / product", "Version", "Operational state", "Training use", "Languages", "Locations"]
+            ),
+        ]
+        for item in group:
+            body.append(
+                f"| {dataset_link(item, '../../')} | {clean(item['version'])} | "
+                f"{clean(item['status'])} | {clean(type_text(item))} | "
+                f"{clean(item['languages'])} | {locations(item)} |\n"
+            )
+        outputs[ROOT / "catalogue-status" / key.lower() / "README.md"] = "".join(body)
+    outputs[ROOT / "catalogue-status" / "README.md"] = "".join(catalogue_status_overview)
+
     return outputs
+
+
+def report_link_errors() -> bool:
+    link_errors = validate_local_links()
+    if not link_errors:
+        return False
+    print("Broken local Markdown links:", file=sys.stderr)
+    for error in link_errors:
+        print(f"  - {error}", file=sys.stderr)
+    return True
 
 
 def main() -> int:
@@ -323,13 +494,6 @@ def main() -> int:
         print(exc, file=sys.stderr)
         return 1
 
-    link_errors = validate_local_links()
-    if link_errors:
-        print("Broken local Markdown links:", file=sys.stderr)
-        for error in link_errors:
-            print(f"  - {error}", file=sys.stderr)
-        return 1
-
     outputs = build_outputs(entries)
     if args.check:
         stale: list[str] = []
@@ -342,12 +506,16 @@ def main() -> int:
                 print(f"  - {path}", file=sys.stderr)
             print("Run: python3 scripts/build_indexes.py", file=sys.stderr)
             return 1
+        if report_link_errors():
+            return 1
         print(f"Catalogue is valid: {len(entries)} entries, {len(outputs)} indexes")
         return 0
 
     for path, content in outputs.items():
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(content, encoding="utf-8")
+    if report_link_errors():
+        return 1
     print(f"Generated {len(outputs)} indexes for {len(entries)} entries")
     return 0
 

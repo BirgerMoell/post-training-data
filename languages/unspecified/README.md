@@ -1,10 +1,10 @@
 # Unspecified
-> Generated from the metadata at the top of each dataset page. Run `python3 scripts/build_indexes.py` after changing an entry.
+> Generated from the JSON frontmatter in each versioned dataset entry. Run `python3 scripts/build_indexes.py` after changing an entry.
 
-Entries are grouped from the language description recorded on each page. Broad multilingual entries may not enumerate every included language.
+Entries are grouped from the recorded coverage on each page. Broad multilingual entries may not enumerate every included language.
 
-| Dataset / product | Training use | State | Recorded coverage |
-| --- | --- | --- | --- |
-| [long_sft placeholder (Harsh1729/long_sft)](../../datasets/long-sft-placeholder-harsh1729-long-sft/README.md) | Long-context extension | Needs verification | unknown |
-| [openeurollm/propella-annotations](../../datasets/openeurollm-propella-annotations/README.md) | Data quality, filtering, and decontamination | Published / available | 50+ languages |
-| [Per-language Wikipedia](../../datasets/per-language-wikipedia/README.md) | Long-context extension, Language repair | Used in completed run | 15 repair languages + EU |
+| Dataset / product | Version | Training use | Catalogue | Operational state | Recorded coverage |
+| --- | --- | --- | --- | --- | --- |
+| [long_sft placeholder (Harsh1729/long_sft)](../../long-sft-placeholder-harsh1729-long-sft/0.0.0/README.md) | 0.0.0 | Long-context extension | Draft | Needs verification | unknown |
+| [openeurollm/propella-annotations](../../openeurollm-propella-annotations/0.0.0/README.md) | 0.0.0 | Data quality, filtering, and decontamination | Published | Published / available | 50+ languages |
+| [Per-language Wikipedia](../../per-language-wikipedia/0.0.0/README.md) | 0.0.0 | Long-context extension, Language repair | Published | Used in completed run | 15 repair languages + EU |

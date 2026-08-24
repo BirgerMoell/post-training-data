@@ -10,12 +10,12 @@ provide a GRPO/RLVR backend, rollout engine, or approved verifier suite.
 
 | Capability | Sources |
 | --- | --- |
-| Multilingual exams | [European exam MCQ v1](../datasets/birgermoell-oellm-eu-exam-mcq-v1/README.md), [official exam bundle](../datasets/european-official-national-exam-bundle-23-ids/README.md), EXAMS-QA |
-| Mathematics | AIME/MATH/GSM sources, [OpenR1-Math-220k staged on LUMI](../datasets/lumi-openr1-math-220k/README.md), [RLVR GSM/MATH/IF mixed constraints](../datasets/allenai-rlvr-gsm-math-if-mixed-constraints/README.md), Dolci RL/Zero candidates |
-| Code | [Python R1-format RLVR](../datasets/allenai-rlvr-code-data-python-r1-format-filtered/README.md) |
-| Instruction constraints | IFEval-style sources and [AutoIF-FI](../datasets/lumiopen-autoif-fi/README.md) |
-| Tools | [EU tool-use v1](../datasets/birgermoell-oellm-eu-tooluse-v1/README.md) and execution-grounded subsets of tool datasets |
-| Medical | [EU medical post-train v1](../datasets/birgermoell-oellm-eu-medical-posttrain-v1/README.md), for a separate specialist branch only |
+| Multilingual exams | [European exam MCQ v1](../birgermoell-oellm-eu-exam-mcq-v1/0.0.0/README.md), [official exam bundle](../european-official-national-exam-bundle-23-ids/0.0.0/README.md), EXAMS-QA |
+| Mathematics | AIME/MATH/GSM sources, [OpenR1-Math-220k staged on LUMI](../lumi-openr1-math-220k/0.0.0/README.md), [RLVR GSM/MATH/IF mixed constraints](../allenai-rlvr-gsm-math-if-mixed-constraints/0.0.0/README.md), Dolci RL/Zero candidates |
+| Code | [Python R1-format RLVR](../allenai-rlvr-code-data-python-r1-format-filtered/0.0.0/README.md) |
+| Instruction constraints | IFEval-style sources and [AutoIF-FI](../lumiopen-autoif-fi/0.0.0/README.md) |
+| Tools | [EU tool-use v1](../birgermoell-oellm-eu-tooluse-v1/0.0.0/README.md) and execution-grounded subsets of tool datasets |
+| Medical | [EU medical post-train v1](../birgermoell-oellm-eu-medical-posttrain-v1/0.0.0/README.md), for a separate specialist branch only |
 
 Global-MMLU, MMMLU, Belebele, XCOPA, ArenaHard-EU, Jeopardy, and the European
 evaluation holdouts are protected evaluations. They must not be silently

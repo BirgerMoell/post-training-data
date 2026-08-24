@@ -1,5 +1,5 @@
 # Browse by training type
-> Generated from the metadata at the top of each dataset page. Run `python3 scripts/build_indexes.py` after changing an entry.
+> Generated from the JSON frontmatter in each versioned dataset entry. Run `python3 scripts/build_indexes.py` after changing an entry.
 
 - [Instruction SFT](instruction-sft/README.md) — 21 entries
 - [Reasoning SFT](reasoning-sft/README.md) — 17 entries

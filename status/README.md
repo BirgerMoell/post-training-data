@@ -1,5 +1,5 @@
-# Browse by state
-> Generated from the metadata at the top of each dataset page. Run `python3 scripts/build_indexes.py` after changing an entry.
+# Browse by operational state
+> Generated from the JSON frontmatter in each versioned dataset entry. Run `python3 scripts/build_indexes.py` after changing an entry.
 
 - [Used in a completed run](used-in-completed-run/README.md) — 23 entries
 - [Used in a research run](used-in-research/README.md) — 8 entries

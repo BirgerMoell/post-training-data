@@ -32,7 +32,7 @@ be able to restart from the last accepted checkpoint.
 | --- | --- | --- |
 | Base knowledge | Global-MMLU, MMMLU, Jeopardy, Prelude score artifact | Overall and per-language deltas from base |
 | Reading and causality | Belebele, XCOPA | Per-language accuracy and confidence intervals |
-| Translation retention | [LUMI FLORES-200/FLORES+](../datasets/lumi-flores-200/README.md) and [Tatoeba en–fi](../datasets/lumi-tatoeba-eng-fin/README.md) | Per-language/direction scores; exact protected IDs and upstream lineage |
+| Translation retention | [LUMI FLORES-200/FLORES+](../lumi-flores-200/0.0.0/README.md) and [Tatoeba en–fi](../lumi-tatoeba-eng-fin/0.0.0/README.md) | Per-language/direction scores; exact protected IDs and upstream lineage |
 | European exams | EXAMS-QA, official exam bundle, EU holdouts | Strict train/eval separation and per-source scores |
 | Instruction/chat | IFEval-style tasks, ArenaHard-EU, battle annotations | Constraint categories, pairwise win rates, judge sensitivity |
 | Reasoning | Held-out math/code/reasoning sets | Final answer, verifier accuracy, and trace policy |

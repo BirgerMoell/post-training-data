@@ -1,9 +1,9 @@
 # Norwegian
-> Generated from the metadata at the top of each dataset page. Run `python3 scripts/build_indexes.py` after changing an entry.
+> Generated from the JSON frontmatter in each versioned dataset entry. Run `python3 scripts/build_indexes.py` after changing an entry.
 
-Entries are grouped from the language description recorded on each page. Broad multilingual entries may not enumerate every included language.
+Entries are grouped from the recorded coverage on each page. Broad multilingual entries may not enumerate every included language.
 
-| Dataset / product | Training use | State | Recorded coverage |
-| --- | --- | --- | --- |
-| [FLORES-200 / FLORES+ evaluation copy on LUMI](../../datasets/lumi-flores-200/README.md) | Evaluation holdouts | Evaluation-only — do not train | 26 European language files plus FLORES+ combined dev/devtest |
-| [qwen35-9b-multiling-dpo-parquet](../../datasets/qwen35-9b-multiling-dpo-parquet/README.md) | Preference optimization | Configured / runnable | fi,sv,da,no,is + multilingual |
+| Dataset / product | Version | Training use | Catalogue | Operational state | Recorded coverage |
+| --- | --- | --- | --- | --- | --- |
+| [FLORES-200 / FLORES+ evaluation copy on LUMI](../../lumi-flores-200/0.0.0/README.md) | 0.0.0 | Evaluation holdouts | Published | Evaluation-only — do not train | 26 European language files plus FLORES+ combined dev/devtest |
+| [qwen35-9b-multiling-dpo-parquet](../../qwen35-9b-multiling-dpo-parquet/0.0.0/README.md) | 0.0.0 | Preference optimization | Published | Configured / runnable | fi,sv,da,no,is + multilingual |

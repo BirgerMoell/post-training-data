@@ -11,17 +11,17 @@ preference optimization.
 
 | Source | State | Recommended role |
 | --- | --- | --- |
-| [Dolci-Instruct-SFT decontaminated](../datasets/openeurollm-dolci-instruct-sft-decontaminated/README.md) | Public | Primary English instruction source |
-| [Dolci Instruct tokenized](../datasets/openeurollm-dolci-instruct-sft-tokenized/README.md) | Public, OLMo-core-specific | OLMo reproduction only; 2.15M examples, 1.7B tokens |
-| [Dolci Instruct translated](../datasets/openeurollm-dolci-instruct-sft-translated/README.md) | Public, 12 languages | Main translated European source |
-| [EU-Instruct-Synthetic](../datasets/openeurollm-eu-instruct-synthetic/README.md) | Public, 1.5M pairs in 11 languages | Constraint-following breadth after quality filtering |
-| [Open-PerfectBlend decontaminated](../datasets/openeurollm-open-perfectblend-decontaminated/README.md) | Public | Diverse instruction/chat replay |
-| [Orca-AgentInstruct decontaminated](../datasets/openeurollm-orca-agentinstruct-1m-v1-decontaminated/README.md) | Public | Complex instructions; keep tool-specific rows for Stage 4 |
-| [LMSYS Chat 1M decontaminated](../datasets/openeurollm-lmsys-chat-1m-decontaminated/README.md) | Public and on LUMI | Multi-turn style and real-user distribution; apply privacy/toxicity filters |
-| [Tulu-3 SFT mixture](../datasets/allenai-tulu-3-sft-mixture/README.md) | Used in completed run | Reproduction/control mixture |
-| [EuroBlocks synthetic SFT](../datasets/euroblocks-sft-synthetic-1124/README.md) | Used in completed run on LUMI | European multilingual control; provenance review required |
-| [LUMI Poro2 instruction data](../datasets/lumi-poro2-instruction-data/README.md) | 4.65 GB JSONL plus Megatron binary; Finnish observed | Finnish replay/ablation only after provenance, license, and language audit |
-| [LUMI English–Finnish long-context SFT](../datasets/lumi-long-context-eng-fin-sft/README.md) | 18.3 GB JSONL plus Megatron binary | P0 retention experiment; not approved until lineage, lengths, and loss mask pass |
+| [Dolci-Instruct-SFT decontaminated](../openeurollm-dolci-instruct-sft-decontaminated/0.0.0/README.md) | Public | Primary English instruction source |
+| [Dolci Instruct tokenized](../openeurollm-dolci-instruct-sft-tokenized/0.0.0/README.md) | Public, OLMo-core-specific | OLMo reproduction only; 2.15M examples, 1.7B tokens |
+| [Dolci Instruct translated](../openeurollm-dolci-instruct-sft-translated/0.0.0/README.md) | Public, 12 languages | Main translated European source |
+| [EU-Instruct-Synthetic](../openeurollm-eu-instruct-synthetic/0.0.0/README.md) | Public, 1.5M pairs in 11 languages | Constraint-following breadth after quality filtering |
+| [Open-PerfectBlend decontaminated](../openeurollm-open-perfectblend-decontaminated/0.0.0/README.md) | Public | Diverse instruction/chat replay |
+| [Orca-AgentInstruct decontaminated](../openeurollm-orca-agentinstruct-1m-v1-decontaminated/0.0.0/README.md) | Public | Complex instructions; keep tool-specific rows for Stage 4 |
+| [LMSYS Chat 1M decontaminated](../openeurollm-lmsys-chat-1m-decontaminated/0.0.0/README.md) | Public and on LUMI | Multi-turn style and real-user distribution; apply privacy/toxicity filters |
+| [Tulu-3 SFT mixture](../allenai-tulu-3-sft-mixture/0.0.0/README.md) | Used in completed run | Reproduction/control mixture |
+| [EuroBlocks synthetic SFT](../euroblocks-sft-synthetic-1124/0.0.0/README.md) | Used in completed run on LUMI | European multilingual control; provenance review required |
+| [LUMI Poro2 instruction data](../lumi-poro2-instruction-data/0.0.0/README.md) | 4.65 GB JSONL plus Megatron binary; Finnish observed | Finnish replay/ablation only after provenance, license, and language audit |
+| [LUMI English–Finnish long-context SFT](../lumi-long-context-eng-fin-sft/0.0.0/README.md) | 18.3 GB JSONL plus Megatron binary | P0 retention experiment; not approved until lineage, lengths, and loss mask pass |
 
 ## Proposed v0 mixture
 

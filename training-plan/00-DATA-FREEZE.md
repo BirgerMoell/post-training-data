@@ -10,22 +10,22 @@ stage ends before any GPU training starts.
 - Public decontaminated releases: Dolci Instruct/Think,
   Nemotron-Post-Training-v2, SmolTalk2, Open-PerfectBlend,
   Orca-AgentInstruct, and LMSYS Chat.
-- [OpenEuroLLM contaminated-document support set](../datasets/openeurollm-contaminated-documents/README.md).
+- [OpenEuroLLM contaminated-document support set](../openeurollm-contaminated-documents/0.0.0/README.md).
 - [OpenEuroLLM post-training decontamination](https://github.com/OpenEuroLLM/post-training-decontamination),
   which provides n-gram search through Elasticsearch.
 - Evaluation-only assets including
-  [European holdouts](../datasets/birgermoell-oellm-eu-eval-holdouts-v1/README.md),
-  [ArenaHard-EU](../datasets/openeurollm-arenahard-eu-v0-v0-bis/README.md),
-  [Jeopardy](../datasets/openeurollm-jeopardy/README.md), Global-MMLU,
+  [European holdouts](../birgermoell-oellm-eu-eval-holdouts-v1/0.0.0/README.md),
+  [ArenaHard-EU](../openeurollm-arenahard-eu-v0-v0-bis/0.0.0/README.md),
+  [Jeopardy](../openeurollm-jeopardy/0.0.0/README.md), Global-MMLU,
   MMMLU, Belebele, XCOPA, and EXAMS-QA.
 - LUMI shared post-training candidates under
   `/scratch/project_462000963/datasets/posttraining_data`.
 - Individually inspected LUMI candidates for
-  [English–Finnish long SFT](../datasets/lumi-long-context-eng-fin-sft/README.md),
-  [Poro2 Finnish instruction data](../datasets/lumi-poro2-instruction-data/README.md),
-  [OpenR1 Math](../datasets/lumi-openr1-math-220k/README.md),
-  [AM reasoning traces](../datasets/lumi-am-deepseek-r1-think/README.md), and
-  [Glaive code](../datasets/lumi-glaive-code-assistant-v3/README.md). Their
+  [English–Finnish long SFT](../lumi-long-context-eng-fin-sft/0.0.0/README.md),
+  [Poro2 Finnish instruction data](../lumi-poro2-instruction-data/0.0.0/README.md),
+  [OpenR1 Math](../lumi-openr1-math-220k/0.0.0/README.md),
+  [AM reasoning traces](../lumi-am-deepseek-r1-think/0.0.0/README.md), and
+  [Glaive code](../lumi-glaive-code-assistant-v3/0.0.0/README.md). Their
   existence is confirmed, but each unresolved lineage/license field remains a
   freeze blocker.
 

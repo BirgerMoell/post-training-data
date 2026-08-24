@@ -1,42 +1,52 @@
 # Contributing
 
-Keep entries useful to someone preparing a training run. Prefer concrete locations, revisions, commands, and limitations over general descriptions.
+Keep entries useful to someone deciding whether a dataset can enter a real post-training run. Prefer immutable revisions, concrete locations, reproducible counts, commands, limitations, and evidence over general descriptions.
 
-## Add a dataset
+Read [catalogue conventions](CATALOGUE-CONVENTIONS.md) and the [dataset ingestion workflow](DATASET-INGESTION.md) before adding a source.
 
-1. Copy `datasets/_template/README.md` to `datasets/<short-name>/README.md`.
-2. Fill in the metadata block and the five short sections.
-3. Run `python3 scripts/build_indexes.py`.
-4. Run `python3 scripts/build_indexes.py --check`.
-5. Open a pull request.
+## Nominate and add a dataset
 
-## Update the training plan
+1. Open a dataset-nomination issue and agree the intended scope, owner, lifecycle, and evaluation-contamination boundary.
+2. Choose `<dataset>/<version>/README.md`. Reuse a pinned upstream semantic version; use `0.0.0` when no stable version has been selected.
+3. Copy `etc/skeleton.md` into the versioned path.
+4. Complete the JSON frontmatter and all canonical sections. Preserve unknown measurements as `null`, never zero.
+5. Use ISO 639-3 plus ISO 15924 language identifiers from [LANGUAGES.md](LANGUAGES.md).
+6. Run `python3 scripts/build_indexes.py`.
+7. Run `python3 scripts/build_indexes.py --check`.
+8. Open a pull request and link the nomination issue and supporting evidence.
 
-Training-stage pages are hand-maintained under `training-plan/`. When changing
-a proposed mixture or gate:
-
-- state whether it is confirmed, runnable, proposed, or blocked;
-- link the exact dataset pages and evidence;
-- distinguish completed-run hyperparameters from pilot suggestions;
-- update `training-plan/DATA_GAPS.md` when a blocker is opened or closed;
-- update `training-plan/LANGUAGE_COVERAGE.md` when capability depth changes;
-- run the catalogue check, which also validates relative Markdown links; and
-- include the evaluation evidence required by the stage's exit gate.
+Do not edit generated pages under `training-types/`, `languages/`, `status/`, or `catalogue-status/` by hand.
 
 ## Update a dataset
 
-Update its page when any of these change:
+Update the current version when a statement is clarified without changing the identity of the artifact. Add a new version when the selected upstream release, split, transformation, schema, tokenizer, filtering policy, or protected-evaluation boundary changes materially.
 
-- a public or LUMI location is added, moved, or removed;
-- a dataset is used in a completed run;
-- licensing or access information becomes clearer;
-- a canonical revision, split, or artifact is selected;
-- a quality, contamination, or privacy check is completed;
-- a candidate is deprecated or becomes production-ready.
+Update an entry when any of these change:
 
-## State vocabulary
+- a public or project-storage location is added, moved, or removed;
+- a dataset is used in a completed or research run;
+- licensing, redistribution, commercial-use, or access information becomes clearer;
+- a canonical revision, configuration, split, tokenizer, or derived artifact is selected;
+- normalized bytes/documents/segments/characters/tokens are reproduced;
+- a quality, contamination, privacy, safety, or language-balance check is completed;
+- a candidate becomes production-ready; or
+- a version is deprecated or superseded.
 
-Use one of these `status_key` values:
+Never silently rewrite published provenance. If an artifact's identity changes, create a new version and retain the old entry as `E` when it remains useful for reproducibility.
+
+## Catalogue lifecycle
+
+Use one `catalogue_status` value:
+
+- `D` — draft entry;
+- `P` — published entry; or
+- `E` — deprecated entry retained for provenance.
+
+This status describes the catalogue page, not approval for training.
+
+## Operational state
+
+Use one `status_key` value:
 
 - `used-in-completed-run`
 - `used-in-research`
@@ -50,12 +60,35 @@ Use one of these `status_key` values:
 - `historical`
 - `eval-only`
 
-“Used” should point to evidence of the run. “Staged” means that a concrete artifact location is known. “Published” means that other people can obtain it. These states are independent of quality or legal approval, which must be described on the page.
+“Used” requires evidence of the run. “Staged” means a concrete artifact was inspected. “Published” means others can obtain the data. None of these implies legal, privacy, safety, quality, contamination, or production approval.
+
+Evaluation-only sources must use `eval-only`, include the `evaluation-holdouts` training type, say **never train** prominently, and describe the decontamination controls for prompts, answers, translations, paraphrases, retrieval sources, and synthetic derivatives.
+
+## Statistics and formats
+
+- Record byte, document, segment, character, and token totals as non-negative integers only after reproducing them.
+- Name the canonical content field and what “document” and “segment” mean for the artifact.
+- Use the common catalogue tokenizer, currently Gemma 3, for normalized token counts and pin its revision. Label training-tokenizer counts separately.
+- Prefer a UTF-8 JSON Lines plus Zstandard interchange artifact where a row-based representation fits.
+- Document Parquet, conversation JSONL, Megatron `.bin`/`.idx`, preference, verifier, packed-context, and other training-specific derivatives separately.
+- Record checksums and the transformation command/commit for production artifacts.
 
 ## Locations
 
-- Link public data directly.
+- Link public data directly and pin immutable revisions.
 - Put LUMI and other filesystem paths in backticks.
 - Never commit credentials or signed download URLs.
 - Record the date on which a location was last verified.
-- If an artifact exists in a personal directory, identify the responsible owner and the intended shared destination.
+- If an artifact exists in a personal directory, identify the responsible owner and intended shared destination.
+
+## Update the training plan
+
+Training-stage pages are hand-maintained under `training-plan/`. When changing a proposed mixture or gate:
+
+- state whether it is confirmed, runnable, proposed, or blocked;
+- link the exact versioned dataset entries and evidence;
+- distinguish completed-run hyperparameters from pilot suggestions;
+- update `training-plan/DATA_GAPS.md` when a blocker is opened or closed;
+- update `training-plan/LANGUAGE_COVERAGE.md` when capability depth changes;
+- run the catalogue check, which also validates relative Markdown links; and
+- include the evaluation evidence required by the stage's exit gate.

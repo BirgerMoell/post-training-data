@@ -10,9 +10,9 @@ English/general replay while explicitly balancing European languages.
 
 ### Broad instruction data
 
-- [Dolci Instruct translated](../datasets/openeurollm-dolci-instruct-sft-translated/README.md):
+- [Dolci Instruct translated](../openeurollm-dolci-instruct-sft-translated/0.0.0/README.md):
   `cs,de,el,es,fi,fr,it,nl,pl,ro,sv,uk`.
-- [EU-Instruct-Synthetic](../datasets/openeurollm-eu-instruct-synthetic/README.md):
+- [EU-Instruct-Synthetic](../openeurollm-eu-instruct-synthetic/0.0.0/README.md):
   `cs,de,el,es,fr,it,nl,pl,pt,ro,uk`.
 - Original/decontaminated English Dolci for replay.
 
@@ -21,14 +21,14 @@ Their union provides broad general SFT for English plus 13 European languages:
 
 ### Targeted repair data
 
-- [OpenEuroLLM EU defect-repair SFT v1](../datasets/birgermoell-oellm-eu-defect-repair-sft-v1/README.md):
+- [OpenEuroLLM EU defect-repair SFT v1](../birgermoell-oellm-eu-defect-repair-sft-v1/0.0.0/README.md):
   `is,ga,mt,et,hr,sl,lt,lv,da,hu,sk,bg,ro,pl,fi`.
-- [Per-language Wikipedia](../datasets/per-language-wikipedia/README.md):
+- [Per-language Wikipedia](../per-language-wikipedia/0.0.0/README.md):
   continued-pretraining/reference text for language repair, not a substitute
   for instruction conversations.
-- [AutoIF-FI](../datasets/lumiopen-autoif-fi/README.md): Finnish
+- [AutoIF-FI](../lumiopen-autoif-fi/0.0.0/README.md): Finnish
   instruction/constraint candidate.
-- [LUMI Poro2 instruction data](../datasets/lumi-poro2-instruction-data/README.md):
+- [LUMI Poro2 instruction data](../lumi-poro2-instruction-data/0.0.0/README.md):
   4.65 GB pre-rendered corpus with Finnish samples; use only after source,
   license, language-distribution, and loss-mask validation.
 - The planned `oellm-eu-native-instruct-v1` family is not yet available.

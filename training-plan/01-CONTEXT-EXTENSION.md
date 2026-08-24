@@ -10,20 +10,20 @@ explicitly approves 256k and the 256k evaluation/compute cost.
 
 | Asset | State | Role |
 | --- | --- | --- |
-| [Jouni Luoma LUMI long-context blend and runs](../datasets/lumi-long-context-sample/README.md) | Completed 16k/64k/128k lineage; directly verified | Primary reproducible baseline and LUMI data source |
-| [Multilingual streamed long-context v2](../datasets/birgermoell-oellm-longctx-tokenized-streamed-all-v2/README.md) | Public | Portable multilingual Megatron-ready candidate |
-| [Natural 128k/256k pilot](../datasets/birgermoell-oellm-longctx-tokenized-natural-128k-256k-pilot-v1/README.md) | Public | Natural long-document ablation |
-| [Structured 128k/256k](../datasets/birgermoell-oellm-longctx-tokenized-structured-128k-256k-v1/README.md) | Public | Technical/structured ablation |
-| [Superlong 512k–2M](../datasets/birgermoell-oellm-longctx-tokenized-superlong-512k-1m-2m-v2/README.md) | Public | Research beyond flagship target; not a default production input |
+| [Jouni Luoma LUMI long-context blend and runs](../lumi-long-context-sample/0.0.0/README.md) | Completed 16k/64k/128k lineage; directly verified | Primary reproducible baseline and LUMI data source |
+| [Multilingual streamed long-context v2](../birgermoell-oellm-longctx-tokenized-streamed-all-v2/0.0.0/README.md) | Public | Portable multilingual Megatron-ready candidate |
+| [Natural 128k/256k pilot](../birgermoell-oellm-longctx-tokenized-natural-128k-256k-pilot-v1/0.0.0/README.md) | Public | Natural long-document ablation |
+| [Structured 128k/256k](../birgermoell-oellm-longctx-tokenized-structured-128k-256k-v1/0.0.0/README.md) | Public | Technical/structured ablation |
+| [Superlong 512k–2M](../birgermoell-oellm-longctx-tokenized-superlong-512k-1m-2m-v2/0.0.0/README.md) | Public | Research beyond flagship target; not a default production input |
 | HPLT/FinePDFs/Wikipedia/ArXiv/math/code components | Present inside Jouni blend | Source-family and language balancing |
 
 ### Retention candidates for the later SFT handoff
 
 | Asset | Confirmed facts | Blocker before use |
 | --- | --- | --- |
-| [LUMI English–Finnish long-context SFT](../datasets/lumi-long-context-eng-fin-sft/README.md) | 18.3 GB JSONL plus 16.6 GB Megatron binary; Llama-3-style conversations | No source manifest, token-length distribution, license record, or verified assistant-only mask |
-| [BookSum on LUMI](../datasets/lumi-booksum/README.md) | Public long-form summarization source with local train/validation/test JSONL | Input content is absent for some rows and source-text rights require review |
-| [ChatQA2](../datasets/nvidia-chatqa2-long-sft-data/README.md), [LongAlign](../datasets/thudm-longalign-10k/README.md), and [LongAlpaca](../datasets/yukang-longalpaca-12k/README.md) | Public candidate families | Need revisions, licenses, length distributions, deduplication, and a project freeze |
+| [LUMI English–Finnish long-context SFT](../lumi-long-context-eng-fin-sft/0.0.0/README.md) | 18.3 GB JSONL plus 16.6 GB Megatron binary; Llama-3-style conversations | No source manifest, token-length distribution, license record, or verified assistant-only mask |
+| [BookSum on LUMI](../lumi-booksum/0.0.0/README.md) | Public long-form summarization source with local train/validation/test JSONL | Input content is absent for some rows and source-text rights require review |
+| [ChatQA2](../nvidia-chatqa2-long-sft-data/0.0.0/README.md), [LongAlign](../thudm-longalign-10k/0.0.0/README.md), and [LongAlpaca](../yukang-longalpaca-12k/0.0.0/README.md) | Public candidate families | Need revisions, licenses, length distributions, deduplication, and a project freeze |
 
 Candidates such as FineWeb-2, CulturaX, The Stack v2, EUR-Lex,
 LongAlign, LongAlpaca, and ChatQA2 should not enter the production mix until
