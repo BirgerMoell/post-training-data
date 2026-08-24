@@ -1,0 +1,15 @@
+{
+  "$schema": "../schemas/capability.schema.json",
+  "schema_version": "1.0.0",
+  "id": "instruction-chat",
+  "title": "Instruction & Chat",
+  "lead": null,
+  "priority": "P0",
+  "state": "proposed",
+  "scope": "Follow explicit and implicit instructions, sustain useful multi-turn dialogue, and produce constrained outputs in all target languages.",
+  "promise": "Reliably do what the user asks, preserve constraints across turns, and recover cleanly from ambiguity or tool failure.",
+  "training_route": ["broad instruction SFT", "multilingual instruction repair", "preference optimization", "format and multi-turn regression repair"],
+  "owner_interfaces": ["Multilingual", "Safety", "Tools & Agents"],
+  "release_decision": "headline",
+  "spreadsheet": {"id": "1hFFDRk_JdjbQCCv3zsemKulSnMyk_fBQIfKPSzSaP9M", "tab": "Instruction & Chat", "gid": 2100000003}
+}

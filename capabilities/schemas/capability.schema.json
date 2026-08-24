@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "capability.schema.json",
+  "type": "object",
+  "required": ["schema_version", "id", "title", "priority", "state", "scope", "promise", "training_route", "release_decision", "spreadsheet"],
+  "properties": {
+    "schema_version": {"type": "string"},
+    "id": {"type": "string", "pattern": "^[a-z0-9-]+$"},
+    "title": {"type": "string", "minLength": 1},
+    "lead": {"type": ["string", "null"]},
+    "priority": {"enum": ["P0", "P1", "P2"]},
+    "state": {"enum": ["proposed", "active", "blocked", "release-ready"]},
+    "scope": {"type": "string", "minLength": 1},
+    "promise": {"type": "string", "minLength": 1},
+    "training_route": {"type": "array", "items": {"type": "string"}},
+    "owner_interfaces": {"type": "array", "items": {"type": "string"}},
+    "release_decision": {"enum": ["non-compensatory", "regression-protected", "headline", "diagnostic"]},
+    "spreadsheet": {
+      "type": "object",
+      "required": ["id", "tab", "gid"],
+      "properties": {
+        "id": {"type": "string"}, "tab": {"type": "string"}, "gid": {"type": "integer"}
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

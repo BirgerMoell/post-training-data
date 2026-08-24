@@ -1,0 +1,17 @@
+{
+  "$schema": "./schemas/capability-index.schema.json",
+  "schema_version": "1.0.0",
+  "updated": "2026-08-24",
+  "spreadsheet": "https://docs.google.com/spreadsheets/d/1hFFDRk_JdjbQCCv3zsemKulSnMyk_fBQIfKPSzSaP9M/edit",
+  "capabilities": [
+    {"id": "safety", "path": "safety", "priority": "P0"},
+    {"id": "multilingual", "path": "multilingual", "priority": "P0"},
+    {"id": "instruction-chat", "path": "instruction-chat", "priority": "P0"},
+    {"id": "reasoning-knowledge", "path": "reasoning-knowledge", "priority": "P0"},
+    {"id": "grounding-rag", "path": "grounding-rag", "priority": "P1"},
+    {"id": "tools-agents", "path": "tools-agents", "priority": "P0"},
+    {"id": "long-context", "path": "long-context", "priority": "P1"},
+    {"id": "coding", "path": "coding", "priority": "P2"},
+    {"id": "efficiency-release", "path": "efficiency-release", "priority": "P0"}
+  ]
+}

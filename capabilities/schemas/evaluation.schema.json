@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "evaluation.schema.json",
+  "type": "object",
+  "required": ["schema_version", "capability_id", "updated", "inherits", "suites", "stress_slices", "gaps"],
+  "properties": {
+    "schema_version": {"type": "string"},
+    "capability_id": {"type": "string"},
+    "updated": {"type": "string", "format": "date"},
+    "inherits": {"type": "string"},
+    "suites": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "type", "primary", "gate_class", "gate_eligible", "separation_evidence", "runner", "language_scope", "metrics", "cadence"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^[a-z0-9-]+$"},
+          "name": {"type": "string"},
+          "source_url": {"type": ["string", "null"]},
+          "catalogue_entry": {"type": ["string", "null"]},
+          "type": {"enum": ["public-benchmark", "project-holdout", "human-evaluation", "red-team", "system-benchmark", "audit"]},
+          "primary": {"type": "boolean"},
+          "gate_class": {"enum": ["release", "headline", "diagnostic", "non-compensatory"]},
+          "gate_eligible": {"type": "boolean"},
+          "separation_evidence": {"type": "string"},
+          "runner": {"type": "string"},
+          "language_scope": {"type": "string"},
+          "metrics": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": ["id", "name", "unit", "direction", "operator", "targets"],
+              "properties": {
+                "id": {"type": "string"}, "name": {"type": "string"}, "unit": {"type": "string"},
+                "direction": {"enum": ["higher", "lower"]}, "operator": {"enum": [">=", "<=", "rank<="]},
+                "targets": {
+                  "type": "object",
+                  "required": ["9b", "30b"],
+                  "properties": {
+                    "9b": {"$ref": "#/$defs/target"}, "30b": {"$ref": "#/$defs/target"}
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "cadence": {"type": "array", "items": {"type": "string"}},
+          "notes": {"type": "string"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "stress_slices": {"type": "array", "items": {"type": "string"}},
+    "gaps": {"type": "array", "items": {"type": "string"}}
+  },
+  "$defs": {
+    "target": {
+      "type": "object",
+      "required": ["committed", "stretch"],
+      "properties": {"committed": {"type": ["number", "null"]}, "stretch": {"type": ["number", "null"]}},
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

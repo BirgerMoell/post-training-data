@@ -1,0 +1,15 @@
+{
+  "$schema": "../schemas/capability.schema.json",
+  "schema_version": "1.0.0",
+  "id": "reasoning-knowledge",
+  "title": "Reasoning & Knowledge",
+  "lead": null,
+  "priority": "P0",
+  "state": "proposed",
+  "scope": "Mathematical, factual, and carefully scoped medical reasoning, with English as the default reasoning-data language and controlled experiments in target-language traces.",
+  "promise": "Solve verifiable problems, use knowledge accurately, expose uncertainty, and avoid hallucinated high-stakes claims.",
+  "training_route": ["reasoning SFT", "verifiable-answer RLVR", "multilingual trace pilots", "knowledge and calibration repair"],
+  "owner_interfaces": ["Multilingual", "Safety", "Coding", "Grounding & RAG"],
+  "release_decision": "headline",
+  "spreadsheet": {"id": "1hFFDRk_JdjbQCCv3zsemKulSnMyk_fBQIfKPSzSaP9M", "tab": "Reasoning & Knowledge", "gid": 2100000004}
+}

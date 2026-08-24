@@ -1,0 +1,15 @@
+{
+  "$schema": "../schemas/capability.schema.json",
+  "schema_version": "1.0.0",
+  "id": "tools-agents",
+  "title": "Tools & Agents",
+  "lead": null,
+  "priority": "P0",
+  "state": "proposed",
+  "scope": "Select and call tools such as search, code execution, and file operations; interpret observations; recover from errors; and respect permissions.",
+  "promise": "Complete useful tool-mediated tasks reliably in target languages without inventing tool results or exceeding authority.",
+  "training_route": ["function-calling SFT", "execution-grounded trajectories", "tool-verifiable RL", "permission and recovery repair"],
+  "owner_interfaces": ["Instruction & Chat", "Safety", "Coding", "Grounding & RAG"],
+  "release_decision": "headline",
+  "spreadsheet": {"id": "1hFFDRk_JdjbQCCv3zsemKulSnMyk_fBQIfKPSzSaP9M", "tab": "Tools & Agents", "gid": 2100000006}
+}

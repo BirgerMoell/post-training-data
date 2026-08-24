@@ -1,0 +1,15 @@
+{
+  "$schema": "../schemas/capability.schema.json",
+  "schema_version": "1.0.0",
+  "id": "efficiency-release",
+  "title": "Efficiency & Release",
+  "lead": null,
+  "priority": "P0",
+  "state": "proposed",
+  "scope": "Serving speed, memory, quantization, reproducibility, provenance, documentation, operational controls, and complete release artifacts.",
+  "promise": "Ship reproducible checkpoints and practical quantizations with bounded quality loss, clear terms, and deployable safety controls.",
+  "training_route": ["representative calibration", "quantization-aware qualification", "serving profiling", "release-candidate audit"],
+  "owner_interfaces": ["all capability leads", "infrastructure lead", "legal and data governance"],
+  "release_decision": "non-compensatory",
+  "spreadsheet": {"id": "1hFFDRk_JdjbQCCv3zsemKulSnMyk_fBQIfKPSzSaP9M", "tab": "Efficiency & Release", "gid": 2100000009}
+}
