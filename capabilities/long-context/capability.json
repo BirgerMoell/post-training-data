@@ -1,0 +1,15 @@
+{
+  "$schema": "../schemas/capability.schema.json",
+  "schema_version": "1.0.0",
+  "id": "long-context",
+  "title": "Long Context",
+  "lead": "Jouni Luoma",
+  "priority": "P1",
+  "state": "active",
+  "scope": "A 128k release base and 256k checkpoint, with explicitly experimental longer-context artifacts.",
+  "promise": "Retrieve, synthesize, and follow instructions throughout long multilingual contexts without sacrificing short-context quality or serving stability.",
+  "training_route": ["continued pretraining and context extension", "long-context SFT", "retrieval and synthesis repair", "serving qualification"],
+  "owner_interfaces": ["Grounding & RAG", "Instruction & Chat", "Efficiency & Release"],
+  "release_decision": "regression-protected",
+  "spreadsheet": {"id": "1hFFDRk_JdjbQCCv3zsemKulSnMyk_fBQIfKPSzSaP9M", "tab": "Long Context", "gid": 2100000007}
+}

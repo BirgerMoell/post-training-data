@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0.0",
+  "updated": "2026-08-24",
+  "policy": {
+    "tier_2_floor_relative_to_tier_1": 0.9,
+    "tier_3_floor_relative_to_tier_2": 0.9,
+    "example_normalized_scores": {"tier_1": 50, "tier_2": 45, "tier_3": 40.5, "tier_3_reported_rounded": 41},
+    "reporting": ["macro", "p10", "minimum", "per-language", "per-script", "language-fidelity"]
+  },
+  "identity_note": "The spreadsheet lists 37 named release locales but 36 unique language identities because Flemish is represented as the nl-BE locale of Dutch (nld_Latn), not a separate ISO 639-3 language.",
+  "tiers": [
+    {"tier": 1, "locales": [
+      {"name": "English", "codes": ["eng_Latn"]}, {"name": "German", "codes": ["deu_Latn"]},
+      {"name": "French", "codes": ["fra_Latn"]}, {"name": "Spanish", "codes": ["spa_Latn"]},
+      {"name": "Dutch", "codes": ["nld_Latn"]}, {"name": "Polish", "codes": ["pol_Latn"]},
+      {"name": "Portuguese", "codes": ["por_Latn"]}
+    ]},
+    {"tier": 2, "locales": [
+      {"name": "Greek", "codes": ["ell_Grek"]}, {"name": "Serbian", "codes": ["srp_Cyrl", "srp_Latn"]},
+      {"name": "Croatian", "codes": ["hrv_Latn"]}, {"name": "Czech", "codes": ["ces_Latn"]},
+      {"name": "Bulgarian", "codes": ["bul_Cyrl"]}, {"name": "Ukrainian", "codes": ["ukr_Cyrl"]},
+      {"name": "Romanian", "codes": ["ron_Latn"]}, {"name": "Swedish", "codes": ["swe_Latn"]},
+      {"name": "Finnish", "codes": ["fin_Latn"]}, {"name": "Danish", "codes": ["dan_Latn"]},
+      {"name": "Norwegian", "codes": ["nor_Latn", "nob_Latn", "nno_Latn"]}, {"name": "Estonian", "codes": ["est_Latn", "ekk_Latn"]},
+      {"name": "Icelandic", "codes": ["isl_Latn"]}, {"name": "Latvian", "codes": ["lav_Latn", "lvs_Latn", "ltg_Latn"]},
+      {"name": "Lithuanian", "codes": ["lit_Latn"]}, {"name": "Armenian", "codes": ["hye_Armn"]},
+      {"name": "Hungarian", "codes": ["hun_Latn"]}, {"name": "Slovenian", "codes": ["slv_Latn"]},
+      {"name": "Slovak", "codes": ["slk_Latn"]}, {"name": "Bosnian", "codes": ["bos_Latn"]},
+      {"name": "Albanian", "codes": ["sqi_Latn", "als_Latn"]}
+    ]},
+    {"tier": 3, "locales": [
+      {"name": "Flemish", "codes": ["nld_Latn"], "locale": "nl-BE", "identity_alias_of": "Dutch"},
+      {"name": "Luxembourgish", "codes": ["ltz_Latn"]}, {"name": "Irish", "codes": ["gle_Latn"]},
+      {"name": "Catalan", "codes": ["cat_Latn"]}, {"name": "Basque", "codes": ["eus_Latn"]},
+      {"name": "Galician", "codes": ["glg_Latn"]}, {"name": "Georgian", "codes": ["kat_Geor"]},
+      {"name": "Macedonian", "codes": ["mkd_Cyrl"]}, {"name": "Turkish", "codes": ["tur_Latn"]}
+    ]}
+  ]
+}

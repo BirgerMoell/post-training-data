@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "training-data.schema.json",
+  "type": "object",
+  "required": ["schema_version", "capability_id", "updated", "selection_principles", "sources", "mixing_guidance", "gaps"],
+  "properties": {
+    "schema_version": {"type": "string"},
+    "capability_id": {"type": "string"},
+    "updated": {"type": "string", "format": "date"},
+    "selection_principles": {"type": "array", "items": {"type": "string"}},
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "source_kind", "decision", "trainable", "stages", "roles", "language_scope", "reason", "required_gates", "eval_overlap_risk"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^[a-z0-9-]+$"},
+          "name": {"type": "string"},
+          "catalogue_entry": {"type": ["string", "null"]},
+          "source_url": {"type": ["string", "null"]},
+          "source_kind": {"enum": ["catalogue", "huggingface", "derived", "planned"]},
+          "decision": {"enum": ["use", "pilot", "candidate", "hold", "exclude"]},
+          "trainable": {"type": "boolean"},
+          "stages": {"type": "array", "items": {"enum": ["continued-pretraining", "context-extension", "sft", "preference", "rlvr", "replay", "calibration", "red-team-discovery"]}},
+          "roles": {"type": "array", "items": {"type": "string"}},
+          "language_scope": {"type": "array", "items": {"type": "string"}},
+          "reason": {"type": "string"},
+          "required_gates": {"type": "array", "items": {"type": "string"}},
+          "eval_overlap_risk": {"enum": ["low", "medium", "high", "prohibited"]}
+        },
+        "additionalProperties": false
+      }
+    },
+    "mixing_guidance": {"type": "array", "items": {"type": "string"}},
+    "gaps": {"type": "array", "items": {"type": "string"}}
+  },
+  "additionalProperties": false
+}

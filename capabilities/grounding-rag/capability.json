@@ -1,0 +1,15 @@
+{
+  "$schema": "../schemas/capability.schema.json",
+  "schema_version": "1.0.0",
+  "id": "grounding-rag",
+  "title": "Grounding & RAG",
+  "lead": null,
+  "priority": "P1",
+  "state": "proposed",
+  "scope": "Answer from supplied evidence, cite it precisely, identify missing or conflicting evidence, and operate with multilingual retrievers and documents.",
+  "promise": "Ground claims in provided sources without inventing support or collapsing into universal abstention.",
+  "training_route": ["document-grounded SFT", "citation and abstention preference data", "multilingual retrieval repair", "conflict and freshness stress training"],
+  "owner_interfaces": ["Multilingual", "Safety", "Tools & Agents", "Long Context"],
+  "release_decision": "regression-protected",
+  "spreadsheet": {"id": "1hFFDRk_JdjbQCCv3zsemKulSnMyk_fBQIfKPSzSaP9M", "tab": "Grounding & RAG", "gid": 2100000005}
+}

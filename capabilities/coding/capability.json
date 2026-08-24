@@ -1,0 +1,15 @@
+{
+  "$schema": "../schemas/capability.schema.json",
+  "schema_version": "1.0.0",
+  "id": "coding",
+  "title": "Coding",
+  "lead": null,
+  "priority": "P2",
+  "state": "proposed",
+  "scope": "Generate, repair, and execute code, with dedicated reinforcement learning only after ownership and contamination controls are established.",
+  "promise": "Produce correct, testable, secure code and use coding tools without regressing multilingual instruction behavior.",
+  "training_route": ["code SFT", "test-verified RLVR", "defect repair", "secure-code and terminal-tool repair"],
+  "owner_interfaces": ["Reasoning & Knowledge", "Tools & Agents", "Safety"],
+  "release_decision": "diagnostic",
+  "spreadsheet": {"id": "1hFFDRk_JdjbQCCv3zsemKulSnMyk_fBQIfKPSzSaP9M", "tab": "Coding", "gid": 2100000008}
+}

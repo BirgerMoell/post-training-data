@@ -1,0 +1,15 @@
+{
+  "$schema": "../schemas/capability.schema.json",
+  "schema_version": "1.0.0",
+  "id": "multilingual",
+  "title": "Multilingual",
+  "lead": null,
+  "priority": "P0",
+  "state": "proposed",
+  "scope": "Useful model behavior across 36 OpenEuroLLM language identities represented by 37 release locales, with three explicitly measured investment tiers.",
+  "promise": "Deliver broad European-language utility while keeping each tier within ten percent of the preceding tier on normalized capability scores.",
+  "training_route": ["base coverage audit", "target-language SFT and preference data", "weak-language repair", "native-speaker review"],
+  "owner_interfaces": ["all capability leads", "evaluation lead", "data lead"],
+  "release_decision": "regression-protected",
+  "spreadsheet": {"id": "1hFFDRk_JdjbQCCv3zsemKulSnMyk_fBQIfKPSzSaP9M", "tab": "Multilingual", "gid": 2100000002}
+}

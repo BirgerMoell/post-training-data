@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "updated": "2026-08-24",
+  "model_sizes": ["9b", "30b"],
+  "promotion_rules": [
+    "The target capability must improve against the declared parent checkpoint.",
+    "No priority language may regress by more than 2 percentage points.",
+    "Report macro average, p10 language, and minimum language; macro alone cannot hide a weak tail.",
+    "Non-compensatory safety, privacy, license, and release-artifact gates must pass independently.",
+    "Absolute targets remain provisional until an immutable base-checkpoint baseline is recorded."
+  ],
+  "protected_evaluation_policy": {
+    "never_train": true,
+    "covers": ["prompts", "answers", "translations", "paraphrases", "retrieval corpora", "synthetic derivatives"],
+    "gate_rule": "A suite is gate-eligible only when split identity, hashes, access controls, and training-overlap checks are recorded.",
+    "public_benchmark_rule": "If exact benchmark items or derivatives entered training or RLVR, report the score as diagnostic and use an untouched holdout for promotion."
+  },
+  "required_run_fields": ["model_revision", "parent_revision", "data_manifest_revision", "code_revision", "benchmark_revision", "prompt_template", "decoding", "hardware", "per_language_results", "timestamp"]
+}

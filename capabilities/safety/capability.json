@@ -1,0 +1,15 @@
+{
+  "$schema": "../schemas/capability.schema.json",
+  "schema_version": "1.0.0",
+  "id": "safety",
+  "title": "Safety",
+  "lead": null,
+  "priority": "P0",
+  "state": "proposed",
+  "scope": "Refusal and safe assistance, including harmful-response prevention, calibrated escalation, and links to appropriate external services such as health care.",
+  "promise": "Be helpful without unsafe uplift, manipulation, psychological-harm reinforcement, or blanket refusal of benign requests.",
+  "training_route": ["policy and boundary SFT", "safe-completion preference optimization", "multilingual adversarial repair", "deployment defense in depth"],
+  "owner_interfaces": ["Multilingual", "Instruction & Chat", "Tools & Agents", "Efficiency & Release"],
+  "release_decision": "non-compensatory",
+  "spreadsheet": {"id": "1hFFDRk_JdjbQCCv3zsemKulSnMyk_fBQIfKPSzSaP9M", "tab": "Safety", "gid": 2100000001}
+}

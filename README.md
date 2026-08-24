@@ -10,6 +10,11 @@ This repository answers five practical questions:
 4. Where can it be found?
 5. What is its current state and next action?
 
+It also contains nine [capability playbooks](capabilities/README.md) that turn
+the catalogue into machine-readable training decisions and evaluation gates
+for 9B and 30B model routes. Each playbook keeps training sources, protected
+evaluation, owners, measurable targets, and unresolved gaps separate.
+
 The catalogue contains 114 versioned entries: 104 seeded from the [OpenEuroLLM post-training data register](https://docs.google.com/spreadsheets/d/1hFFDRk_JdjbQCCv3zsemKulSnMyk_fBQIfKPSzSaP9M/edit#gid=1339797209) and 10 later LUMI/Hugging Face discoveries. Each source or product has its own versioned page and can be updated through an ordinary pull request.
 
 Two states are intentionally kept separate:
@@ -55,6 +60,8 @@ question is simply what data exists.
 
 ## Browse the catalogue
 
+- [Capability training and evaluation playbooks](capabilities/README.md)
+- [Cross-capability target matrix](capabilities/MATRIX.md)
 - [Detailed stage-by-stage training guidance](training-plan/README.md)
 - [Language coverage by capability](training-plan/LANGUAGE_COVERAGE.md)
 - [By training type](training-types/README.md)
@@ -77,6 +84,8 @@ languages/<language>/README.md      Language-oriented views
 catalogue-status/<D|P|E>/           Official catalogue lifecycle views
 status/<state>/README.md            Post-training operational-readiness views
 storage/README.md                   Shared storage roots and conventions
+capabilities/<capability>/          Training-data and evaluation manifests
+capabilities/MATRIX.md              Generated 9B/30B/stretch target matrix
 ```
 
 The indexes are generated from the small metadata block at the top of each dataset page:
@@ -84,6 +93,8 @@ The indexes are generated from the small metadata block at the top of each datas
 ```bash
 python3 scripts/build_indexes.py
 python3 scripts/build_indexes.py --check
+python3 scripts/build_capability_indexes.py
+python3 scripts/build_capability_indexes.py --check
 ```
 
 ## Reading a dataset page

@@ -17,6 +17,24 @@ Read [catalogue conventions](CATALOGUE-CONVENTIONS.md) and the [dataset ingestio
 
 Do not edit generated pages under `training-types/`, `languages/`, `status/`, or `catalogue-status/` by hand.
 
+## Update a capability playbook
+
+The canonical capability records are the JSON manifests under `capabilities/<capability>/`:
+
+- update `capability.json` when scope, priority, lead, or release-decision class changes;
+- update `training-data.json` when a source is nominated, promoted, held, or excluded for that capability; and
+- update `evaluation.json` when a benchmark, target, separation boundary, cadence, or release gate changes.
+
+External sources cannot be promoted to `use` before a versioned catalogue
+entry records provenance, immutable revision, terms, quality evidence, and the
+evaluation-contamination boundary. Evaluation-only entries and all prompt,
+answer, translation, paraphrase, retrieval, and synthetic derivatives remain
+outside training and calibration.
+
+Run `python3 scripts/build_capability_indexes.py` to regenerate the capability
+README files and target matrix. Do not edit those generated Markdown views by
+hand. Then run both `--check` commands before opening a pull request.
+
 ## Update a dataset
 
 Update the current version when a statement is clarified without changing the identity of the artifact. Add a new version when the selected upstream release, split, transformation, schema, tokenizer, filtering policy, or protected-evaluation boundary changes materially.
