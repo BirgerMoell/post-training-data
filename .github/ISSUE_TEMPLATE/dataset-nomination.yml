@@ -1,0 +1,80 @@
+name: Dataset nomination
+description: Propose a new source, artifact, support resource, or protected evaluation entry.
+title: "[dataset] "
+labels: ["dataset nomination"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Dataset or artifact
+      placeholder: Organization/name or a descriptive local artifact name
+    validations:
+      required: true
+  - type: dropdown
+    id: training_type
+    attributes:
+      label: Primary post-training use
+      options:
+        - Instruction SFT
+        - Reasoning SFT
+        - Preference optimization
+        - RLVR / GRPO / verifiable RL
+        - Tool use and agents
+        - Long-context extension
+        - Continued pretraining
+        - Medical specialization
+        - Safety and civic
+        - Language repair
+        - Data quality / decontamination
+        - Evaluation holdout — never train
+    validations:
+      required: true
+  - type: textarea
+    id: capability
+    attributes:
+      label: Capability and intended use
+      description: Explain what this adds and where it would enter the 9B–30B training sequence.
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Source, revision, configuration, and split
+      description: Include public URLs and known LUMI/project paths. Do not include credentials or signed URLs.
+    validations:
+      required: true
+  - type: textarea
+    id: languages
+    attributes:
+      label: European-language coverage
+      description: Use ISO 639-3 plus ISO 15924 when known and note how coverage was measured.
+    validations:
+      required: true
+  - type: textarea
+    id: terms
+    attributes:
+      label: License, access, privacy, and safety
+      description: Record known terms and anything that requires legal, PII, or safety review.
+    validations:
+      required: true
+  - type: textarea
+    id: contamination
+    attributes:
+      label: Evaluation overlap and contamination risk
+      description: Identify benchmark families, derivatives, translations, or model-generated leakage risks.
+    validations:
+      required: true
+  - type: input
+    id: curator
+    attributes:
+      label: Proposed curator
+      placeholder: Person or team
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance gate and evidence
+      description: State the measurable checks required before use and link existing runs, manifests, or discussions.
+    validations:
+      required: true

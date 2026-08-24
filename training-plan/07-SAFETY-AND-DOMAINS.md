@@ -12,7 +12,7 @@ keeps specialist data from silently redefining the flagship model.
 ### Safety and civic
 
 The catalogue contains a planned
-[`oellm-eu-safety-civic-v1`](../datasets/oellm-eu-safety-civic-v1/README.md),
+[`oellm-eu-safety-civic-v1`](../oellm-eu-safety-civic-v1/0.0.0/README.md),
 but no canonical production artifact. ArenaHard-EU and battle annotations are
 evaluation/feedback assets, not a complete safety training set.
 
@@ -22,9 +22,9 @@ This means the flagship safety stage is currently blocked.
 
 | Asset | State | Use |
 | --- | --- | --- |
-| [EU medical post-train v1](../datasets/birgermoell-oellm-eu-medical-posttrain-v1/README.md) | Public and on LUMI | Source collection and evaluation/branch data |
-| [Medical SFT Parquet](../datasets/medical-sft-parquet/README.md) | Configured/runnable | Swedish medical SFT branch |
-| [Medical DPO Parquet](../datasets/medical-dpo-parquet/README.md) | Staged | Swedish/mixed medical preference branch |
+| [EU medical post-train v1](../birgermoell-oellm-eu-medical-posttrain-v1/0.0.0/README.md) | Public and on LUMI | Source collection and evaluation/branch data |
+| [Medical SFT Parquet](../medical-sft-parquet/0.0.0/README.md) | Configured/runnable | Swedish medical SFT branch |
+| [Medical DPO Parquet](../medical-dpo-parquet/0.0.0/README.md) | Staged | Swedish/mixed medical preference branch |
 
 Medical data is currently strongest in Swedish. It is insufficient for a
 pan-European medical claim and must not be merged into the general checkpoint

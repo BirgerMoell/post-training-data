@@ -2,6 +2,13 @@
 
 Dataset pages record concrete locations. This page explains the main location families currently visible in the catalogue.
 
+The official training-data catalogue currently records shared catalogue roots
+at `/appl/local/openeurollm/training/catalogue/` on LUMI and
+`/leonardo_work/OELLM_Catalog/training/` on Leonardo. This repository does not
+yet claim an equivalent durable post-training root. Paths below are verified
+working locations until project governance selects and documents that release
+location.
+
 ## Public sources
 
 Hugging Face is the most common public source. Production recipes should pin a dataset commit or immutable revision, along with the exact configuration and split.
@@ -16,7 +23,7 @@ A large shared collection is recorded under:
 /scratch/project_462000963/datasets/posttraining_data
 ```
 
-It contains SFT/DPO-formatted data and other staged candidates. Treat folder names as leads until the exact files, source revision, license, and row counts have been confirmed. The [shared-catalogue page](../datasets/lumi-shared-post-training-catalogue/README.md) links the individually inspected assets and their readiness decisions.
+It contains SFT/DPO-formatted data and other staged candidates. Treat folder names as leads until the exact files, source revision, license, and row counts have been confirmed. The [shared-catalogue page](../lumi-shared-post-training-catalogue/0.0.0/README.md) links the individually inspected assets and their readiness decisions.
 
 Notable paths directly verified on 2026-08-18 include:
 

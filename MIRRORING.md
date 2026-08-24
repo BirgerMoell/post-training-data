@@ -12,6 +12,12 @@ It is ready to mirror into the OpenEuroLLM organization when:
 - the generated indexes pass `python3 scripts/build_indexes.py --check`;
 - repository ownership and update responsibility are agreed.
 
+The repository now follows the official training-data catalogue's versioned
+`<dataset>/<version>/README.md` topology, D/P/E entry lifecycle, canonical
+sections, ISO 639-3 plus ISO 15924 language identifiers, and normalized
+statistics fields. The generated post-training readiness views are deliberate
+extensions and can remain alongside those conventions after mirroring.
+
 Before a public mirror, review member-only Mattermost evidence links, personal
 LUMI working paths, and run identifiers. Keep concrete internal locations when
 they are useful to project members, but mark their access level and avoid
