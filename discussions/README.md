@@ -5,13 +5,13 @@ post-training data freeze. They start from the repository catalogue and the
 `Data` tab of the [OpenEuroLLM post-training register](https://docs.google.com/spreadsheets/d/1hFFDRk_JdjbQCCv3zsemKulSnMyk_fBQIfKPSzSaP9M/edit#gid=1339797209),
 but they are decisions rather than another undifferentiated dataset list.
 
-| Discussion | Decision to make |
-| --- | --- |
-| [Long-context extension](01-long-context-extension.md) | Which continued-pretraining and long-instruction sources qualify 128K first, with 256K and 512K+ kept as explicit promotions |
-| [SFT and reasoning](02-sft-and-reasoning.md) | Which general, multilingual, and verified-reasoning sources form the assistant backbone |
-| [DPO and GRPO](03-dpo-and-grpo.md) | How to combine offline preference data with a narrow verifier-backed GRPO bridge |
-| [Reinforcement learning](04-reinforcement-learning.md) | Which task banks, environments, and verifiers are mature enough for broader online RL |
-| [Safety](05-safety.md) | How to materialize the missing multilingual safety/civic SFT and preference products |
+| Brief | Live discussion | Decision to make |
+| --- | --- | --- |
+| [Long-context extension](01-long-context-extension.md) | [#5](https://github.com/BirgerMoell/post-training-data/discussions/5) | Which continued-pretraining and long-instruction sources qualify 128K first, with 256K and 512K+ kept as explicit promotions |
+| [SFT and reasoning](02-sft-and-reasoning.md) | [#6](https://github.com/BirgerMoell/post-training-data/discussions/6) | Which general, multilingual, and verified-reasoning sources form the assistant backbone |
+| [DPO and GRPO](03-dpo-and-grpo.md) | [#7](https://github.com/BirgerMoell/post-training-data/discussions/7) | How to combine offline preference data with a narrow verifier-backed GRPO bridge |
+| [Reinforcement learning](04-reinforcement-learning.md) | [#8](https://github.com/BirgerMoell/post-training-data/discussions/8) | Which task banks, environments, and verifiers are mature enough for broader online RL |
+| [Safety](05-safety.md) | [#9](https://github.com/BirgerMoell/post-training-data/discussions/9) | How to materialize the missing multilingual safety/civic SFT and preference products |
 
 ## Shared objective
 
