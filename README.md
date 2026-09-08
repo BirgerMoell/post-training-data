@@ -58,6 +58,12 @@ to proposed mixtures, framework handoffs, training procedures, and evaluation
 gates. The table above is the recommended starting point when the immediate
 question is simply what data exists.
 
+The five [post-training dataset decision discussions](discussions/README.md)
+turn that inventory into open, reviewable choices for long-context extension,
+SFT and reasoning, DPO and GRPO, broader RL, and safety. They include new
+Hugging Face candidates, synthetic-data proposals, explicit holdouts, and
+promotion gates tied to EUROPA Eval's target languages and capability slices.
+
 ## Browse the catalogue
 
 - [Capability training and evaluation playbooks](capabilities/README.md)
