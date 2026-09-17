@@ -1,0 +1,34 @@
+schema_version: 1
+name: birgermoell-oellm-eu-human-benchmarks-grpo
+task: rlvr
+training_eligible: true
+catalogue_entry: birgermoell-oellm-eu-human-benchmarks-grpo/0.1.0/README.md
+description: Opt-in human-authored multilingual exact-reward candidate with explicit benchmark contamination.
+source:
+  default:
+    repo_id: birgermoell/oellm-eu-human-benchmarks-grpo
+    revision: f96729b537a7f57f871a067568b11a6a319c0d0d
+    split: train
+    license: mixed-row-level
+checks:
+  license: {status: complete, evidence: "sources.json and row-level source_license; no unknown-license rows"}
+  pii: {status: pending, overlay: pii, fields: ["prompt", "question", "options", "acceptable_answers"]}
+  safety: {status: pending, overlay: quality}
+  integrity: {status: complete, evidence: "Manifest reports unique IDs and content/group-disjoint splits."}
+  language_quality: {status: pending, overlay: quality}
+  task_quality: {status: complete, evidence: "Exact MCQ, numeric, or normalized-answer reward per row"}
+  contamination: {status: complete, evidence: "Every row is marked benchmark-derived; use requires disclosure and affected benchmarks cannot be independent evaluation."}
+release:
+  train-f96729b5:
+    status: candidate
+    input: source.default
+    annotations: ["manifest.json", "sources.json", "quality/opt-in-only"]
+    dataset:
+      path: /scratch/project_465002530/training/collection/post-training/2026q3/birgermoell-oellm-eu-human-benchmarks-grpo/release/f96729b5/data/train.parquet
+      revision: f96729b537a7f57f871a067568b11a6a319c0d0d
+      split: train
+      schema: oellm-human-benchmark-rlvr-v1
+      expected_rows: 99079
+      sha256: 7bc24e01e62075540c85fd65a70966cee56b4c0052815a977bb5d45e58ee7002
+      locations:
+        lumi: /scratch/project_465002530/training/collection/post-training/2026q3/birgermoell-oellm-eu-human-benchmarks-grpo/release/f96729b5

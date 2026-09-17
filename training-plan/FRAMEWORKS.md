@@ -14,6 +14,9 @@ framework-specific artifact is a derived product.
 | LlamaFactory backend in `post-training` | SFT/DPO and long-context experiments | A Jupiter-oriented 16k example exists | LlamaFactory dataset registry plus normalized conversations | The checked-in `long_sft` data is a placeholder, not an OpenEuroLLM production mix |
 | OLMo-core | Reproducing Dolci Instruct/Think SFT | Published tokenized OpenEuroLLM artifacts | Premerged NumPy token IDs and label masks | Tokenized artifact is tied to its tokenizer and cannot be reused for Prelude |
 | Alignment-handbook scripts | Historical SFT -> DPO reference | A Tulu-3 two-stage example exists | HF SFT and preference datasets | Not the common production pipeline and lacks later stages |
+| [`BirgerMoell/oellm-rlvr`](https://github.com/BirgerMoell/oellm-rlvr) with TMAX/Open-Instruct | Online math RLVR (DAPO/CISPO/DPPO/TVPO) | Two-node ROCm/Ray preflight and multilingual math/runtime qualifications exist on LUMI | Prompt-only Parquet with separate ground truth and verifier identity | Each checkpoint still needs pass-rate profiling; this is a separate control plane from `post-training` |
+| `oellm-rlvr` with SkyRL/Harbor | Code and multi-turn agentic RL | Qwen3.5-9B Harbor rollouts and optimizer steps qualified on LUMI | Packaged environment/task bundle with oracle, timeout, and trajectory schema | Requalify images, environments, and verifier oracles for each capability and checkpoint |
+| `oellm-rlvr` verl OPD adapter | Alternate online-policy optimization | Pinned integration exists | verl-compatible prompt/reward contract and checkpoint bridge | Keep as an ablation path until matched against the primary TMAX recipe |
 
 The staged LUMI `Megatron_format` corpora are mostly one-field, already-rendered
 `text` JSONL with paired `.bin`/`.idx`. That makes them convenient for Megatron
@@ -56,9 +59,12 @@ test a separate label mask rather than trusting the directory name.
 
 ### SFT/DPO checkpoint to RLVR
 
-This handoff is not yet implemented in the common framework. A production plan
-must select and pin the RL backend, rollout engine, verifier interfaces,
-checkpoint converter, and failure-recovery behavior before Stage 6 is runnable.
+This handoff is not implemented in the common framework. Use the pinned
+`oellm-rlvr` control plane and the shared collection manifests instead. The
+starting checkpoint, TMAX/SkyRL/verl commit, container, verifier contract,
+dataset release, rollout settings, and resume behavior must be frozen per run.
+The common SFT/DPO repository does not need to absorb RLVR before Stage 6 can
+run, but checkpoint/tokenizer compatibility must still be verified.
 
 ## Minimum framework validation
 

@@ -18,6 +18,7 @@ Entries are grouped from the recorded coverage on each page. Broad multilingual 
 | [allenai/rlvr-code-data-python-r1-format-filtered](../../allenai-rlvr-code-data-python-r1-format-filtered/0.0.0/README.md) | 0.0.0 | RLVR / GRPO / verifiable RL | Draft | Planned | code/en |
 | [allenai/RLVR-GSM-MATH-IF-Mixed-Constraints](../../allenai-rlvr-gsm-math-if-mixed-constraints/0.0.0/README.md) | 0.0.0 | RLVR / GRPO / verifiable RL | Draft | Planned | primarily en |
 | [allenai/tulu-3-sft-mixture](../../allenai-tulu-3-sft-mixture/0.0.0/README.md) | 0.0.0 | Instruction SFT | Published | Used in completed run | en |
+| [birgermoell/oellm-code-rlvr](../../birgermoell-oellm-code-rlvr/0.1.0/README.md) | 0.1.0 | RLVR / GRPO / verifiable RL | Published | Candidate | English prompts; Python solutions |
 | [birgermoell/oellm-eu-tooluse-v1](../../birgermoell-oellm-eu-tooluse-v1/0.0.0/README.md) | 0.0.0 | RLVR / GRPO / verifiable RL, Tool use and agentic training | Published | Used in completed run | en |
 | [birgermoell/oellm-longctx-tokenized-natural-128k-256k-pilot-v1](../../birgermoell-oellm-longctx-tokenized-natural-128k-256k-pilot-v1/0.0.0/README.md) | 0.0.0 | Long-context extension, Continued pretraining | Published | Published / available | en + multilingual |
 | [birgermoell/oellm-longctx-tokenized-structured-128k-256k-v1](../../birgermoell-oellm-longctx-tokenized-structured-128k-256k-v1/0.0.0/README.md) | 0.0.0 | Long-context extension, Continued pretraining | Published | Published / available | en |
@@ -42,6 +43,7 @@ Entries are grouped from the recorded coverage on each page. Broad multilingual 
 | [nvidia/Nemotron-Post-Training-Dataset-v2](../../nvidia-nemotron-post-training-dataset-v2/0.0.0/README.md) | 0.0.0 | Reasoning SFT | Published | Configured / runnable | primarily en |
 | [nvidia/Nemotron-SFT-Agentic-v2 — interactive-agent](../../nvidia-nemotron-sft-agentic-v2-interactive-agent/0.0.0/README.md) | 0.0.0 | Tool use and agentic training | Published | Used in research run | primarily en |
 | [nvidia/OpenMathInstruct-2](../../nvidia-openmathinstruct-2/0.0.0/README.md) | 0.0.0 | Reasoning SFT | Draft | Candidate | primarily en |
+| [open-r1/DAPO-Math-17k-Processed](../../open-r1-dapo-math-17k-processed/0.1.0/README.md) | 0.1.0 | RLVR / GRPO / verifiable RL | Draft | Candidate | en |
 | [open-thoughts/OpenThoughts-114k](../../open-thoughts-openthoughts-114k/0.0.0/README.md) | 0.0.0 | Reasoning SFT | Draft | Candidate | primarily en |
 | [open-thoughts/OpenThoughts2-1M](../../open-thoughts-openthoughts2-1m/0.0.0/README.md) | 0.0.0 | Reasoning SFT | Draft | Candidate | primarily en |
 | [OpenEuroLLM function-calling mixture (#220)](../../openeurollm-function-calling-mixture-220/0.0.0/README.md) | 0.0.0 | Tool use and agentic training | Published | Used in research run | primarily en |

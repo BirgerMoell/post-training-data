@@ -1,7 +1,7 @@
 # Used in a completed run
 > Generated from the JSON frontmatter in each versioned dataset entry. Run `python3 scripts/build_indexes.py` after changing an entry.
 
-23 entries.
+25 entries.
 
 | Dataset / product | Version | Catalogue | Training use | Languages | Locations |
 | --- | --- | --- | --- | --- | --- |
@@ -11,6 +11,7 @@
 | [birgermoell/oellm-eu-defect-repair-sft-v1](../../birgermoell-oellm-eu-defect-repair-sft-v1/0.0.0/README.md) | 0.0.0 | Published | Language repair | is,ga,mt,et,hr,sl,lt,lv,da,hu,sk,bg,ro,pl,fi | [public](<https://huggingface.co/datasets/birgermoell/oellm-eu-defect-repair-sft-v1>) · LUMI |
 | [birgermoell/oellm-eu-exam-mcq-v1](../../birgermoell-oellm-eu-exam-mcq-v1/0.0.0/README.md) | 0.0.0 | Published | Preference optimization, RLVR / GRPO / verifiable RL | 35 language codes | [public](<https://huggingface.co/datasets/birgermoell/oellm-eu-exam-mcq-v1>) · LUMI |
 | [birgermoell/oellm-eu-tooluse-v1](../../birgermoell-oellm-eu-tooluse-v1/0.0.0/README.md) | 0.0.0 | Published | RLVR / GRPO / verifiable RL, Tool use and agentic training | en | [public](<https://huggingface.co/datasets/birgermoell/oellm-eu-tooluse-v1>) · LUMI |
+| [birgermoell/oellm-math-rlvr](../../birgermoell-oellm-math-rlvr/0.1.0/README.md) | 0.1.0 | Published | RLVR / GRPO / verifiable RL | 24 EU languages | [public](<https://huggingface.co/datasets/birgermoell/oellm-math-rlvr>) · LUMI |
 | [cambridgeltl/xcopa](../../cambridgeltl-xcopa/0.0.0/README.md) | 0.0.0 | Published | Preference optimization, RLVR / GRPO / verifiable RL | multilingual | [public](<https://huggingface.co/datasets/cambridgeltl/xcopa>) |
 | [CohereLabs/Global-MMLU](../../coherelabs-global-mmlu/0.0.0/README.md) | 0.0.0 | Published | Preference optimization, RLVR / GRPO / verifiable RL | multilingual | [public](<https://huggingface.co/datasets/CohereLabs/Global-MMLU>) |
 | [EuroBlocks-SFT-Synthetic-1124](../../euroblocks-sft-synthetic-1124/0.0.0/README.md) | 0.0.0 | Published | Instruction SFT | EU multilingual | LUMI |
@@ -23,6 +24,7 @@
 | [NousResearch/hermes-function-calling-v1](../../nousresearch-hermes-function-calling-v1/0.0.0/README.md) | 0.0.0 | Published | RLVR / GRPO / verifiable RL, Tool use and agentic training | en | [public](<https://huggingface.co/datasets/NousResearch/hermes-function-calling-v1>) |
 | [nvidia/Llama-Nemotron-Post-Training-Dataset](../../nvidia-llama-nemotron-post-training-dataset/0.0.0/README.md) | 0.0.0 | Published | Reasoning SFT | primarily en | [public](<https://huggingface.co/datasets/nvidia/Llama-Nemotron-Post-Training-Dataset>) · LUMI |
 | [openai/MMMLU](../../openai-mmmlu/0.0.0/README.md) | 0.0.0 | Published | Preference optimization, RLVR / GRPO / verifiable RL | multilingual | [public](<https://huggingface.co/datasets/openai/MMMLU>) |
+| [OpenEuroLLM multilingual reasoning signal](../../oellm-multilingual-reasoning-signal/0.1.0/README.md) | 0.1.0 | Draft | RLVR / GRPO / verifiable RL | 34 European macro-languages | [public](<https://github.com/BirgerMoell/oellm-rlvr>) · LUMI |
 | [Per-language Wikipedia](../../per-language-wikipedia/0.0.0/README.md) | 0.0.0 | Published | Long-context extension, Language repair | 15 repair languages + EU | [public](<https://huggingface.co/datasets/wikimedia/wikipedia>) |
 | [qwen35-9b-dpo-parquet](../../qwen35-9b-dpo-parquet/0.0.0/README.md) | 0.0.0 | Published | Preference optimization | en | [public](<https://github.com/BirgerMoell/qwen35-posttrain/blob/main/configs/dpo_qwen35_9b.yaml>) · LUMI |
 | [qwen35-9b-reasoning-sft-parquet](../../qwen35-9b-reasoning-sft-parquet/0.0.0/README.md) | 0.0.0 | Published | Reasoning SFT | en,fi | [public](<https://github.com/BirgerMoell/qwen35-posttrain/blob/main/configs/sft_qwen35_9b_reasoning.yaml>) · LUMI |

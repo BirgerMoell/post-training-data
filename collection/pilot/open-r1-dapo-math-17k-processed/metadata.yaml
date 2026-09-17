@@ -1,0 +1,36 @@
+schema_version: 1
+name: open-r1-dapo-math-17k-processed
+task: rlvr
+training_eligible: true
+catalogue_entry: open-r1-dapo-math-17k-processed/0.1.0/README.md
+description: Prompt-only, deduplicated DAPO competition-math splits for TMAX/Open-Instruct.
+source:
+  en:
+    repo_id: open-r1/DAPO-Math-17k-Processed
+    revision: 31dd309567e3da778038cc87d868b6097a3ccf68
+    configuration: en
+    split: train
+    sha256: 40f672fe8b6dbeee953ae5acc75a38e99144e682450e07c625c87c734ec76285
+checks:
+  license: {status: pending, reason: "Upstream dataset card has no machine-readable license tag; approve inherited terms before production promotion."}
+  pii: {status: pending, overlay: pii, fields: ["messages[].content"]}
+  safety: {status: complete, evidence: "Mathematics-only prompt pool"}
+  integrity: {status: complete, evidence: "Manifest records duplicate/conflict removal, hashes, and zero split-ID overlap."}
+  language_quality: {status: complete, evidence: "Upstream English configuration"}
+  task_quality: {status: complete, evidence: "Published MATH_v2 ground truth and deterministic math verifier"}
+  contamination: {status: pending, reason: "Competition-math overlap must be disclosed and protected evaluation sets checked."}
+release:
+  train-31dd3095:
+    status: candidate
+    input: source.en
+    annotations: ["manifest.json", "calibration.parquet", "evaluation.parquet"]
+    dataset:
+      path: /scratch/project_465002530/training/collection/post-training/2026q3/open-r1-dapo-math-17k-processed/release/31dd3095/train.parquet
+      revision: 31dd309567e3da778038cc87d868b6097a3ccf68
+      subset: en
+      split: train
+      schema: oellm-rlvr-math-v1
+      expected_rows: 12700
+      sha256: cce9fb9a7a458bd7e8ca08abb9618fac77cfc8e4360bdb355bbf1ddc12f05852
+      locations:
+        lumi: /scratch/project_465002530/training/collection/post-training/2026q3/open-r1-dapo-math-17k-processed/release/31dd3095

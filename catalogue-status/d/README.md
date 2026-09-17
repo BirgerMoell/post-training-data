@@ -1,7 +1,7 @@
 # D — Draft
 > Generated from the JSON frontmatter in each versioned dataset entry. Run `python3 scripts/build_indexes.py` after changing an entry.
 
-41 entries.
+43 entries.
 
 | Dataset / product | Version | Operational state | Training use | Languages | Locations |
 | --- | --- | --- | --- | --- | --- |
@@ -34,8 +34,10 @@
 | [oellm-eu-reasoning-v1](../../oellm-eu-reasoning-v1/0.0.0/README.md) | 0.0.0 | Planned | Reasoning SFT | European languages | [public](<https://github.com/BirgerMoell/qwen35-posttrain/blob/main/docs/EU_DATA_STRATEGY.md>) |
 | [oellm-eu-safety-civic-v1](../../oellm-eu-safety-civic-v1/0.0.0/README.md) | 0.0.0 | Planned | Safety and civic training | European languages | [public](<https://github.com/BirgerMoell/qwen35-posttrain/blob/main/docs/EU_DATA_STRATEGY.md>) |
 | [oellm-eu-tool-agent-v1](../../oellm-eu-tool-agent-v1/0.0.0/README.md) | 0.0.0 | Planned | RLVR / GRPO / verifiable RL, Tool use and agentic training | European languages | [public](<https://github.com/BirgerMoell/qwen35-posttrain/blob/main/docs/EU_DATA_STRATEGY.md>) |
+| [open-r1/DAPO-Math-17k-Processed](../../open-r1-dapo-math-17k-processed/0.1.0/README.md) | 0.1.0 | Candidate | RLVR / GRPO / verifiable RL | en | [public](<https://huggingface.co/datasets/open-r1/DAPO-Math-17k-Processed>) · LUMI |
 | [open-thoughts/OpenThoughts-114k](../../open-thoughts-openthoughts-114k/0.0.0/README.md) | 0.0.0 | Candidate | Reasoning SFT | primarily en | [public](<https://huggingface.co/datasets/open-thoughts/OpenThoughts-114k>) |
 | [open-thoughts/OpenThoughts2-1M](../../open-thoughts-openthoughts2-1m/0.0.0/README.md) | 0.0.0 | Candidate | Reasoning SFT | primarily en | [public](<https://huggingface.co/datasets/open-thoughts/OpenThoughts2-1M>) |
+| [OpenEuroLLM multilingual reasoning signal](../../oellm-multilingual-reasoning-signal/0.1.0/README.md) | 0.1.0 | Used in completed run | RLVR / GRPO / verifiable RL | 34 European macro-languages | [public](<https://github.com/BirgerMoell/oellm-rlvr>) · LUMI |
 | [openeurollm/common-pile-annotated](../../openeurollm-common-pile-annotated/0.0.0/README.md) | 0.0.0 | Candidate | Data quality, filtering, and decontamination | primarily en | [public](<https://huggingface.co/datasets/openeurollm/common-pile-annotated>) |
 | [openeurollm/nemotron-cc-10K-sample-translated](../../openeurollm-nemotron-cc-10k-sample-translated/0.0.0/README.md) | 0.0.0 | Candidate | Data quality, filtering, and decontamination | multilingual | [public](<https://huggingface.co/datasets/openeurollm/nemotron-cc-10K-sample-translated>) |
 | [qwen35-9b-multiling-dpo-parquet](../../qwen35-9b-multiling-dpo-parquet/0.0.0/README.md) | 0.0.0 | Needs verification | Preference optimization | fi,sv,da,no,is + multilingual | [public](<https://github.com/BirgerMoell/qwen35-posttrain/blob/main/configs/dpo_qwen35_9b_multilingual.yaml>) |

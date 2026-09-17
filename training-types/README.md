@@ -4,7 +4,7 @@
 - [Instruction SFT](instruction-sft/README.md) — 21 entries
 - [Reasoning SFT](reasoning-sft/README.md) — 17 entries
 - [Preference optimization](preference-optimization/README.md) — 24 entries
-- [RLVR / GRPO / verifiable RL](reinforcement-learning/README.md) — 23 entries
+- [RLVR / GRPO / verifiable RL](reinforcement-learning/README.md) — 28 entries
 - [Tool use and agentic training](tool-and-agentic/README.md) — 13 entries
 - [Long-context extension](long-context-extension/README.md) — 20 entries
 - [Continued pretraining](continued-pretraining/README.md) — 6 entries

@@ -25,6 +25,11 @@ REQUIRED_CHECKS = (
 CHECK_STATES = {"complete", "pending", "inapplicable"}
 RELEASE_STATES = {"candidate", "approved", "deprecated"}
 MIX_STATES = {"draft", "pilot", "approved", "deprecated"}
+BACKENDS_BY_METHOD = {
+    "sft": {"trl", "llamafactory"},
+    "dpo": {"trl", "llamafactory"},
+    "rlvr": {"tmax", "verl", "skyrl"},
+}
 
 
 def load_mapping(path: Path, errors: list[str]) -> dict[str, Any] | None:
@@ -143,9 +148,15 @@ def validate_mix(path: Path, errors: list[str]) -> None:
     if status not in MIX_STATES:
         errors.append(f"{label}: status must be one of {sorted(MIX_STATES)}")
     method = mix.get("method")
-    if method not in {"sft", "dpo"}:
-        errors.append(f"{label}: current framework supports method sft or dpo")
+    if method not in {"sft", "dpo", "rlvr"}:
+        errors.append(f"{label}: method must be sft, dpo, or rlvr")
         return
+    backend = mix.get("backend")
+    if backend not in BACKENDS_BY_METHOD[method]:
+        errors.append(
+            f"{label}: backend {backend!r} is not valid for method {method!r}; "
+            f"choose from {sorted(BACKENDS_BY_METHOD[method])}"
+        )
     sampling = mix.get("sampling")
     if not isinstance(sampling, dict) or sampling.get("mode") != "multiplier":
         errors.append(f"{label}: sampling.mode must be multiplier")

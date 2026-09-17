@@ -10,8 +10,8 @@
     "version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+(?:[-+][0-9A-Za-z.-]+)?$"},
     "status": {"enum": ["draft", "pilot", "approved", "deprecated"]},
     "description": {"type": "string"},
-    "method": {"enum": ["sft", "dpo"]},
-    "backend": {"enum": ["trl", "llamafactory"]},
+    "method": {"enum": ["sft", "dpo", "rlvr"]},
+    "backend": {"enum": ["trl", "llamafactory", "tmax", "verl", "skyrl"]},
     "sampling": {
       "type": "object",
       "required": ["mode"],

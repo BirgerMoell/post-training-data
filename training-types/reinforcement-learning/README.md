@@ -1,7 +1,7 @@
 # RLVR / GRPO / verifiable RL
 > Generated from the JSON frontmatter in each versioned dataset entry. Run `python3 scripts/build_indexes.py` after changing an entry.
 
-23 entries.
+28 entries.
 
 | Dataset / product | Version | Catalogue | Operational state | Languages | Purpose | Locations |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -11,9 +11,12 @@
 | [allenai/Dolci-Think-RL-7B / 32B](../../allenai-dolci-think-rl-7b-32b/0.0.0/README.md) | 0.0.0 | Draft | Candidate | primarily en | Reasoning RL data | [public](<https://huggingface.co/datasets/allenai/Dolci-Think-RL-7B>) |
 | [allenai/rlvr-code-data-python-r1-format-filtered](../../allenai-rlvr-code-data-python-r1-format-filtered/0.0.0/README.md) | 0.0.0 | Draft | Planned | code/en | Verifiable Python rewards | [public](<https://huggingface.co/datasets/allenai/rlvr-code-data-python-r1-format-filtered>) |
 | [allenai/RLVR-GSM-MATH-IF-Mixed-Constraints](../../allenai-rlvr-gsm-math-if-mixed-constraints/0.0.0/README.md) | 0.0.0 | Draft | Planned | primarily en | Verifiable math + IF rewards | [public](<https://huggingface.co/datasets/allenai/RLVR-GSM-MATH-IF-Mixed-Constraints>) |
+| [birgermoell/oellm-code-rlvr](../../birgermoell-oellm-code-rlvr/0.1.0/README.md) | 0.1.0 | Published | Candidate | English prompts; Python solutions | Deterministic Python stdin/stdout tasks with hidden tests | [public](<https://huggingface.co/datasets/birgermoell/oellm-code-rlvr>) · LUMI |
 | [birgermoell/oellm-eu-exam-mcq-v1](../../birgermoell-oellm-eu-exam-mcq-v1/0.0.0/README.md) | 0.0.0 | Published | Used in completed run | 35 language codes | European exam rewards and preference pairs | [public](<https://huggingface.co/datasets/birgermoell/oellm-eu-exam-mcq-v1>) · LUMI |
+| [birgermoell/oellm-eu-human-benchmarks-grpo](../../birgermoell-oellm-eu-human-benchmarks-grpo/0.1.0/README.md) | 0.1.0 | Published | Candidate | 28 European languages | Redistribution-audited human benchmark prompts with exact rewards | [public](<https://huggingface.co/datasets/birgermoell/oellm-eu-human-benchmarks-grpo>) · LUMI |
 | [birgermoell/oellm-eu-medical-posttrain-v1](../../birgermoell-oellm-eu-medical-posttrain-v1/0.0.0/README.md) | 0.0.0 | Published | Published / available | European; current SFT sv | Medical source registry and builds | [public](<https://huggingface.co/datasets/birgermoell/oellm-eu-medical-posttrain-v1>) · LUMI |
 | [birgermoell/oellm-eu-tooluse-v1](../../birgermoell-oellm-eu-tooluse-v1/0.0.0/README.md) | 0.0.0 | Published | Used in completed run | en | Qwen-native tool SFT + verifiable RL | [public](<https://huggingface.co/datasets/birgermoell/oellm-eu-tooluse-v1>) · LUMI |
+| [birgermoell/oellm-math-rlvr](../../birgermoell-oellm-math-rlvr/0.1.0/README.md) | 0.1.0 | Published | Used in completed run | 24 EU languages | Deterministic procedural mathematics for RLVR | [public](<https://huggingface.co/datasets/birgermoell/oellm-math-rlvr>) · LUMI |
 | [cambridgeltl/xcopa](../../cambridgeltl-xcopa/0.0.0/README.md) | 0.0.0 | Published | Used in completed run | multilingual | Causal reasoning MCQs | [public](<https://huggingface.co/datasets/cambridgeltl/xcopa>) |
 | [CohereLabs/Global-MMLU](../../coherelabs-global-mmlu/0.0.0/README.md) | 0.0.0 | Published | Used in completed run | multilingual | Academic MCQ coverage | [public](<https://huggingface.co/datasets/CohereLabs/Global-MMLU>) |
 | [European official/national exam bundle (23 IDs)](../../european-official-national-exam-bundle-23-ids/0.0.0/README.md) | 0.0.0 | Published | Used in completed run | sq,bg,ca,cs,da,en,es,et,eu,it,pl,sk,sv | Native exam/licensing/civic MCQs | [public](<https://huggingface.co/datasets/birgermoell/oellm-eu-exam-mcq-v1>) |
@@ -24,7 +27,9 @@
 | [LumiOpen/AutoIF-FI](../../lumiopen-autoif-fi/0.0.0/README.md) | 0.0.0 | Draft | Candidate | fi | Finnish verifiable instruction following | [public](<https://huggingface.co/datasets/LumiOpen/AutoIF-FI>) |
 | [NousResearch/hermes-function-calling-v1](../../nousresearch-hermes-function-calling-v1/0.0.0/README.md) | 0.0.0 | Published | Used in completed run | en | Hermes/Qwen-formatted calls | [public](<https://huggingface.co/datasets/NousResearch/hermes-function-calling-v1>) |
 | [oellm-eu-tool-agent-v1](../../oellm-eu-tool-agent-v1/0.0.0/README.md) | 0.0.0 | Draft | Planned | European languages | Planned multilingual tool product | [public](<https://github.com/BirgerMoell/qwen35-posttrain/blob/main/docs/EU_DATA_STRATEGY.md>) |
+| [open-r1/DAPO-Math-17k-Processed](../../open-r1-dapo-math-17k-processed/0.1.0/README.md) | 0.1.0 | Draft | Candidate | en | Competition-math prompt pool for deterministic RLVR | [public](<https://huggingface.co/datasets/open-r1/DAPO-Math-17k-Processed>) · LUMI |
 | [openai/MMMLU](../../openai-mmmlu/0.0.0/README.md) | 0.0.0 | Published | Used in completed run | multilingual | Multilingual MMLU-style MCQs | [public](<https://huggingface.co/datasets/openai/MMMLU>) |
+| [OpenEuroLLM multilingual reasoning signal](../../oellm-multilingual-reasoning-signal/0.1.0/README.md) | 0.1.0 | Draft | Used in completed run | 34 European macro-languages | Procedural multilingual reasoning with answer, language, and format rewards | [public](<https://github.com/BirgerMoell/oellm-rlvr>) · LUMI |
 | [OpenR1-Math-220k staged on LUMI](../../lumi-openr1-math-220k/0.0.0/README.md) | 0.0.0 | Published | Staged on LUMI — local revision not pinned | English | Verified-trace math SFT, preference-pair construction, and RLVR prompt seed | [public](<https://huggingface.co/datasets/open-r1/OpenR1-Math-220k>) · LUMI |
 | [Salesforce/xlam-function-calling-60k](../../salesforce-xlam-function-calling-60k/0.0.0/README.md) | 0.0.0 | Draft | Candidate | en | APIGen-style function calls | [public](<https://huggingface.co/datasets/Salesforce/xlam-function-calling-60k>) |
 | [Team-ACE/ToolACE](../../team-ace-toolace/0.0.0/README.md) | 0.0.0 | Published | Used in completed run | en | Multi-turn dependency calls | [public](<https://huggingface.co/datasets/Team-ACE/ToolACE>) |

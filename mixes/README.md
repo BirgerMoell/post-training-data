@@ -1,9 +1,12 @@
 # Post-training data mixes
 
-This directory contains reusable data-selection manifests that are consumed by
-[`OpenEuroLLM/post-training`](https://github.com/OpenEuroLLM/post-training).
-They select data only; model, optimizer, RoPE, sequence length, SLURM, container,
-and checkpoint settings remain in the ordinary training-run YAML.
+This directory contains reusable data-selection manifests. SFT/DPO manifests
+are consumed by
+[`OpenEuroLLM/post-training`](https://github.com/OpenEuroLLM/post-training);
+RLVR manifests are the reviewed data-selection input for
+[`BirgerMoell/oellm-rlvr`](https://github.com/BirgerMoell/oellm-rlvr). They
+select data only; model, optimizer, RoPE, sequence length, SLURM, container,
+checkpoint, rollout, and reward settings remain in the ordinary run YAML.
 
 ## Use with the post-training framework
 
@@ -56,6 +59,9 @@ filter. Run `scripts/data.py inspect` and `scripts/data.py token-stats` before a
 large job and record the realized sample/token composition.
 
 The pilot manifests are smoke-test selections, not approved flagship recipes.
+For online RLVR, weights describe submitted prompts before rollout filtering.
+Record the realized optimizer composition after verifier execution and
+zero-variance filtering; it can differ materially from the static input mix.
 
 ## Validation
 

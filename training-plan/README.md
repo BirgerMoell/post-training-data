@@ -13,8 +13,8 @@ The plan is deliberately evidence-aware:
   production data freeze has not yet been approved.
 - **Proposed** means a pilot recipe or mixture to test. It is not a claim about
   a completed OpenEuroLLM run.
-- **Blocked** means a required dataset, verifier, evaluation, framework feature,
-  or release decision is missing.
+- **Qualify** means the bytes and implementation exist but the entering
+  checkpoint still needs rollout profiling or an infrastructure gate.
 
 ## Recommended sequence
 
@@ -49,7 +49,7 @@ Every later stage therefore has a long-context retention gate.
 | [3. Multilingual repair](03-MULTILINGUAL-REPAIR.md) | Runnable but uneven | 13-language general SFT union plus 15-language repair set | Many official languages have only narrow repair data, not broad native instruction data |
 | [4. Reasoning/tools](04-REASONING-AND-TOOLS.md) | English runnable; several LUMI candidates need freeze | Decontaminated Dolci Think/Nemotron, OpenR1 Math, 40.2 GB AM think mix, and Glaive code | Local lineage/correctness plus multilingual reasoning/tool data and common quality gates are missing |
 | [5. Preference](05-PREFERENCE-OPTIMIZATION.md) | Runnable for DPO | Translated Dolci DPO and decontaminated SmolTalk2 | Preference fidelity after translation and low-resource coverage are unverified |
-| [6. RLVR/GRPO](06-RLVR-GRPO.md) | Blocked for common pipeline | Exam MCQ, math/code/IF candidate sets | OpenEuroLLM post-training framework has no GRPO path or approved verifier suite |
+| [6. RLVR/GRPO](06-RLVR-GRPO.md) | Runnable through `oellm-rlvr`; shared releases staged | DAPO, 1M-row EU24 math, multilingual reasoning, 100k code, tools, IF sources | Checkpoint-specific rollout profiles, code/tool/constraint qualification, and production promotion decisions |
 | [7. Safety/domains](07-SAFETY-AND-DOMAINS.md) | Medical pilot only | Swedish medical SFT/DPO and exam artifacts | No production multilingual safety/civic/refusal dataset |
 | [8. Integration/release](08-INTEGRATION-EVALUATION-RELEASE.md) | Partial | Multilingual holdouts, LUMI FLORES/Tatoeba, ArenaHard-EU, Prelude scores | No signed common gate, multilingual long-context benchmark, or release artifact manifest |
 
@@ -65,7 +65,8 @@ Use this to exercise the pipeline while gaps are being filled:
    budget or use the verified 128k checkpoint as an engineering input.
 4. Run general SFT, a multilingual SFT ratio sweep, reasoning/tool branches,
    and DPO.
-5. Skip RLVR and flagship safety claims unless their blockers are closed.
+5. Run the DAPO smoke and staged RLVR capability pilots through `oellm-rlvr`;
+   keep unqualified verifier families out of optimizer updates.
 6. Evaluate and publish a full run manifest even if the model is not a release
    candidate.
 

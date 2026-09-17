@@ -1,0 +1,34 @@
+schema_version: 1
+name: allenai-rlvr-gsm-math-if-mixed-constraints
+task: rlvr
+training_eligible: true
+catalogue_entry: allenai-rlvr-gsm-math-if-mixed-constraints/0.0.0/README.md
+description: Pinned native Tulu-style math and instruction-following RLVR source.
+source:
+  default:
+    repo_id: allenai/RLVR-GSM-MATH-IF-Mixed-Constraints
+    revision: 7dbd180f5440c0b90f2944e6efea934b85437a95
+    split: train
+    license: ODC-BY-1.0 aggregate; subset terms apply
+checks:
+  license: {status: pending, reason: "Review aggregate ODC-BY and the separate subset/model-derived terms before promotion."}
+  pii: {status: pending, overlay: pii, fields: ["messages[].content", "constraint"]}
+  safety: {status: pending, overlay: quality}
+  integrity: {status: complete, evidence: "Pinned 29,946-row Parquet with SHA-256"}
+  language_quality: {status: complete, evidence: "English-only source"}
+  task_quality: {status: pending, reason: "Qualify each constraint verifier; prefer the IF slice where math duplicates DAPO/GSM pools."}
+  contamination: {status: pending, reason: "GSM8K and MATH rows contaminate those public benchmarks."}
+release:
+  source-7dbd180f:
+    status: candidate
+    input: source.default
+    annotations: ["quality/subset-and-verifier-qualification"]
+    dataset:
+      path: /scratch/project_465002530/training/collection/post-training/2026q3/allenai-rlvr-gsm-math-if-mixed-constraints/source/7dbd180f/data/train-00000-of-00001.parquet
+      revision: 7dbd180f5440c0b90f2944e6efea934b85437a95
+      split: train
+      schema: open-instruct-rlvr-v1
+      expected_rows: 29946
+      sha256: d4ff1f9c054129bfad71876be125c58c5eb18b4d57e8729c86fcfc126f2df300
+      locations:
+        lumi: /scratch/project_465002530/training/collection/post-training/2026q3/allenai-rlvr-gsm-math-if-mixed-constraints/source/7dbd180f

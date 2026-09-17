@@ -1,0 +1,28 @@
+schema_version: 1
+id: rlvr-multilingual-math
+version: 1.0.0
+status: pilot
+method: rlvr
+backend: tmax
+description: >-
+  Approximately 36.6k submitted prompts for checkpoint-specific profiling and
+  a multilingual math curriculum: procedural EU24 math, hard English DAPO,
+  and the 34-language symbolic reasoning signal. Actual optimizer sampling is
+  reweighted by successful non-degenerate verifier groups.
+sampling:
+  mode: multiplier
+data:
+  seed: 20260917
+  datasets:
+    - name: eu24_procedural_math
+      collection: ../../collection/pilot/birgermoell-oellm-math-rlvr/metadata.yaml
+      release: train-0ffc9d6c
+      weight: 0.016
+    - name: dapo_hard_math_en
+      collection: ../../collection/pilot/open-r1-dapo-math-17k-processed/metadata.yaml
+      release: train-31dd3095
+      weight: 1.0
+    - name: european_symbolic_reasoning
+      collection: ../../collection/pilot/oellm-multilingual-reasoning-signal/metadata.yaml
+      release: train-20260914
+      weight: 4.0

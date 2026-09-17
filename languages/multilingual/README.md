@@ -7,8 +7,10 @@ Entries are grouped from the recorded coverage on each page. Broad multilingual 
 | --- | --- | --- | --- | --- | --- |
 | [birgermoell/oellm-eu-eval-holdouts-v1](../../birgermoell-oellm-eu-eval-holdouts-v1/0.0.0/README.md) | 0.0.0 | Evaluation holdouts | Published | Eval-only — do not train | 38 languages |
 | [birgermoell/oellm-eu-exam-mcq-v1](../../birgermoell-oellm-eu-exam-mcq-v1/0.0.0/README.md) | 0.0.0 | Preference optimization, RLVR / GRPO / verifiable RL | Published | Used in completed run | 35 language codes |
+| [birgermoell/oellm-eu-human-benchmarks-grpo](../../birgermoell-oellm-eu-human-benchmarks-grpo/0.1.0/README.md) | 0.1.0 | RLVR / GRPO / verifiable RL | Published | Candidate | 28 European languages |
 | [birgermoell/oellm-longctx-tokenized-natural-128k-256k-pilot-v1](../../birgermoell-oellm-longctx-tokenized-natural-128k-256k-pilot-v1/0.0.0/README.md) | 0.0.0 | Long-context extension, Continued pretraining | Published | Published / available | en + multilingual |
 | [birgermoell/oellm-longctx-tokenized-streamed-all-v2](../../birgermoell-oellm-longctx-tokenized-streamed-all-v2/0.0.0/README.md) | 0.0.0 | Long-context extension, Continued pretraining | Published | Published / available | 34 European languages |
+| [birgermoell/oellm-math-rlvr](../../birgermoell-oellm-math-rlvr/0.1.0/README.md) | 0.1.0 | RLVR / GRPO / verifiable RL | Published | Used in completed run | 24 EU languages |
 | [cambridgeltl/xcopa](../../cambridgeltl-xcopa/0.0.0/README.md) | 0.0.0 | Preference optimization, RLVR / GRPO / verifiable RL | Published | Used in completed run | multilingual |
 | [CohereLabs/Global-MMLU](../../coherelabs-global-mmlu/0.0.0/README.md) | 0.0.0 | Preference optimization, RLVR / GRPO / verifiable RL | Published | Used in completed run | multilingual |
 | [CulturaX](../../culturax/0.0.0/README.md) | 0.0.0 | Long-context extension | Draft | Candidate | European multilingual |
@@ -36,6 +38,7 @@ Entries are grouped from the recorded coverage on each page. Broad multilingual 
 | [OLMo gzip decontamination filter](../../olmo-gzip-decontamination-filter/0.0.0/README.md) | 0.0.0 | Data quality, filtering, and decontamination | Published | Supporting / filtering | language-agnostic |
 | [openai/MMMLU](../../openai-mmmlu/0.0.0/README.md) | 0.0.0 | Preference optimization, RLVR / GRPO / verifiable RL | Published | Used in completed run | multilingual |
 | [OpenAssistant / OASST2](../../openassistant-oasst2/0.0.0/README.md) | 0.0.0 | Instruction SFT | Published | Used in research run | multilingual |
+| [OpenEuroLLM multilingual reasoning signal](../../oellm-multilingual-reasoning-signal/0.1.0/README.md) | 0.1.0 | RLVR / GRPO / verifiable RL | Draft | Used in completed run | 34 European macro-languages |
 | [openeurollm/ArenaHard-EU-v0 / v0-bis](../../openeurollm-arenahard-eu-v0-v0-bis/0.0.0/README.md) | 0.0.0 | Evaluation holdouts | Published | Eval-only — do not train | European languages |
 | [openeurollm/battle-annotations](../../openeurollm-battle-annotations/0.0.0/README.md) | 0.0.0 | Evaluation holdouts | Published | Eval-only — do not train | multilingual |
 | [openeurollm/contaminated-documents](../../openeurollm-contaminated-documents/0.0.0/README.md) | 0.0.0 | Data quality, filtering, and decontamination | Published | Supporting / filtering | multilingual |

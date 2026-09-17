@@ -1,0 +1,34 @@
+schema_version: 1
+name: lumiopen-autoif-fi
+task: rlvr
+training_eligible: true
+catalogue_entry: lumiopen-autoif-fi/0.0.0/README.md
+description: Pinned Finnish machine-checkable instruction-following source for verifier qualification.
+source:
+  default:
+    repo_id: LumiOpen/AutoIF-FI
+    revision: abeaec4f62f5f875810de0514176d9a5fc0506ea
+    split: train
+    license: other
+checks:
+  license: {status: pending, reason: "The Hub card declares license 'other'; record the exact permission before production promotion."}
+  pii: {status: pending, overlay: pii, fields: ["messages[].content", "constraints"]}
+  safety: {status: pending, overlay: quality}
+  integrity: {status: complete, evidence: "Pinned shared mirror; train SHA-256 1423e7b42b0d14c7a1098d951bda20c6aea13e4dab47b65b6c93145f73e76b49"}
+  language_quality: {status: pending, reason: "Native Finnish sample audit remains required."}
+  task_quality: {status: pending, reason: "Never execute row-provided eval_funcs directly; map audited constraint IDs to packaged sandboxed verifiers."}
+  contamination: {status: pending, overlay: contamination}
+release:
+  source-abeaec4f:
+    status: candidate
+    input: source.default
+    annotations: ["quality/license-review", "quality/verifier-code-vetting"]
+    dataset:
+      path: /scratch/project_465002530/training/collection/post-training/2026q3/lumiopen-autoif-fi/source/abeaec4f/train.parquet
+      revision: abeaec4f62f5f875810de0514176d9a5fc0506ea
+      split: train
+      schema: autoif-fi-native-v1
+      expected_rows: 30000
+      sha256: 1423e7b42b0d14c7a1098d951bda20c6aea13e4dab47b65b6c93145f73e76b49
+      locations:
+        lumi: /scratch/project_465002530/training/collection/post-training/2026q3/lumiopen-autoif-fi/source/abeaec4f

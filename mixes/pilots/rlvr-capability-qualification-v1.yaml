@@ -1,0 +1,39 @@
+schema_version: 1
+id: rlvr-capability-qualification
+version: 1.0.0
+status: draft
+method: rlvr
+backend: tmax
+description: >-
+  Target capability pool after each verifier family passes an isolated rollout
+  profile. Do not launch this combined mix before the math, code sandbox,
+  instruction-constraint, and tool-parser gates in the Stage 6 plan pass.
+sampling:
+  mode: multiplier
+data:
+  seed: 20260917
+  datasets:
+    - name: eu24_procedural_math
+      collection: ../../collection/pilot/birgermoell-oellm-math-rlvr/metadata.yaml
+      release: train-0ffc9d6c
+      weight: 0.010
+    - name: dapo_hard_math_en
+      collection: ../../collection/pilot/open-r1-dapo-math-17k-processed/metadata.yaml
+      release: train-31dd3095
+      weight: 0.50
+    - name: european_symbolic_reasoning
+      collection: ../../collection/pilot/oellm-multilingual-reasoning-signal/metadata.yaml
+      release: train-20260914
+      weight: 2.0
+    - name: procedural_python
+      collection: ../../collection/pilot/birgermoell-oellm-code-rlvr/metadata.yaml
+      release: train-e1cae771
+      weight: 0.05
+    - name: exact_tool_calls
+      collection: ../../collection/pilot/birgermoell-oellm-eu-tooluse-v1/metadata.yaml
+      release: train-b131d571
+      weight: 0.05
+    - name: mixed_instruction_constraints
+      collection: ../../collection/pilot/allenai-rlvr-gsm-math-if-mixed-constraints/metadata.yaml
+      release: source-7dbd180f
+      weight: 0.10

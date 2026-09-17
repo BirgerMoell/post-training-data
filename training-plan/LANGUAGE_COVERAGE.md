@@ -12,7 +12,7 @@ all listed rows have passed quality or legal approval.
 | Reasoning SFT | Primarily English; Finnish seed exists; OpenR1 and a 40.2 GB local think mix add English breadth | Canonical multilingual reasoning translations are not stored; most languages missing; local mixture lineage unverified |
 | Tool/agentic SFT | Primarily English; EU tool-use v1 is currently English | Multilingual schemas, requests, arguments, observations, and execution evals missing |
 | Preference optimization | `cs,de,el,es,fi,fr,it,pl,ro,sv,uk` plus English in translated Dolci DPO | Dutch, Portuguese, and repair-only languages missing; preference fidelity unverified |
-| RLVR/GRPO | Multilingual exam MCQ reaches many languages; Finnish AutoIF candidate | Common verifiers/backend missing; coverage is task-specific rather than broad |
+| RLVR/GRPO | EU24 procedural math, a 34-language symbolic-reasoning signal, audited 28-language human prompts, and Finnish AutoIF are on LUMI | Coverage is task-specific; AutoIF/tool/code verifiers and several native-language audits still need qualification |
 | Safety/civic | No production set | Missing across all release languages |
 | Medical | Swedish SFT/DPO pilot; some multilingual exam/eval sources | Pan-European specialist data and expert validation missing |
 | Evaluation | EU holdouts span 38 language codes; Belebele, Global-MMLU/MMMLU, XCOPA, ArenaHard-EU, FLORES/FLORES+, and English–Finnish Tatoeba | Multilingual long-context, tool, safety, and native cultural evaluation remain incomplete |

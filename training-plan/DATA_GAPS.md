@@ -12,7 +12,7 @@ exist.
 | Long-context retention during SFT | Short 32k SFT has destroyed 128k capability in prior Poro-long experience | Small-model ablation selects a mixed-SFT or recovery strategy that passes 128k gates | Context + SFT leads |
 | Multilingual long-context evaluation | The project cannot claim European 128k behavior from English-centric RULER results | Protected native multilingual suite with 4k–128k curves | Evaluation + language leads |
 | Production multilingual safety/civic data | No canonical artifact exists; safety cannot be inferred from general SFT | Policy-approved SFT/preference set with native review and protected eval | Safety/legal/language leads |
-| RLVR backend and verifiers | Candidate prompts exist, but the common pipeline cannot run or audit GRPO | Reproducible backend, versioned verifier package, resume test, small-model report | RL + infrastructure leads |
+| Flagship RLVR promotion | The `oellm-rlvr` control plane and shared datasets exist, but every verifier family and entering checkpoint still needs signed qualification | Versioned verifier package, rollout profile, resume test, matched control, and held-out report for the selected production mix | RL + infrastructure leads |
 | Legal/license approval for mixed sources | Several cluster/public candidates have inherited, mixed, or unclear terms | Named approval and redistributability/training-use decision per source | Legal/data governance |
 | Shared retained long-context artifacts | Strongest data/checkpoints live in user workspaces and flash/scratch | Shared immutable data/checkpoint root with checksums and restore plan | LUMI/release lead |
 
@@ -52,6 +52,10 @@ exist.
   cover a useful set of languages, and a Poro2 Finnish corpus is staged for
   validation.
 - DPO infrastructure: the common post-training repository implements TRL DPO.
+- RLVR infrastructure and initial data: `oellm-rlvr` provides LUMI TMAX,
+  verl, and SkyRL/Harbor paths, and the shared collection contains pinned math,
+  multilingual reasoning, code, tool, and constraint assets. The remaining
+  work is qualification and promotion, not discovering a backend from scratch.
 - Broad evaluation starting points: European holdouts, FLORES/FLORES+,
   English–Finnish Tatoeba, and other multilingual benchmarks are catalogued and
   can be protected now.

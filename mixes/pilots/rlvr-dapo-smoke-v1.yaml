@@ -1,0 +1,19 @@
+schema_version: 1
+id: rlvr-dapo-smoke
+version: 1.0.0
+status: pilot
+method: rlvr
+backend: tmax
+description: >-
+  First online RLVR smoke for the 9B instruct-SFT checkpoint. Uses only the
+  prompt-only DAPO train split; calibration and evaluation rows remain outside
+  learner updates.
+sampling:
+  mode: multiplier
+data:
+  seed: 20260916
+  datasets:
+    - name: dapo_math_en
+      collection: ../../collection/pilot/open-r1-dapo-math-17k-processed/metadata.yaml
+      release: train-31dd3095
+      weight: 1.0

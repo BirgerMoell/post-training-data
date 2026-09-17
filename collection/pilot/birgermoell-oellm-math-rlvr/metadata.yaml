@@ -1,0 +1,34 @@
+schema_version: 1
+name: birgermoell-oellm-math-rlvr
+task: rlvr
+training_eligible: true
+catalogue_entry: birgermoell-oellm-math-rlvr/0.1.0/README.md
+description: Pinned deterministic multilingual mathematics with exact symbolic rewards.
+source:
+  default:
+    repo_id: birgermoell/oellm-math-rlvr
+    revision: 0ffc9d6dc82717c25733b3172f4dbd63e48bab68
+    license: Apache-2.0
+    verifier_contract: oellm-math-verifier-contract-0.1.0
+checks:
+  license: {status: complete, evidence: "Apache-2.0 release LICENSE"}
+  pii: {status: inapplicable, reason: "Deterministic procedural generation contains no people or source documents."}
+  safety: {status: complete, evidence: "Bounded mathematical generator families"}
+  integrity: {status: complete, evidence: "release/manifest.json and deterministic regeneration validation"}
+  language_quality: {status: pending, overlay: quality}
+  task_quality: {status: complete, evidence: "Versioned exact integer/rational verifier contract"}
+  contamination: {status: complete, evidence: "Procedural generation, semantic-group split, benchmark isolation policy"}
+release:
+  train-0ffc9d6c:
+    status: candidate
+    input: source.default
+    annotations: ["manifest.json", "quality/model-specific-rollout-profile"]
+    dataset:
+      path: /scratch/project_465002530/training/collection/post-training/2026q3/birgermoell-oellm-math-rlvr/release/0ffc9d6c/data/train-00000-of-00001.parquet
+      revision: 0ffc9d6dc82717c25733b3172f4dbd63e48bab68
+      split: train
+      schema: oellm-rlvr-math-v1
+      expected_rows: 949289
+      sha256: e4c82ed056abb754e65deeaa44747fb6f7817f3bb342a8ab2bcc0b6f2249d024
+      locations:
+        lumi: /scratch/project_465002530/training/collection/post-training/2026q3/birgermoell-oellm-math-rlvr/release/0ffc9d6c

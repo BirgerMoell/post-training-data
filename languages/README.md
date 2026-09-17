@@ -5,12 +5,12 @@
 - [Basque](eu/README.md) — 1 entries
 - [Bulgarian](bg/README.md) — 3 entries
 - [Catalan](ca/README.md) — 1 entries
-- [Code](code/README.md) — 7 entries
+- [Code](code/README.md) — 8 entries
 - [Croatian](hr/README.md) — 2 entries
 - [Czech](cs/README.md) — 5 entries
 - [Danish](da/README.md) — 4 entries
 - [Dutch](nl/README.md) — 3 entries
-- [English](en/README.md) — 62 entries
+- [English](en/README.md) — 64 entries
 - [Estonian](et/README.md) — 3 entries
 - [Finnish](fi/README.md) — 11 entries
 - [French](fr/README.md) — 5 entries
@@ -23,7 +23,7 @@
 - [Latvian](lv/README.md) — 2 entries
 - [Lithuanian](lt/README.md) — 2 entries
 - [Maltese](mt/README.md) — 2 entries
-- [Multilingual and European language groups](multilingual/README.md) — 41 entries
+- [Multilingual and European language groups](multilingual/README.md) — 44 entries
 - [Norwegian](no/README.md) — 2 entries
 - [Polish](pl/README.md) — 7 entries
 - [Portuguese](pt/README.md) — 2 entries

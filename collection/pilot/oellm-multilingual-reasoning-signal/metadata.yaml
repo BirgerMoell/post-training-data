@@ -1,0 +1,34 @@
+schema_version: 1
+name: oellm-multilingual-reasoning-signal
+task: rlvr
+training_eligible: true
+catalogue_entry: oellm-multilingual-reasoning-signal/0.1.0/README.md
+description: Project-generated European reasoning tasks with conjunctive answer, language, and format rewards.
+source:
+  default:
+    repository: https://github.com/BirgerMoell/oellm-rlvr
+    generated_at: "2026-09-14"
+    generator_version: oellm-symbolic-reasoning-canary-v2
+    language_registry_revision: 2f3bdf8457d76cf032440b76a3dc86ea69c72405
+checks:
+  license: {status: pending, reason: "Retain attribution for the localized-header reference and approve the aggregate release terms."}
+  pii: {status: inapplicable, reason: "Procedural symbolic tasks contain no people or source documents."}
+  safety: {status: complete, evidence: "Bounded symbolic task families"}
+  integrity: {status: complete, evidence: "Manifest records hashes and zero train/evaluation ID overlap."}
+  language_quality: {status: pending, reason: "Galician and Maltese remain outside the automatic promotion gate; native audits remain required."}
+  task_quality: {status: complete, evidence: "Answer, target-language, and output-format reward conjunction"}
+  contamination: {status: complete, evidence: "Procedural generators and disjoint release IDs"}
+release:
+  train-20260914:
+    status: candidate
+    input: source.default
+    annotations: ["manifest.json", "profile.parquet", "evaluation.parquet"]
+    dataset:
+      path: /scratch/project_465002530/training/collection/post-training/2026q3/oellm-multilingual-reasoning-signal/release/20260914/train.parquet
+      revision: "20260914"
+      split: train
+      schema: oellm-rlvr-multilingual-reasoning-v1
+      expected_rows: 2176
+      sha256: 677f7b79569635cd028e991474d6a7af154f85149785441e8f25d0ff68332fe3
+      locations:
+        lumi: /scratch/project_465002530/training/collection/post-training/2026q3/oellm-multilingual-reasoning-signal/release/20260914

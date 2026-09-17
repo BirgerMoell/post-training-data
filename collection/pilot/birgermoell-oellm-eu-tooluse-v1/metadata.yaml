@@ -1,0 +1,36 @@
+schema_version: 1
+name: birgermoell-oellm-eu-tooluse-v1
+task: rlvr
+training_eligible: true
+catalogue_entry: birgermoell-oellm-eu-tooluse-v1/0.0.0/README.md
+description: Qwen-format tool-call and abstention prompts with exact structured rewards.
+source:
+  grpo:
+    repo_id: birgermoell/oellm-eu-tooluse-v1
+    revision: b131d571a9f31a4ba4e518f2edce9bd1fcb0190b
+    configuration: grpo
+    split: train
+    license: Apache-2.0
+checks:
+  license: {status: complete, evidence: "Pinned Hugging Face card: Apache-2.0"}
+  pii: {status: pending, overlay: pii, fields: ["prompt[].content", "answer"]}
+  safety: {status: pending, reason: "Audit tools, arguments, and abstention behavior before a mixed-capability run."}
+  integrity: {status: complete, evidence: "66,366 valid JSONL rows and recorded SHA-256"}
+  language_quality: {status: complete, evidence: "English-only source"}
+  task_quality: {status: pending, reason: "Re-run exact-name/argument and no-call verifier tests against the target parser."}
+  contamination: {status: pending, overlay: contamination}
+release:
+  train-b131d571:
+    status: candidate
+    input: source.grpo
+    annotations: ["quality/tool-parser-qualification", "quality/abstention-audit"]
+    dataset:
+      path: /scratch/project_465002530/training/collection/post-training/2026q3/birgermoell-oellm-eu-tooluse-v1/release/b131d571/grpo/train.jsonl
+      revision: b131d571a9f31a4ba4e518f2edce9bd1fcb0190b
+      subset: grpo
+      split: train
+      schema: oellm-tool-call-exact-v1
+      expected_rows: 66366
+      sha256: 5f75334a45be0f946db6b690b57a95aafa8692371709be055b4beb13405a2acd
+      locations:
+        lumi: /scratch/project_465002530/training/collection/post-training/2026q3/birgermoell-oellm-eu-tooluse-v1/release/b131d571

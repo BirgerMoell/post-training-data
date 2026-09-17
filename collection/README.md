@@ -20,9 +20,9 @@ collection/<cycle>/<dataset>/
 Only metadata, schemas, recipes, and small count manifests belong in Git.
 Dataset bytes stay on Hugging Face and shared cluster storage. A deployment can
 materialize the same relative tree below, for example,
-`/scratch/project_465002530/post-training/collection/<cycle>/<dataset>/`.
-The final shared root is a governance decision; personal scratch or flash is
-not a durable release location.
+`/scratch/project_465002530/training/collection/post-training/<cycle>/<dataset>/`.
+The 2026 Q3 DPO and RLVR candidates use that shared root; personal scratch or
+flash is experiment evidence, not the canonical release location.
 
 ## Contract
 
@@ -41,9 +41,10 @@ not a durable release location.
   any source that must remain visible without becoming trainable.
 
 The `dataset` object under a named release is the small interface consumed by
-the current `OpenEuroLLM/post-training` configuration. A mix may therefore use
-the public Hugging Face release on a workstation and select a local mirror via
-`data.location: lumi` or `leonardo` without changing the recipe.
+the current `OpenEuroLLM/post-training` configuration for SFT/DPO and by
+`BirgerMoell/oellm-rlvr` for RLVR. A mix may therefore use the public Hugging
+Face release on a workstation and select a local mirror via `data.location:
+lumi` or `leonardo` without changing the recipe.
 
 Pilot metadata currently points at pinned upstream candidate releases so the
 integration can be exercised. Its pending checks are intentional: those

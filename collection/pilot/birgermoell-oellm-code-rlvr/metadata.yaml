@@ -1,0 +1,34 @@
+schema_version: 1
+name: birgermoell-oellm-code-rlvr
+task: rlvr
+training_eligible: true
+catalogue_entry: birgermoell-oellm-code-rlvr/0.1.0/README.md
+description: Pinned deterministic Python tasks with hidden stdin/stdout tests.
+source:
+  default:
+    repo_id: birgermoell/oellm-code-rlvr
+    revision: e1cae7711049e3b5ff021fb3e9c752424882998c
+    license: Apache-2.0
+    verifier_contract: oellm-code-stdio-contract-0.1.0
+checks:
+  license: {status: complete, evidence: "Apache-2.0 release LICENSE"}
+  pii: {status: inapplicable, reason: "Deterministic procedural generation contains no people or source documents."}
+  safety: {status: pending, reason: "Production sandbox and infrastructure-error accounting must be qualified on LUMI."}
+  integrity: {status: complete, evidence: "release/manifest.json, regeneration, mutation, and reference execution checks"}
+  language_quality: {status: complete, evidence: "Generator-authored English specifications"}
+  task_quality: {status: complete, evidence: "10-13 hidden tests and mutation score per task"}
+  contamination: {status: complete, evidence: "Generated without public benchmark prompts; benchmark isolation policy"}
+release:
+  train-e1cae771:
+    status: candidate
+    input: source.default
+    annotations: ["manifest.json", "quality/sandbox-qualification", "quality/model-specific-rollout-profile"]
+    dataset:
+      path: /scratch/project_465002530/training/collection/post-training/2026q3/birgermoell-oellm-code-rlvr/release/e1cae771/data/train-00000-of-00001.parquet
+      revision: e1cae7711049e3b5ff021fb3e9c752424882998c
+      split: train
+      schema: oellm-rlvr-code-stdio-v1
+      expected_rows: 95099
+      sha256: d0511a717b422766b7e80dbb585dbfff07fe8e9a6a8a57879486e6577b3a74a7
+      locations:
+        lumi: /scratch/project_465002530/training/collection/post-training/2026q3/birgermoell-oellm-code-rlvr/release/e1cae771
