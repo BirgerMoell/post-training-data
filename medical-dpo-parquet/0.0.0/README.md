@@ -16,10 +16,10 @@ curator: "Birger"
 license_access: "License review pending"
 public_location: "https://github.com/BirgerMoell/qwen35-posttrain/blob/main/scripts/stage_medical_data.py"
 lumi_location: "/scratch/project_465002530/users/bmoell/posttrain-data/medical-dpo-parquet/train.parquet"
-data_format: null
+data_format: "Apache Parquet: prompt, chosen, rejected"
 compression: null
-statistics: {"bytes":null,"documents":null,"segments":null,"characters":null,"tokens":null}
-last_verified: "2026-08-11"
+statistics: {"bytes":558867,"documents":3380,"segments":null,"characters":null,"tokens":null}
+last_verified: "2026-09-17 on LUMI"
 confidence: "High"
 source_sheet_row: 65
 ---
@@ -46,16 +46,17 @@ Medical preference pairs
 
 ## <a id="statistics">Structure & Statistics</a>
 
-The normalized totals below have not yet been entered for this catalogue version. Source-specific figures in the evidence section remain useful, but should not be treated as comparable catalogue totals until reproduced.
+The verified training Parquet contains string `prompt`, `chosen`, and
+`rejected` columns.
 
 | Measure | Value |
 | --- | ---: |
-| Bytes | — |
-| Documents | — |
+| Bytes | 558,867 |
+| Documents | 3,380 preference pairs |
 | Segments | — |
 | Characters | — |
 | Tokens | — |
-| Data format | Not normalized |
+| Data format | Apache Parquet: prompt, chosen, rejected |
 | Compression | Not normalized |
 
 ## <a id="metadata">Available Metadata</a>
@@ -84,7 +85,7 @@ Language codes use ISO 639-3 plus ISO 15924, matching the OpenEuroLLM training-d
 - **Public or upstream:** [public or upstream](<https://github.com/BirgerMoell/qwen35-posttrain/blob/main/scripts/stage_medical_data.py>)
 - **LUMI or project artifact:** `/scratch/project_465002530/users/bmoell/posttrain-data/medical-dpo-parquet/train.parquet`
 - **Source register:** [Data register row 65](<https://docs.google.com/spreadsheets/d/1hFFDRk_JdjbQCCv3zsemKulSnMyk_fBQIfKPSzSaP9M/edit#gid=1339797209&range=A65:Q65>)
-- **Last verified:** 2026-08-11
+- **Last verified:** 2026-09-17 on LUMI
 - **Confidence:** High
 
 A recorded path means that the artifact existed at the verification date. Recheck storage, access permissions, revision, configuration, split, and checksums before a run.
@@ -108,7 +109,7 @@ Verify the terms of every upstream component and transformed artifact before use
 - **Source type:** Derived LUMI artifact
 - **Priority:** P3
 - **License / access:** License review pending
-- **Last verified:** 2026-08-11
+- **Last verified:** 2026-09-17 on LUMI
 - **Confidence:** High
 
 ## <a id="quality">Quality, Safety & Exclusions</a>
@@ -123,4 +124,7 @@ This is the recorded operational owner or lead. Catalogue review and release app
 
 ## <a id="notes">Notes and Next Action</a>
 
-No confirmed mainline recipe.
+No confirmed mainline recipe. Keep this as a separate specialist branch until
+license, privacy, clinical-safety, and provenance reviews are complete.
+SHA-256:
+`ad451963e35f4090df332cfdf6211a9494b23cc1e7b01691ca3cccbaa2b4ac88`.

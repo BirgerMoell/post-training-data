@@ -2,10 +2,10 @@
 name: "qwen35-9b-multiling-dpo-parquet"
 slug: "qwen35-9b-multiling-dpo-parquet"
 version: "0.0.0"
-catalogue_status: "P"
+catalogue_status: "D"
 training_types: ["preference-optimization"]
-status_key: "configured-runnable"
-status: "Configured / runnable"
+status_key: "needs-verification"
+status: "Needs verification"
 language_keys: ["fi","sv","da","no","is","multilingual"]
 language_codes: ["fin_Latn","swe_Latn","dan_Latn","nor_Latn","nno_Latn","nob_Latn","isl_Latn"]
 languages: "fi,sv,da,no,is + multilingual"
@@ -15,20 +15,20 @@ priority: "P1"
 curator: "Birger"
 license_access: "Source manifest required"
 public_location: "https://github.com/BirgerMoell/qwen35-posttrain/blob/main/configs/dpo_qwen35_9b_multilingual.yaml"
-lumi_location: "/scratch/project_465002530/users/bmoell/posttrain-data/qwen35-9b-multiling-dpo-parquet/train.parquet"
+lumi_location: ""
 data_format: null
 compression: null
 statistics: {"bytes":null,"documents":null,"segments":null,"characters":null,"tokens":null}
-last_verified: "2026-08-11"
+last_verified: "2026-09-17 on LUMI; recorded artifact missing"
 confidence: "High"
 source_sheet_row: 40
 ---
 
 # qwen35-9b-multiling-dpo-parquet
 
-**[PUBLISHED] (Version 0.0.0; August 2026)**
+**[DRAFT] (Version 0.0.0; August 2026)**
 
-> **Operational state:** Configured / runnable  
+> **Operational state:** Needs verification
 > **Training use:** preference-optimization  
 > **Recorded languages:** fi,sv,da,no,is + multilingual
 
@@ -39,7 +39,7 @@ Nordic/multilingual DPO mix
 ## <a id="sources">Data Sources</a>
 
 - **Public or upstream:** [source](<https://github.com/BirgerMoell/qwen35-posttrain/blob/main/configs/dpo_qwen35_9b_multilingual.yaml>)
-- **LUMI or other artifact:** `/scratch/project_465002530/users/bmoell/posttrain-data/qwen35-9b-multiling-dpo-parquet/train.parquet`
+- **Recorded artifact:** `/scratch/project_465002530/users/bmoell/posttrain-data/qwen35-9b-multiling-dpo-parquet/train.parquet` (not found on 2026-09-17)
 - **Upstream / parent:** LUMI DPOTrainer_format
 - **Evidence:** [evidence](<https://github.com/BirgerMoell/qwen35-posttrain/blob/main/scripts/build_run2_data.py>)
 - **Seed inventory:** [Data tab, row 40](<https://docs.google.com/spreadsheets/d/1hFFDRk_JdjbQCCv3zsemKulSnMyk_fBQIfKPSzSaP9M/edit#gid=1339797209&range=A40:Q40>)
@@ -88,9 +88,10 @@ Language codes use ISO 639-3 plus ISO 15924, matching the OpenEuroLLM training-d
 ## <a id="access">Access Information</a>
 
 - **Public or upstream:** [public or upstream](<https://github.com/BirgerMoell/qwen35-posttrain/blob/main/configs/dpo_qwen35_9b_multilingual.yaml>)
-- **LUMI or project artifact:** `/scratch/project_465002530/users/bmoell/posttrain-data/qwen35-9b-multiling-dpo-parquet/train.parquet`
+- **LUMI or project artifact:** Not currently available. The previously
+  recorded path did not exist on 2026-09-17.
 - **Source register:** [Data register row 40](<https://docs.google.com/spreadsheets/d/1hFFDRk_JdjbQCCv3zsemKulSnMyk_fBQIfKPSzSaP9M/edit#gid=1339797209&range=A40:Q40>)
-- **Last verified:** 2026-08-11
+- **Last verified:** 2026-09-17 on LUMI; recorded artifact missing
 - **Confidence:** High
 
 A recorded path means that the artifact existed at the verification date. Recheck storage, access permissions, revision, configuration, split, and checksums before a run.
@@ -113,7 +114,7 @@ Verify the terms of every upstream component and transformed artifact before use
 - **Source type:** Derived LUMI artifact
 - **Priority:** P1
 - **License / access:** Source manifest required
-- **Last verified:** 2026-08-11
+- **Last verified:** 2026-09-17 on LUMI; recorded artifact missing
 - **Confidence:** High
 
 ## <a id="quality">Quality, Safety & Exclusions</a>
@@ -128,4 +129,8 @@ This is the recorded operational owner or lead. Catalogue review and release app
 
 ## <a id="notes">Notes and Next Action</a>
 
-Resolve exact shares and licenses.
+The recorded Parquet artifact is missing, and the source
+`DPOTrainer_format` directories used by the build script are not readable by
+the current `project_465002530` account. Restore source access, rebuild into
+the shared collection, and verify exact shares and licenses before marking
+this runnable again.

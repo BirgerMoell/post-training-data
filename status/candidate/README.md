@@ -1,7 +1,7 @@
 # Candidate
 > Generated from the JSON frontmatter in each versioned dataset entry. Run `python3 scripts/build_indexes.py` after changing an entry.
 
-22 entries.
+21 entries.
 
 | Dataset / product | Version | Catalogue | Training use | Languages | Locations |
 | --- | --- | --- | --- | --- | --- |
@@ -15,7 +15,6 @@
 | [HPLT v2](../../hplt-v2/0.0.0/README.md) | 0.0.0 | Draft | Long-context extension | European multilingual | [public](<https://hplt-project.org/datasets/v2.0>) · LUMI |
 | [LightOn multilingual reasoning SFT](../../lighton-multilingual-reasoning-sft/0.0.0/README.md) | 0.0.0 | Draft | Reasoning SFT | European languages | Not recorded |
 | [LumiOpen/AutoIF-FI](../../lumiopen-autoif-fi/0.0.0/README.md) | 0.0.0 | Draft | Instruction SFT, Preference optimization, RLVR / GRPO / verifiable RL | fi | [public](<https://huggingface.co/datasets/LumiOpen/AutoIF-FI>) |
-| [nvidia/HelpSteer3](../../nvidia-helpsteer3/0.0.0/README.md) | 0.0.0 | Draft | Preference optimization | primarily en | [public](<https://huggingface.co/datasets/nvidia/HelpSteer3>) · LUMI |
 | [nvidia/OpenMathInstruct-2](../../nvidia-openmathinstruct-2/0.0.0/README.md) | 0.0.0 | Draft | Reasoning SFT | primarily en | [public](<https://huggingface.co/datasets/nvidia/OpenMathInstruct-2>) |
 | [open-thoughts/OpenThoughts-114k](../../open-thoughts-openthoughts-114k/0.0.0/README.md) | 0.0.0 | Draft | Reasoning SFT | primarily en | [public](<https://huggingface.co/datasets/open-thoughts/OpenThoughts-114k>) |
 | [open-thoughts/OpenThoughts2-1M](../../open-thoughts-openthoughts2-1m/0.0.0/README.md) | 0.0.0 | Draft | Reasoning SFT | primarily en | [public](<https://huggingface.co/datasets/open-thoughts/OpenThoughts2-1M>) |

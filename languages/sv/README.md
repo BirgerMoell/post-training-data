@@ -13,4 +13,4 @@ Entries are grouped from the recorded coverage on each page. Broad multilingual 
 | [medical-sft-parquet](../../medical-sft-parquet/0.0.0/README.md) | 0.0.0 | Medical specialization | Published | Configured / runnable | sv |
 | [openeurollm/Dolci-Instruct-DPO-translated](../../openeurollm-dolci-instruct-dpo-translated/0.0.0/README.md) | 0.0.0 | Preference optimization | Published | Published / available | cs,de,el,es,fi,fr,it,pl,ro,sv,uk (+ en config) |
 | [openeurollm/Dolci-Instruct-SFT-translated](../../openeurollm-dolci-instruct-sft-translated/0.0.0/README.md) | 0.0.0 | Instruction SFT | Published | Published / available | cs,de,el,es,fi,fr,it,nl,pl,ro,sv,uk |
-| [qwen35-9b-multiling-dpo-parquet](../../qwen35-9b-multiling-dpo-parquet/0.0.0/README.md) | 0.0.0 | Preference optimization | Published | Configured / runnable | fi,sv,da,no,is + multilingual |
+| [qwen35-9b-multiling-dpo-parquet](../../qwen35-9b-multiling-dpo-parquet/0.0.0/README.md) | 0.0.0 | Preference optimization | Draft | Needs verification | fi,sv,da,no,is + multilingual |

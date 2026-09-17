@@ -1,0 +1,9 @@
+**/source/
+**/pii/
+**/contamination/
+**/quality/
+**/release_raw/
+**/release/
+**/tokenized/
+**/megatron-lm/
+**/tmp/

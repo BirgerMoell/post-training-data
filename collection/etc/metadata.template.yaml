@@ -1,0 +1,53 @@
+schema_version: 1
+name: example-sft-1.0
+task: sft
+training_eligible: true
+catalogue_entry: example/1.0.0/README.md
+description: Canonical example; replace every placeholder before review.
+
+source:
+  default:
+    huggingface: https://huggingface.co/datasets/owner/dataset
+    repo_id: owner/dataset
+    revision: 0123456789abcdef0123456789abcdef01234567
+    subset: null
+    split: train
+    format: parquet
+    schema: upstream-schema-v1
+
+checks:
+  license:
+    status: pending
+  pii:
+    status: pending
+    overlay: pii
+    fields: [messages[].content, messages[].function_calls]
+  safety:
+    status: pending
+    overlay: quality
+  integrity:
+    status: pending
+  language_quality:
+    status: pending
+    overlay: quality
+  task_quality:
+    status: pending
+    overlay: quality
+  contamination:
+    status: pending
+    overlay: contamination
+
+release:
+  candidate:
+    status: candidate
+    input: source.default
+    annotations: []
+    dataset:
+      path: owner/dataset
+      revision: 0123456789abcdef0123456789abcdef01234567
+      subset: null
+      split: train
+      schema: chat-messages-v1
+      expected_rows: null
+      sha256: null
+      locations: {}

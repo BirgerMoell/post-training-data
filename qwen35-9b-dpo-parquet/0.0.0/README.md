@@ -16,10 +16,10 @@ curator: "Birger"
 license_access: "Internal derivative"
 public_location: "https://github.com/BirgerMoell/qwen35-posttrain/blob/main/configs/dpo_qwen35_9b.yaml"
 lumi_location: "/scratch/project_465002530/users/bmoell/posttrain-data/qwen35-9b-dpo-parquet/train.parquet"
-data_format: null
+data_format: "Apache Parquet with nested conversation records"
 compression: null
-statistics: {"bytes":null,"documents":null,"segments":null,"characters":null,"tokens":null}
-last_verified: "2026-08-11"
+statistics: {"bytes":1714274014,"documents":259922,"segments":null,"characters":null,"tokens":null}
+last_verified: "2026-09-17 on LUMI"
 confidence: "High"
 source_sheet_row: 37
 ---
@@ -46,16 +46,17 @@ Completed 9B English DPO stage
 
 ## <a id="statistics">Structure & Statistics</a>
 
-The normalized totals below have not yet been entered for this catalogue version. Source-specific figures in the evidence section remain useful, but should not be treated as comparable catalogue totals until reproduced.
+The live Parquet artifact contains nested full-conversation `chosen` and
+`rejected` columns and no explicit top-level prompt column.
 
 | Measure | Value |
 | --- | ---: |
-| Bytes | — |
-| Documents | — |
+| Bytes | 1,714,274,014 |
+| Documents | 259,922 preference pairs |
 | Segments | — |
 | Characters | — |
 | Tokens | — |
-| Data format | Not normalized |
+| Data format | Apache Parquet with nested conversation records |
 | Compression | Not normalized |
 
 ## <a id="metadata">Available Metadata</a>
@@ -84,7 +85,7 @@ Language codes use ISO 639-3 plus ISO 15924, matching the OpenEuroLLM training-d
 - **Public or upstream:** [public or upstream](<https://github.com/BirgerMoell/qwen35-posttrain/blob/main/configs/dpo_qwen35_9b.yaml>)
 - **LUMI or project artifact:** `/scratch/project_465002530/users/bmoell/posttrain-data/qwen35-9b-dpo-parquet/train.parquet`
 - **Source register:** [Data register row 37](<https://docs.google.com/spreadsheets/d/1hFFDRk_JdjbQCCv3zsemKulSnMyk_fBQIfKPSzSaP9M/edit#gid=1339797209&range=A37:Q37>)
-- **Last verified:** 2026-08-11
+- **Last verified:** 2026-09-17 on LUMI
 - **Confidence:** High
 
 A recorded path means that the artifact existed at the verification date. Recheck storage, access permissions, revision, configuration, split, and checksums before a run.
@@ -107,7 +108,7 @@ Verify the terms of every upstream component and transformed artifact before use
 - **Source type:** Derived LUMI artifact
 - **Priority:** P1
 - **License / access:** Internal derivative
-- **Last verified:** 2026-08-11
+- **Last verified:** 2026-09-17 on LUMI
 - **Confidence:** High
 
 ## <a id="quality">Quality, Safety & Exclusions</a>
@@ -122,4 +123,7 @@ This is the recorded operational owner or lead. Catalogue review and release app
 
 ## <a id="notes">Notes and Next Action</a>
 
-260k pairs; keep as English reference.
+Keep as an English historical/reproduction control. Its nested records retain
+substantial private run metadata and descend from Dolci DPO; normalize,
+sanitize, and source-dedupe before any new use. SHA-256:
+`dcfe21130872058f82ea285803815ee1c4b06708c606639fb5790f496ad2e7b6`.

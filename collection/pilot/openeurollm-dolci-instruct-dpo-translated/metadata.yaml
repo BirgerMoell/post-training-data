@@ -1,0 +1,86 @@
+schema_version: 1
+name: openeurollm-dolci-instruct-dpo-translated
+task: dpo
+training_eligible: true
+catalogue_entry: openeurollm-dolci-instruct-dpo-translated/0.0.0/README.md
+description: Pinned multilingual translated Dolci preference candidate.
+source:
+  default:
+    huggingface: https://huggingface.co/datasets/openeurollm/Dolci-Instruct-DPO-translated
+    repo_id: openeurollm/Dolci-Instruct-DPO-translated
+    revision: b231fb0cc857840d4731b180cc910d5f5d1f523e
+    split: train
+    format: parquet
+    schema: preference-messages-v1
+  a57841a6:
+    huggingface: https://huggingface.co/datasets/openeurollm/Dolci-Instruct-DPO-translated
+    repo_id: openeurollm/Dolci-Instruct-DPO-translated
+    revision: a57841a6bbabfed8ca2597438995c2991e5b73b7
+    split: train
+    format: mixed-jsonl-parquet
+    schema: preference-messages-v1
+checks:
+  license:
+    status: complete
+    evidence: https://huggingface.co/datasets/openeurollm/Dolci-Instruct-DPO-translated/blob/a57841a6bbabfed8ca2597438995c2991e5b73b7/README.md
+  pii:
+    status: pending
+    overlay: pii
+    fields: ["prompt[].content", "chosen[].content", "rejected[].content"]
+  safety: {status: pending, overlay: quality}
+  integrity: {status: pending}
+  language_quality: {status: pending, overlay: quality}
+  task_quality: {status: pending, overlay: quality}
+  contamination: {status: pending, overlay: contamination}
+release:
+  candidate:
+    status: candidate
+    input: source.default
+    annotations: []
+    dataset:
+      path: openeurollm/Dolci-Instruct-DPO-translated
+      revision: b231fb0cc857840d4731b180cc910d5f5d1f523e
+      split: train
+      schema: preference-messages-v1
+      configs:
+        cs: {expected_rows: 224796}
+        de: {expected_rows: 224815}
+        el: {expected_rows: 224846}
+        en: {expected_rows: 246215}
+        es: {expected_rows: 224981}
+        fi: {expected_rows: 224815}
+        fr: {expected_rows: 220212}
+        it: {expected_rows: 480643}
+        pl: {expected_rows: 234382}
+        ro: {expected_rows: 236995}
+        sv: {expected_rows: 483264}
+        uk: {expected_rows: 233629}
+      locations: {}
+  candidate-a57841a6:
+    status: candidate
+    input: source.a57841a6
+    annotations:
+      - quality/candidate-a57841a6/structural-rejections
+      - counts/candidate-a57841a6/manifest.json
+      - counts/candidate-a57841a6/summary.json
+    dataset:
+      path: openeurollm/Dolci-Instruct-DPO-translated
+      revision: a57841a6bbabfed8ca2597438995c2991e5b73b7
+      split: train
+      transform: null
+      schema: preference-messages-v1
+      configs:
+        cs: {expected_rows: 115203}
+        de: {expected_rows: 114246}
+        el: {expected_rows: 100456}
+        en: {expected_rows: 243622}
+        es: {expected_rows: 125773}
+        fi: {expected_rows: 108109}
+        fr: {expected_rows: 14795}
+        it: {expected_rows: 86776}
+        pl: {expected_rows: 118664}
+        ro: {expected_rows: 115485}
+        sv: {expected_rows: 120850}
+        uk: {expected_rows: 114314}
+      locations:
+        lumi: /scratch/project_465002530/training/collection/post-training/2026q3/openeurollm-dolci-instruct-dpo-translated/release/candidate-a57841a6

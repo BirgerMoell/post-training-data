@@ -7,4 +7,4 @@ Entries are grouped from the recorded coverage on each page. Broad multilingual 
 | --- | --- | --- | --- | --- | --- |
 | [birgermoell/oellm-eu-defect-repair-sft-v1](../../birgermoell-oellm-eu-defect-repair-sft-v1/0.0.0/README.md) | 0.0.0 | Language repair | Published | Used in completed run | is,ga,mt,et,hr,sl,lt,lv,da,hu,sk,bg,ro,pl,fi |
 | [FLORES-200 / FLORES+ evaluation copy on LUMI](../../lumi-flores-200/0.0.0/README.md) | 0.0.0 | Evaluation holdouts | Published | Evaluation-only — do not train | 26 European language files plus FLORES+ combined dev/devtest |
-| [qwen35-9b-multiling-dpo-parquet](../../qwen35-9b-multiling-dpo-parquet/0.0.0/README.md) | 0.0.0 | Preference optimization | Published | Configured / runnable | fi,sv,da,no,is + multilingual |
+| [qwen35-9b-multiling-dpo-parquet](../../qwen35-9b-multiling-dpo-parquet/0.0.0/README.md) | 0.0.0 | Preference optimization | Draft | Needs verification | fi,sv,da,no,is + multilingual |

@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/OpenEuroLLM/post-training-data/collection/schema.json",
+  "title": "OpenEuroLLM post-training collection metadata",
+  "type": "object",
+  "required": ["schema_version", "name", "task", "training_eligible", "source", "checks", "release"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "name": {"type": "string", "minLength": 1},
+    "task": {"enum": ["sft", "dpo", "rlvr", "continued-pretraining"]},
+    "training_eligible": {"type": "boolean"},
+    "catalogue_entry": {"type": "string", "minLength": 1},
+    "description": {"type": "string"},
+    "source": {"type": "object", "minProperties": 1},
+    "checks": {
+      "type": "object",
+      "required": ["license", "pii", "safety", "integrity", "language_quality", "task_quality", "contamination"],
+      "additionalProperties": {"$ref": "#/$defs/check"}
+    },
+    "release": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {"$ref": "#/$defs/release"}
+    }
+  },
+  "$defs": {
+    "check": {
+      "type": "object",
+      "required": ["status"],
+      "properties": {
+        "status": {"enum": ["complete", "pending", "inapplicable"]},
+        "reason": {"type": "string"},
+        "overlay": {"type": "string"},
+        "fields": {"type": "array", "items": {"type": "string"}},
+        "evidence": {"type": ["string", "array"]}
+      },
+      "additionalProperties": true
+    },
+    "release": {
+      "type": "object",
+      "required": ["status", "input", "dataset"],
+      "properties": {
+        "status": {"enum": ["candidate", "approved", "deprecated"]},
+        "input": {"type": "string"},
+        "annotations": {"type": "array", "items": {"type": "string"}},
+        "dataset": {
+          "type": "object",
+          "required": ["path", "revision", "split", "schema"],
+          "properties": {
+            "path": {"type": "string", "minLength": 1},
+            "revision": {"type": ["string", "null"]},
+            "data_dir": {"type": ["string", "null"]},
+            "subset": {"type": ["string", "null"]},
+            "split": {"type": "string", "minLength": 1},
+            "transform": {"type": ["string", "null"]},
+            "schema": {"type": "string", "minLength": 1},
+            "expected_rows": {"type": ["integer", "null"], "minimum": 1},
+            "sha256": {"type": ["string", "null"], "pattern": "^[0-9a-f]{64}$"},
+            "locations": {"type": "object", "additionalProperties": {"type": "string"}},
+            "configs": {"type": "object"},
+            "llamafactory": {"type": "object"}
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

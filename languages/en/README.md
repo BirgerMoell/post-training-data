@@ -36,7 +36,7 @@ Entries are grouped from the recorded coverage on each page. Broad multilingual 
 | [Nanbeige/ToolMind — GraphSyn](../../nanbeige-toolmind-graphsyn/0.0.0/README.md) | 0.0.0 | Tool use and agentic training | Published | Used in research run | primarily en |
 | [NousResearch/hermes-function-calling-v1](../../nousresearch-hermes-function-calling-v1/0.0.0/README.md) | 0.0.0 | RLVR / GRPO / verifiable RL, Tool use and agentic training | Published | Used in completed run | en |
 | [nvidia/ChatQA2-Long-SFT-data](../../nvidia-chatqa2-long-sft-data/0.0.0/README.md) | 0.0.0 | Long-context extension | Draft | Planned | primarily en |
-| [nvidia/HelpSteer3](../../nvidia-helpsteer3/0.0.0/README.md) | 0.0.0 | Preference optimization | Draft | Candidate | primarily en |
+| [nvidia/HelpSteer3](../../nvidia-helpsteer3/0.0.0/README.md) | 0.0.0 | Preference optimization | Draft | Configured / runnable | primarily en |
 | [nvidia/Llama-Nemotron-Post-Training-Dataset](../../nvidia-llama-nemotron-post-training-dataset/0.0.0/README.md) | 0.0.0 | Reasoning SFT | Published | Used in completed run | primarily en |
 | [nvidia/Nemotron-Agentic-v1 — tool-calling](../../nvidia-nemotron-agentic-v1-tool-calling/0.0.0/README.md) | 0.0.0 | Tool use and agentic training | Published | Used in research run | primarily en |
 | [nvidia/Nemotron-Post-Training-Dataset-v2](../../nvidia-nemotron-post-training-dataset-v2/0.0.0/README.md) | 0.0.0 | Reasoning SFT | Published | Configured / runnable | primarily en |

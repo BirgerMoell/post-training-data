@@ -13,6 +13,6 @@ Entries are grouped from the recorded coverage on each page. Broad multilingual 
 | [LumiOpen/AutoIF-FI](../../lumiopen-autoif-fi/0.0.0/README.md) | 0.0.0 | Instruction SFT, Preference optimization, RLVR / GRPO / verifiable RL | Draft | Candidate | fi |
 | [openeurollm/Dolci-Instruct-DPO-translated](../../openeurollm-dolci-instruct-dpo-translated/0.0.0/README.md) | 0.0.0 | Preference optimization | Published | Published / available | cs,de,el,es,fi,fr,it,pl,ro,sv,uk (+ en config) |
 | [openeurollm/Dolci-Instruct-SFT-translated](../../openeurollm-dolci-instruct-sft-translated/0.0.0/README.md) | 0.0.0 | Instruction SFT | Published | Published / available | cs,de,el,es,fi,fr,it,nl,pl,ro,sv,uk |
-| [qwen35-9b-multiling-dpo-parquet](../../qwen35-9b-multiling-dpo-parquet/0.0.0/README.md) | 0.0.0 | Preference optimization | Published | Configured / runnable | fi,sv,da,no,is + multilingual |
+| [qwen35-9b-multiling-dpo-parquet](../../qwen35-9b-multiling-dpo-parquet/0.0.0/README.md) | 0.0.0 | Preference optimization | Draft | Needs verification | fi,sv,da,no,is + multilingual |
 | [qwen35-9b-reasoning-sft-parquet](../../qwen35-9b-reasoning-sft-parquet/0.0.0/README.md) | 0.0.0 | Reasoning SFT | Published | Used in completed run | en,fi |
 | [Tatoeba MT Challenge English–Finnish holdout on LUMI](../../lumi-tatoeba-eng-fin/0.0.0/README.md) | 0.0.0 | Evaluation holdouts | Published | Evaluation-only — do not train | English, Finnish |

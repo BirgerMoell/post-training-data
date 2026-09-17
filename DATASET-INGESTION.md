@@ -45,6 +45,13 @@ Compute the normalized catalogue token total with the common official catalogue 
 
 Do not substitute a tokenized artifact across tokenizers or model chat templates without rebuilding it.
 
+Create `collection/<cycle>/<dataset>/metadata.yaml` from
+[`collection/etc/metadata.template.yaml`](collection/etc/metadata.template.yaml).
+As in the pre-training collection, keep source bytes and overlay directories on
+shared storage; commit their identities, policies, and release descriptors.
+Mix manifests select only a named `release`, never `source` or an overlay
+directory directly.
+
 ## 4. Run post-training quality gates
 
 The curator records results for the gates that apply:
@@ -86,6 +93,7 @@ Run:
 ```bash
 python3 scripts/build_indexes.py
 python3 scripts/build_indexes.py --check
+python3 scripts/validate_mixes.py --check
 ```
 
 The check validates version paths, required fields, lifecycle values, language identifiers, normalized-statistic types, canonical section anchors, generated indexes, and local Markdown links.

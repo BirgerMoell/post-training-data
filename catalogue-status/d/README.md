@@ -1,7 +1,7 @@
 # D — Draft
 > Generated from the JSON frontmatter in each versioned dataset entry. Run `python3 scripts/build_indexes.py` after changing an entry.
 
-40 entries.
+41 entries.
 
 | Dataset / product | Version | Operational state | Training use | Languages | Locations |
 | --- | --- | --- | --- | --- | --- |
@@ -26,7 +26,7 @@
 | [LumiOpen/AutoIF-FI](../../lumiopen-autoif-fi/0.0.0/README.md) | 0.0.0 | Candidate | Instruction SFT, Preference optimization, RLVR / GRPO / verifiable RL | fi | [public](<https://huggingface.co/datasets/LumiOpen/AutoIF-FI>) |
 | [MultiSynt OpenThoughts translations](../../multisynt-openthoughts-translations/0.0.0/README.md) | 0.0.0 | Planned | Reasoning SFT | 7 European languages | Not recorded |
 | [nvidia/ChatQA2-Long-SFT-data](../../nvidia-chatqa2-long-sft-data/0.0.0/README.md) | 0.0.0 | Planned | Long-context extension | primarily en | [public](<https://huggingface.co/datasets/nvidia/ChatQA2-Long-SFT-data>) |
-| [nvidia/HelpSteer3](../../nvidia-helpsteer3/0.0.0/README.md) | 0.0.0 | Candidate | Preference optimization | primarily en | [public](<https://huggingface.co/datasets/nvidia/HelpSteer3>) · LUMI |
+| [nvidia/HelpSteer3](../../nvidia-helpsteer3/0.0.0/README.md) | 0.0.0 | Configured / runnable | Preference optimization | primarily en | [public](<https://huggingface.co/datasets/nvidia/HelpSteer3>) · LUMI |
 | [nvidia/OpenMathInstruct-2](../../nvidia-openmathinstruct-2/0.0.0/README.md) | 0.0.0 | Candidate | Reasoning SFT | primarily en | [public](<https://huggingface.co/datasets/nvidia/OpenMathInstruct-2>) |
 | [oellm-eu-longctx-instruct-v1](../../oellm-eu-longctx-instruct-v1/0.0.0/README.md) | 0.0.0 | Planned | Long-context extension | European languages | [public](<https://github.com/BirgerMoell/qwen35-posttrain/blob/main/docs/EU_DATA_STRATEGY.md>) |
 | [oellm-eu-native-instruct-v1](../../oellm-eu-native-instruct-v1/0.0.0/README.md) | 0.0.0 | Planned | Instruction SFT | European languages | [public](<https://github.com/BirgerMoell/qwen35-posttrain/blob/main/docs/EU_DATA_STRATEGY.md>) |
@@ -38,6 +38,7 @@
 | [open-thoughts/OpenThoughts2-1M](../../open-thoughts-openthoughts2-1m/0.0.0/README.md) | 0.0.0 | Candidate | Reasoning SFT | primarily en | [public](<https://huggingface.co/datasets/open-thoughts/OpenThoughts2-1M>) |
 | [openeurollm/common-pile-annotated](../../openeurollm-common-pile-annotated/0.0.0/README.md) | 0.0.0 | Candidate | Data quality, filtering, and decontamination | primarily en | [public](<https://huggingface.co/datasets/openeurollm/common-pile-annotated>) |
 | [openeurollm/nemotron-cc-10K-sample-translated](../../openeurollm-nemotron-cc-10k-sample-translated/0.0.0/README.md) | 0.0.0 | Candidate | Data quality, filtering, and decontamination | multilingual | [public](<https://huggingface.co/datasets/openeurollm/nemotron-cc-10K-sample-translated>) |
+| [qwen35-9b-multiling-dpo-parquet](../../qwen35-9b-multiling-dpo-parquet/0.0.0/README.md) | 0.0.0 | Needs verification | Preference optimization | fi,sv,da,no,is + multilingual | [public](<https://github.com/BirgerMoell/qwen35-posttrain/blob/main/configs/dpo_qwen35_9b_multilingual.yaml>) |
 | [Rada transcripts + Ukrainian court registry](../../rada-transcripts-plus-ukrainian-court-registry/0.0.0/README.md) | 0.0.0 | Planned | Long-context extension | uk | Not recorded |
 | [Salesforce/xlam-function-calling-60k](../../salesforce-xlam-function-calling-60k/0.0.0/README.md) | 0.0.0 | Candidate | RLVR / GRPO / verifiable RL, Tool use and agentic training | en | [public](<https://huggingface.co/datasets/Salesforce/xlam-function-calling-60k>) |
 | [The Stack v2](../../the-stack-v2/0.0.0/README.md) | 0.0.0 | Candidate | Long-context extension, Continued pretraining | code | [public](<https://huggingface.co/datasets/bigcode/the-stack-v2>) |

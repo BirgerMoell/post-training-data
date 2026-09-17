@@ -43,6 +43,6 @@ Entries are grouped from the recorded coverage on each page. Broad multilingual 
 | [openeurollm/nemotron-cc-10K-sample-translated](../../openeurollm-nemotron-cc-10k-sample-translated/0.0.0/README.md) | 0.0.0 | Data quality, filtering, and decontamination | Draft | Candidate | multilingual |
 | [openeurollm/nemotron-cc-10K-sample-translated-judged](../../openeurollm-nemotron-cc-10k-sample-translated-judged/0.0.0/README.md) | 0.0.0 | Data quality, filtering, and decontamination | Published | Supporting / filtering | multilingual |
 | [openeurollm/prelude-base-eval-scores](../../openeurollm-prelude-base-eval-scores/0.0.0/README.md) | 0.0.0 | Evaluation holdouts | Published | Supporting evaluation artifact | multilingual |
-| [qwen35-9b-multiling-dpo-parquet](../../qwen35-9b-multiling-dpo-parquet/0.0.0/README.md) | 0.0.0 | Preference optimization | Published | Configured / runnable | fi,sv,da,no,is + multilingual |
+| [qwen35-9b-multiling-dpo-parquet](../../qwen35-9b-multiling-dpo-parquet/0.0.0/README.md) | 0.0.0 | Preference optimization | Draft | Needs verification | fi,sv,da,no,is + multilingual |
 | [qwen35-9b-sft-parquet (tulu3-euroblocks-85-15)](../../qwen35-9b-sft-parquet-tulu3-euroblocks-85-15/0.0.0/README.md) | 0.0.0 | Instruction SFT | Published | Used in completed run | EU multilingual + en |
 | [WildChat](../../wildchat/0.0.0/README.md) | 0.0.0 | Instruction SFT | Published | Used in research run | multilingual |

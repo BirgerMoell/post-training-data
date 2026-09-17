@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "repo_id": "openeurollm/Dolci-Instruct-DPO-translated",
+  "revision": "a57841a6bbabfed8ca2597438995c2991e5b73b7",
+  "built_on": "2026-09-17",
+  "lumi_job_id": "22117157",
+  "lumi_job_state": "COMPLETED",
+  "lumi_job_exit_code": "0:0",
+  "lumi_job_elapsed": "00:01:58",
+  "source_bytes": 3607260934,
+  "release_bytes": 1226775439,
+  "input_rows": 1402161,
+  "release_rows": 1378293,
+  "rejected_rows": 23868,
+  "rejection_counts": {
+    "identical_preference_pair": 23736,
+    "invalid_structure:empty_message_content": 97,
+    "invalid_structure:invalid_message_content": 35
+  },
+  "languages": {
+    "cs": {"input_rows": 117424, "release_rows": 115203, "rejected_rows": 2221},
+    "de": {"input_rows": 116429, "release_rows": 114246, "rejected_rows": 2183},
+    "el": {"input_rows": 102542, "release_rows": 100456, "rejected_rows": 2086},
+    "en": {"input_rows": 246215, "release_rows": 243622, "rejected_rows": 2593},
+    "es": {"input_rows": 127909, "release_rows": 125773, "rejected_rows": 2136},
+    "fi": {"input_rows": 110234, "release_rows": 108109, "rejected_rows": 2125},
+    "fr": {"input_rows": 15082, "release_rows": 14795, "rejected_rows": 287},
+    "it": {"input_rows": 88323, "release_rows": 86776, "rejected_rows": 1547},
+    "pl": {"input_rows": 120833, "release_rows": 118664, "rejected_rows": 2169},
+    "ro": {"input_rows": 117687, "release_rows": 115485, "rejected_rows": 2202},
+    "sv": {"input_rows": 122945, "release_rows": 120850, "rejected_rows": 2095},
+    "uk": {"input_rows": 116538, "release_rows": 114314, "rejected_rows": 2224}
+  },
+  "lumi_release": "/scratch/project_465002530/training/collection/post-training/2026q3/openeurollm-dolci-instruct-dpo-translated/release/candidate-a57841a6",
+  "lumi_manifest": "/scratch/project_465002530/training/collection/post-training/2026q3/openeurollm-dolci-instruct-dpo-translated/counts/candidate-a57841a6/manifest.json",
+  "lumi_manifest_sha256": "8743398a990908b75bd8db9ddc77427c2456c9c76a0d82eb788d65519a128970",
+  "builder_sha256": "6b48cbe5b581a40b6a839e0a5be7740dd6fc3630c9cdd4cdcebf5ad0f44a1650",
+  "validation": {
+    "all_configs_streaming_load": true,
+    "sv_nonstreaming_rows": 120850,
+    "canonical_columns": ["id", "language", "prompt", "chosen", "rejected", "source_revision"]
+  },
+  "pending_gates": ["pii", "safety", "integrity", "language_quality", "task_quality", "contamination"]
+}

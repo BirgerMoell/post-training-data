@@ -1,7 +1,7 @@
 # P — Published
 > Generated from the JSON frontmatter in each versioned dataset entry. Run `python3 scripts/build_indexes.py` after changing an entry.
 
-73 entries.
+72 entries.
 
 | Dataset / product | Version | Operational state | Training use | Languages | Locations |
 | --- | --- | --- | --- | --- | --- |
@@ -52,7 +52,7 @@
 | [openeurollm/ArenaHard-EU-v0 / v0-bis](../../openeurollm-arenahard-eu-v0-v0-bis/0.0.0/README.md) | 0.0.0 | Eval-only — do not train | Evaluation holdouts | European languages | [public](<https://huggingface.co/datasets/openeurollm/ArenaHard-EU-v0>) |
 | [openeurollm/battle-annotations](../../openeurollm-battle-annotations/0.0.0/README.md) | 0.0.0 | Eval-only — do not train | Evaluation holdouts | multilingual | [public](<https://huggingface.co/datasets/openeurollm/battle-annotations>) |
 | [openeurollm/contaminated-documents](../../openeurollm-contaminated-documents/0.0.0/README.md) | 0.0.0 | Supporting / filtering | Data quality, filtering, and decontamination | multilingual | [public](<https://huggingface.co/datasets/openeurollm/contaminated-documents>) |
-| [openeurollm/Dolci-Instruct-DPO-translated](../../openeurollm-dolci-instruct-dpo-translated/0.0.0/README.md) | 0.0.0 | Published / available | Preference optimization | cs,de,el,es,fi,fr,it,pl,ro,sv,uk (+ en config) | [public](<https://huggingface.co/datasets/openeurollm/Dolci-Instruct-DPO-translated>) |
+| [openeurollm/Dolci-Instruct-DPO-translated](../../openeurollm-dolci-instruct-dpo-translated/0.0.0/README.md) | 0.0.0 | Published / available | Preference optimization | cs,de,el,es,fi,fr,it,pl,ro,sv,uk (+ en config) | [public](<https://huggingface.co/datasets/openeurollm/Dolci-Instruct-DPO-translated>) · LUMI |
 | [openeurollm/Dolci-Instruct-SFT-decontaminated](../../openeurollm-dolci-instruct-sft-decontaminated/0.0.0/README.md) | 0.0.0 | Published / available | Instruction SFT | primarily en | [public](<https://huggingface.co/datasets/openeurollm/Dolci-Instruct-SFT-decontaminated>) |
 | [openeurollm/dolci-instruct-sft-tokenized](../../openeurollm-dolci-instruct-sft-tokenized/0.0.0/README.md) | 0.0.0 | Published / available | Instruction SFT | primarily en | [public](<https://huggingface.co/datasets/openeurollm/dolci-instruct-sft-tokenized>) |
 | [openeurollm/Dolci-Instruct-SFT-translated](../../openeurollm-dolci-instruct-sft-translated/0.0.0/README.md) | 0.0.0 | Published / available | Instruction SFT | cs,de,el,es,fi,fr,it,nl,pl,ro,sv,uk | [public](<https://huggingface.co/datasets/openeurollm/Dolci-Instruct-SFT-translated>) |
@@ -72,7 +72,6 @@
 | [OpenR1-Math-220k staged on LUMI](../../lumi-openr1-math-220k/0.0.0/README.md) | 0.0.0 | Staged on LUMI — local revision not pinned | Reasoning SFT, Preference optimization, RLVR / GRPO / verifiable RL | English | [public](<https://huggingface.co/datasets/open-r1/OpenR1-Math-220k>) · LUMI |
 | [Per-language Wikipedia](../../per-language-wikipedia/0.0.0/README.md) | 0.0.0 | Used in completed run | Long-context extension, Language repair | 15 repair languages + EU | [public](<https://huggingface.co/datasets/wikimedia/wikipedia>) |
 | [qwen35-9b-dpo-parquet](../../qwen35-9b-dpo-parquet/0.0.0/README.md) | 0.0.0 | Used in completed run | Preference optimization | en | [public](<https://github.com/BirgerMoell/qwen35-posttrain/blob/main/configs/dpo_qwen35_9b.yaml>) · LUMI |
-| [qwen35-9b-multiling-dpo-parquet](../../qwen35-9b-multiling-dpo-parquet/0.0.0/README.md) | 0.0.0 | Configured / runnable | Preference optimization | fi,sv,da,no,is + multilingual | [public](<https://github.com/BirgerMoell/qwen35-posttrain/blob/main/configs/dpo_qwen35_9b_multilingual.yaml>) · LUMI |
 | [qwen35-9b-reasoning-sft-parquet](../../qwen35-9b-reasoning-sft-parquet/0.0.0/README.md) | 0.0.0 | Used in completed run | Reasoning SFT | en,fi | [public](<https://github.com/BirgerMoell/qwen35-posttrain/blob/main/configs/sft_qwen35_9b_reasoning.yaml>) · LUMI |
 | [qwen35-9b-sft-parquet (tulu3-euroblocks-85-15)](../../qwen35-9b-sft-parquet-tulu3-euroblocks-85-15/0.0.0/README.md) | 0.0.0 | Used in completed run | Instruction SFT | EU multilingual + en | [public](<https://github.com/BirgerMoell/qwen35-posttrain/blob/main/configs/sft_qwen35_9b.yaml>) · LUMI |
 | [Tatoeba MT Challenge English–Finnish holdout on LUMI](../../lumi-tatoeba-eng-fin/0.0.0/README.md) | 0.0.0 | Evaluation-only — do not train | Evaluation holdouts | English, Finnish | [public](<https://github.com/Helsinki-NLP/Tatoeba-Challenge>) · LUMI |

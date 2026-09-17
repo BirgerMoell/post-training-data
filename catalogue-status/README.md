@@ -3,6 +3,6 @@
 
 This D/P/E lifecycle follows the OpenEuroLLM training-data catalogue and is separate from operational readiness.
 
-- [D — Draft](d/README.md) — 40 entries
-- [P — Published](p/README.md) — 73 entries
+- [D — Draft](d/README.md) — 41 entries
+- [P — Published](p/README.md) — 72 entries
 - [E — Deprecated](e/README.md) — 1 entries

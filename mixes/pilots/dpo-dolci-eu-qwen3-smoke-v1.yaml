@@ -1,0 +1,35 @@
+schema_version: 1
+id: dpo-dolci-eu-qwen3-smoke
+version: 1.0.0
+status: pilot
+method: dpo
+backend: trl
+description: >-
+  Small Qwen3-compatible DPO smoke mix over the structurally validated English,
+  German, Finnish, and Swedish Dolci candidate staged in shared LUMI storage.
+sampling:
+  mode: multiplier
+data:
+  chat_template: qwen3
+  seed: 42
+  datasets:
+    - name: dolci_dpo_en_a57841a6
+      collection: ../../collection/pilot/openeurollm-dolci-instruct-dpo-translated/metadata.yaml
+      release: candidate-a57841a6
+      subset: en
+      weight: 0.001
+    - name: dolci_dpo_de_a57841a6
+      collection: ../../collection/pilot/openeurollm-dolci-instruct-dpo-translated/metadata.yaml
+      release: candidate-a57841a6
+      subset: de
+      weight: 0.001
+    - name: dolci_dpo_fi_a57841a6
+      collection: ../../collection/pilot/openeurollm-dolci-instruct-dpo-translated/metadata.yaml
+      release: candidate-a57841a6
+      subset: fi
+      weight: 0.001
+    - name: dolci_dpo_sv_a57841a6
+      collection: ../../collection/pilot/openeurollm-dolci-instruct-dpo-translated/metadata.yaml
+      release: candidate-a57841a6
+      subset: sv
+      weight: 0.001

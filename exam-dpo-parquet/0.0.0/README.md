@@ -16,10 +16,10 @@ curator: "Birger"
 license_access: "Mixed upstream; filter licenses"
 public_location: "https://github.com/BirgerMoell/qwen35-posttrain/blob/main/configs/simpo_qwen35_9b_exam.yaml"
 lumi_location: "/scratch/project_465002530/users/bmoell/posttrain-data/exam-dpo-parquet/train.parquet"
-data_format: null
+data_format: "Apache Parquet: prompt, chosen, rejected"
 compression: null
-statistics: {"bytes":null,"documents":null,"segments":null,"characters":null,"tokens":null}
-last_verified: "2026-08-11"
+statistics: {"bytes":194220044,"documents":1089256,"segments":null,"characters":null,"tokens":null}
+last_verified: "2026-09-17 on LUMI"
 confidence: "High"
 source_sheet_row: 50
 ---
@@ -46,16 +46,17 @@ Exam correctness preference pairs
 
 ## <a id="statistics">Structure & Statistics</a>
 
-The normalized totals below have not yet been entered for this catalogue version. Source-specific figures in the evidence section remain useful, but should not be treated as comparable catalogue totals until reproduced.
+The verified training Parquet contains string `prompt`, `chosen`, and
+`rejected` columns. Validation and test remain separate in the source tree.
 
 | Measure | Value |
 | --- | ---: |
-| Bytes | — |
-| Documents | — |
+| Bytes | 194,220,044 |
+| Documents | 1,089,256 preference pairs |
 | Segments | — |
 | Characters | — |
 | Tokens | — |
-| Data format | Not normalized |
+| Data format | Apache Parquet: prompt, chosen, rejected |
 | Compression | Not normalized |
 
 ## <a id="metadata">Available Metadata</a>
@@ -84,7 +85,7 @@ Language codes use ISO 639-3 plus ISO 15924, matching the OpenEuroLLM training-d
 - **Public or upstream:** [public or upstream](<https://github.com/BirgerMoell/qwen35-posttrain/blob/main/configs/simpo_qwen35_9b_exam.yaml>)
 - **LUMI or project artifact:** `/scratch/project_465002530/users/bmoell/posttrain-data/exam-dpo-parquet/train.parquet`
 - **Source register:** [Data register row 50](<https://docs.google.com/spreadsheets/d/1hFFDRk_JdjbQCCv3zsemKulSnMyk_fBQIfKPSzSaP9M/edit#gid=1339797209&range=A50:Q50>)
-- **Last verified:** 2026-08-11
+- **Last verified:** 2026-09-17 on LUMI
 - **Confidence:** High
 
 A recorded path means that the artifact existed at the verification date. Recheck storage, access permissions, revision, configuration, split, and checksums before a run.
@@ -108,7 +109,7 @@ Verify the terms of every upstream component and transformed artifact before use
 - **Source type:** Derived LUMI artifact
 - **Priority:** P1
 - **License / access:** Mixed upstream; filter licenses
-- **Last verified:** 2026-08-11
+- **Last verified:** 2026-09-17 on LUMI
 - **Confidence:** High
 
 ## <a id="quality">Quality, Safety & Exclusions</a>
@@ -123,4 +124,7 @@ This is the recorded operational owner or lead. Catalogue review and release app
 
 ## <a id="notes">Notes and Next Action</a>
 
-SimPO configs exist for 2B/4B/9B/256k.
+SimPO configs exist for 2B/4B/9B/256k. Preserve validation/test splits,
+reconstruct source-family and license manifests, and cap this source in a
+general DPO mix. SHA-256:
+`70ef651a0baa4b04a42514ec7ed3c9647bcd367f1add58d6fce900fcfded42cc`.

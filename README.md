@@ -15,6 +15,13 @@ the catalogue into machine-readable training decisions and evaluation gates
 for 9B and 30B model routes. Each playbook keeps training sources, protected
 evaluation, owners, measurable targets, and unresolved gaps separate.
 
+The [post-training collection](collection/README.md) and reusable
+[data-mix manifests](mixes/README.md) add the executable layer. They mirror the
+pre-training `source → overlays → release → tokenized derivative` layout while
+compiling directly into the current `OpenEuroLLM/post-training` dataset config.
+The catalogue remains the human/governance record; collection metadata is the
+release contract; a mix is the experiment recipe.
+
 The catalogue contains 114 versioned entries: 104 seeded from the [OpenEuroLLM post-training data register](https://docs.google.com/spreadsheets/d/1hFFDRk_JdjbQCCv3zsemKulSnMyk_fBQIfKPSzSaP9M/edit#gid=1339797209) and 10 later LUMI/Hugging Face discoveries. Each source or product has its own versioned page and can be updated through an ordinary pull request.
 
 Two states are intentionally kept separate:
@@ -84,6 +91,8 @@ languages/<language>/README.md      Language-oriented views
 catalogue-status/<D|P|E>/           Official catalogue lifecycle views
 status/<state>/README.md            Post-training operational-readiness views
 storage/README.md                   Shared storage roots and conventions
+collection/<cycle>/<dataset>/       Source/overlay/release metadata; bytes stay external
+mixes/                              Reusable SFT/DPO experiment recipes
 capabilities/<capability>/          Training-data and evaluation manifests
 capabilities/MATRIX.md              Generated 9B/30B/stretch target matrix
 ```
