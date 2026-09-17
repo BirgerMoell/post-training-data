@@ -15,11 +15,11 @@ priority: "P1"
 curator: "Birger"
 license_access: "Apache-2.0"
 public_location: "https://huggingface.co/datasets/birgermoell/oellm-eu-tooluse-v1"
-lumi_location: "/scratch/project_465002530/users/bmoell/posttrain-data/eu-tooluse-parquet"
-data_format: null
-compression: null
-statistics: {"bytes":null,"documents":null,"segments":null,"characters":null,"tokens":null}
-last_verified: "2026-07-02"
+lumi_location: "/scratch/project_465002530/training/collection/post-training/2026q3/birgermoell-oellm-eu-tooluse-v1/release/b131d571"
+data_format: "JSONL"
+compression: "none"
+statistics: {"bytes":84730379,"documents":66366,"segments":66366,"characters":null,"tokens":null}
+last_verified: "2026-09-17"
 confidence: "High"
 source_sheet_row: 67
 ---
@@ -39,24 +39,24 @@ Qwen-native tool SFT + verifiable RL
 ## <a id="sources">Data Sources</a>
 
 - **Public or upstream:** [source](<https://huggingface.co/datasets/birgermoell/oellm-eu-tooluse-v1>)
-- **LUMI or other artifact:** `/scratch/project_465002530/users/bmoell/posttrain-data/eu-tooluse-parquet`
+- **LUMI or other artifact:** `/scratch/project_465002530/training/collection/post-training/2026q3/birgermoell-oellm-eu-tooluse-v1/release/b131d571`
 - **Upstream / parent:** Glaive v2 + ToolACE + Hermes
 - **Evidence:** [evidence](<https://github.com/BirgerMoell/qwen35-posttrain/blob/main/dataset_cards/oellm-eu-tooluse-v1-README.md>)
 - **Seed inventory:** [Data tab, row 67](<https://docs.google.com/spreadsheets/d/1hFFDRk_JdjbQCCv3zsemKulSnMyk_fBQIfKPSzSaP9M/edit#gid=1339797209&range=A67:Q67>)
 
 ## <a id="statistics">Structure & Statistics</a>
 
-The normalized totals below have not yet been entered for this catalogue version. Source-specific figures in the evidence section remain useful, but should not be treated as comparable catalogue totals until reproduced.
+The shared GRPO split contains 66,366 JSONL rows.
 
 | Measure | Value |
 | --- | ---: |
-| Bytes | — |
-| Documents | — |
-| Segments | — |
+| Bytes | 84,730,379 |
+| Documents | 66,366 |
+| Segments | 66,366 |
 | Characters | — |
 | Tokens | — |
-| Data format | Not normalized |
-| Compression | Not normalized |
+| Data format | JSONL |
+| Compression | none |
 
 ## <a id="metadata">Available Metadata</a>
 
@@ -82,9 +82,9 @@ Language codes use ISO 639-3 plus ISO 15924, matching the OpenEuroLLM training-d
 ## <a id="access">Access Information</a>
 
 - **Public or upstream:** [public or upstream](<https://huggingface.co/datasets/birgermoell/oellm-eu-tooluse-v1>)
-- **LUMI or project artifact:** `/scratch/project_465002530/users/bmoell/posttrain-data/eu-tooluse-parquet`
+- **LUMI or project artifact:** `/scratch/project_465002530/training/collection/post-training/2026q3/birgermoell-oellm-eu-tooluse-v1/release/b131d571`
 - **Source register:** [Data register row 67](<https://docs.google.com/spreadsheets/d/1hFFDRk_JdjbQCCv3zsemKulSnMyk_fBQIfKPSzSaP9M/edit#gid=1339797209&range=A67:Q67>)
-- **Last verified:** 2026-07-02
+- **Last verified:** 2026-09-17
 - **Confidence:** High
 
 A recorded path means that the artifact existed at the verification date. Recheck storage, access permissions, revision, configuration, split, and checksums before a run.
@@ -108,7 +108,7 @@ Verify the terms of every upstream component and transformed artifact before use
 - **Source type:** HF dataset
 - **Priority:** P1
 - **License / access:** Apache-2.0
-- **Last verified:** 2026-07-02
+- **Last verified:** 2026-09-17
 - **Confidence:** High
 
 ## <a id="quality">Quality, Safety & Exclusions</a>
@@ -123,4 +123,8 @@ This is the recorded operational owner or lead. Catalogue review and release app
 
 ## <a id="notes">Notes and Next Action</a>
 
-55,077 SFT; 46,366 GRPO; ~10% completed 4B mix.
+The public revision `b131d571a9f31a4ba4e518f2edce9bd1fcb0190b` and shared
+66,366-row GRPO file are pinned. The train SHA-256 is
+`5f75334a45be0f946db6b690b57a95aafa8692371709be055b4beb13405a2acd`.
+Requalify exact name/argument parsing and no-call abstentions for each target
+chat template before a new run.

@@ -1,7 +1,7 @@
 # Candidate
 > Generated from the JSON frontmatter in each versioned dataset entry. Run `python3 scripts/build_indexes.py` after changing an entry.
 
-24 entries.
+23 entries.
 
 | Dataset / product | Version | Catalogue | Training use | Languages | Locations |
 | --- | --- | --- | --- | --- | --- |
@@ -16,7 +16,6 @@
 | [FineWeb-2](../../fineweb-2/0.0.0/README.md) | 0.0.0 | Draft | Long-context extension | European multilingual | [public](<https://huggingface.co/datasets/HuggingFaceFW/fineweb-2>) |
 | [HPLT v2](../../hplt-v2/0.0.0/README.md) | 0.0.0 | Draft | Long-context extension | European multilingual | [public](<https://hplt-project.org/datasets/v2.0>) · LUMI |
 | [LightOn multilingual reasoning SFT](../../lighton-multilingual-reasoning-sft/0.0.0/README.md) | 0.0.0 | Draft | Reasoning SFT | European languages | Not recorded |
-| [LumiOpen/AutoIF-FI](../../lumiopen-autoif-fi/0.0.0/README.md) | 0.0.0 | Draft | Instruction SFT, Preference optimization, RLVR / GRPO / verifiable RL | fi | [public](<https://huggingface.co/datasets/LumiOpen/AutoIF-FI>) |
 | [nvidia/OpenMathInstruct-2](../../nvidia-openmathinstruct-2/0.0.0/README.md) | 0.0.0 | Draft | Reasoning SFT | primarily en | [public](<https://huggingface.co/datasets/nvidia/OpenMathInstruct-2>) |
 | [open-r1/DAPO-Math-17k-Processed](../../open-r1-dapo-math-17k-processed/0.1.0/README.md) | 0.1.0 | Draft | RLVR / GRPO / verifiable RL | en | [public](<https://huggingface.co/datasets/open-r1/DAPO-Math-17k-Processed>) · LUMI |
 | [open-thoughts/OpenThoughts-114k](../../open-thoughts-openthoughts-114k/0.0.0/README.md) | 0.0.0 | Draft | Reasoning SFT | primarily en | [public](<https://huggingface.co/datasets/open-thoughts/OpenThoughts-114k>) |

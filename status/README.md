@@ -5,9 +5,9 @@
 - [Used in a research run](used-in-research/README.md) — 8 entries
 - [Published / available](published/README.md) — 19 entries
 - [Configured / runnable](configured-runnable/README.md) — 5 entries
-- [Staged](staged/README.md) — 8 entries
-- [Candidate](candidate/README.md) — 24 entries
-- [Planned](planned/README.md) — 17 entries
+- [Staged](staged/README.md) — 10 entries
+- [Candidate](candidate/README.md) — 23 entries
+- [Planned](planned/README.md) — 16 entries
 - [Supporting / filtering](supporting/README.md) — 4 entries
 - [Needs verification](needs-verification/README.md) — 2 entries
 - [Historical / superseded](historical/README.md) — 1 entries

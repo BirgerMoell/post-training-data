@@ -1,7 +1,7 @@
 # Planned
 > Generated from the JSON frontmatter in each versioned dataset entry. Run `python3 scripts/build_indexes.py` after changing an entry.
 
-17 entries.
+16 entries.
 
 | Dataset / product | Version | Catalogue | Training use | Languages | Locations |
 | --- | --- | --- | --- | --- | --- |
@@ -9,7 +9,6 @@
 | [allenai/Dolci-Instruct-SFT-Tool-Use](../../allenai-dolci-instruct-sft-tool-use/0.0.0/README.md) | 0.0.0 | Draft | Tool use and agentic training | primarily en | [public](<https://huggingface.co/datasets/allenai/Dolci-Instruct-SFT-Tool-Use>) |
 | [allenai/Dolci-RL-Zero-Mix-7B](../../allenai-dolci-rl-zero-mix-7b/0.0.0/README.md) | 0.0.0 | Draft | RLVR / GRPO / verifiable RL | primarily en | [public](<https://huggingface.co/datasets/allenai/Dolci-RL-Zero-Mix-7B>) |
 | [allenai/rlvr-code-data-python-r1-format-filtered](../../allenai-rlvr-code-data-python-r1-format-filtered/0.0.0/README.md) | 0.0.0 | Draft | RLVR / GRPO / verifiable RL | code/en | [public](<https://huggingface.co/datasets/allenai/rlvr-code-data-python-r1-format-filtered>) |
-| [allenai/RLVR-GSM-MATH-IF-Mixed-Constraints](../../allenai-rlvr-gsm-math-if-mixed-constraints/0.0.0/README.md) | 0.0.0 | Draft | RLVR / GRPO / verifiable RL | primarily en | [public](<https://huggingface.co/datasets/allenai/RLVR-GSM-MATH-IF-Mixed-Constraints>) |
 | [EU native source family](../../eu-native-source-family/0.0.0/README.md) | 0.0.0 | Draft | Instruction SFT | European languages | [public](<https://data.europa.eu/>) |
 | [EUR-Lex / MultiEURLEX](../../eur-lex-multieurlex/0.0.0/README.md) | 0.0.0 | Draft | Long-context extension | 23+ EU languages | [public](<https://eur-lex.europa.eu/>) |
 | [Europarl](../../europarl/0.0.0/README.md) | 0.0.0 | Draft | Long-context extension | EU multilingual | [public](<https://www.statmt.org/europarl/>) · LUMI |

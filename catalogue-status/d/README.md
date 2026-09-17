@@ -14,7 +14,7 @@
 | [allenai/Dolci-Think-DPO-7B](../../allenai-dolci-think-dpo-7b/0.0.0/README.md) | 0.0.0 | Candidate | Preference optimization | primarily en | [public](<https://huggingface.co/datasets/allenai/Dolci-Think-DPO-7B>) |
 | [allenai/Dolci-Think-RL-7B / 32B](../../allenai-dolci-think-rl-7b-32b/0.0.0/README.md) | 0.0.0 | Candidate | RLVR / GRPO / verifiable RL | primarily en | [public](<https://huggingface.co/datasets/allenai/Dolci-Think-RL-7B>) |
 | [allenai/rlvr-code-data-python-r1-format-filtered](../../allenai-rlvr-code-data-python-r1-format-filtered/0.0.0/README.md) | 0.0.0 | Planned | RLVR / GRPO / verifiable RL | code/en | [public](<https://huggingface.co/datasets/allenai/rlvr-code-data-python-r1-format-filtered>) |
-| [allenai/RLVR-GSM-MATH-IF-Mixed-Constraints](../../allenai-rlvr-gsm-math-if-mixed-constraints/0.0.0/README.md) | 0.0.0 | Planned | RLVR / GRPO / verifiable RL | primarily en | [public](<https://huggingface.co/datasets/allenai/RLVR-GSM-MATH-IF-Mixed-Constraints>) |
+| [allenai/RLVR-GSM-MATH-IF-Mixed-Constraints](../../allenai-rlvr-gsm-math-if-mixed-constraints/0.0.0/README.md) | 0.0.0 | Staged | RLVR / GRPO / verifiable RL | primarily en | [public](<https://huggingface.co/datasets/allenai/RLVR-GSM-MATH-IF-Mixed-Constraints>) · LUMI |
 | [CulturaX](../../culturax/0.0.0/README.md) | 0.0.0 | Candidate | Long-context extension | European multilingual | [public](<https://huggingface.co/datasets/uonlp/CulturaX>) |
 | [EU native source family](../../eu-native-source-family/0.0.0/README.md) | 0.0.0 | Planned | Instruction SFT | European languages | [public](<https://data.europa.eu/>) |
 | [EUR-Lex / MultiEURLEX](../../eur-lex-multieurlex/0.0.0/README.md) | 0.0.0 | Planned | Long-context extension | 23+ EU languages | [public](<https://eur-lex.europa.eu/>) |
@@ -23,7 +23,7 @@
 | [HPLT v2](../../hplt-v2/0.0.0/README.md) | 0.0.0 | Candidate | Long-context extension | European multilingual | [public](<https://hplt-project.org/datasets/v2.0>) · LUMI |
 | [LightOn multilingual reasoning SFT](../../lighton-multilingual-reasoning-sft/0.0.0/README.md) | 0.0.0 | Candidate | Reasoning SFT | European languages | Not recorded |
 | [long_sft placeholder (Harsh1729/long_sft)](../../long-sft-placeholder-harsh1729-long-sft/0.0.0/README.md) | 0.0.0 | Needs verification | Long-context extension | unknown | Not recorded |
-| [LumiOpen/AutoIF-FI](../../lumiopen-autoif-fi/0.0.0/README.md) | 0.0.0 | Candidate | Instruction SFT, Preference optimization, RLVR / GRPO / verifiable RL | fi | [public](<https://huggingface.co/datasets/LumiOpen/AutoIF-FI>) |
+| [LumiOpen/AutoIF-FI](../../lumiopen-autoif-fi/0.0.0/README.md) | 0.0.0 | Staged | Instruction SFT, Preference optimization, RLVR / GRPO / verifiable RL | fi | [public](<https://huggingface.co/datasets/LumiOpen/AutoIF-FI>) · LUMI |
 | [MultiSynt OpenThoughts translations](../../multisynt-openthoughts-translations/0.0.0/README.md) | 0.0.0 | Planned | Reasoning SFT | 7 European languages | Not recorded |
 | [nvidia/ChatQA2-Long-SFT-data](../../nvidia-chatqa2-long-sft-data/0.0.0/README.md) | 0.0.0 | Planned | Long-context extension | primarily en | [public](<https://huggingface.co/datasets/nvidia/ChatQA2-Long-SFT-data>) |
 | [nvidia/HelpSteer3](../../nvidia-helpsteer3/0.0.0/README.md) | 0.0.0 | Configured / runnable | Preference optimization | primarily en | [public](<https://huggingface.co/datasets/nvidia/HelpSteer3>) · LUMI |

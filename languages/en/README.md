@@ -16,7 +16,7 @@ Entries are grouped from the recorded coverage on each page. Broad multilingual 
 | [allenai/Dolci-Think-DPO-7B](../../allenai-dolci-think-dpo-7b/0.0.0/README.md) | 0.0.0 | Preference optimization | Draft | Candidate | primarily en |
 | [allenai/Dolci-Think-RL-7B / 32B](../../allenai-dolci-think-rl-7b-32b/0.0.0/README.md) | 0.0.0 | RLVR / GRPO / verifiable RL | Draft | Candidate | primarily en |
 | [allenai/rlvr-code-data-python-r1-format-filtered](../../allenai-rlvr-code-data-python-r1-format-filtered/0.0.0/README.md) | 0.0.0 | RLVR / GRPO / verifiable RL | Draft | Planned | code/en |
-| [allenai/RLVR-GSM-MATH-IF-Mixed-Constraints](../../allenai-rlvr-gsm-math-if-mixed-constraints/0.0.0/README.md) | 0.0.0 | RLVR / GRPO / verifiable RL | Draft | Planned | primarily en |
+| [allenai/RLVR-GSM-MATH-IF-Mixed-Constraints](../../allenai-rlvr-gsm-math-if-mixed-constraints/0.0.0/README.md) | 0.0.0 | RLVR / GRPO / verifiable RL | Draft | Staged | primarily en |
 | [allenai/tulu-3-sft-mixture](../../allenai-tulu-3-sft-mixture/0.0.0/README.md) | 0.0.0 | Instruction SFT | Published | Used in completed run | en |
 | [birgermoell/oellm-code-rlvr](../../birgermoell-oellm-code-rlvr/0.1.0/README.md) | 0.1.0 | RLVR / GRPO / verifiable RL | Published | Candidate | English prompts; Python solutions |
 | [birgermoell/oellm-eu-tooluse-v1](../../birgermoell-oellm-eu-tooluse-v1/0.0.0/README.md) | 0.0.0 | RLVR / GRPO / verifiable RL, Tool use and agentic training | Published | Used in completed run | en |

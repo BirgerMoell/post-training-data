@@ -1,7 +1,7 @@
 # Operational post-training plan
 
 This plan turns the catalogue into a sequence that can guide an integration
-build. It is based on artifacts verified on 2026-08-18 from the OpenEuroLLM
+build. It is based on artifacts verified through 2026-09-17 from the OpenEuroLLM
 Hugging Face organization, project repositories, Mattermost, and read-only
 inspection of LUMI.
 
